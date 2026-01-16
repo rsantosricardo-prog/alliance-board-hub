@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { Image } from '@/components/ui/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,8 +13,13 @@ export default function Header() {
     <header className="w-full bg-background border-b border-secondary/10">
       <div className="max-w-[120rem] mx-auto px-6 lg:px-12 py-6">
         <div className="flex items-center justify-between">
-          <Link to="/" className="font-heading text-2xl lg:text-3xl text-secondary">
-            Alliance Board Hub
+          <Link to="/" className="flex items-center gap-3">
+            <Image 
+              src="https://static.wixstatic.com/media/904ff8_60f5e0c7c27d43e49b0942c2168b02b5~mv2.png" 
+              alt="Alliance Board Hub Logo" 
+              width={180}
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
