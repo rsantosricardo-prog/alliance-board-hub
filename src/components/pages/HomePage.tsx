@@ -20,9 +20,8 @@ const SectionDivider = () => (
 const Monogram = () => (
   <div className="relative w-32 h-48 border-[3px] border-primary-foreground rounded-[100%] flex flex-col items-center justify-center overflow-hidden group cursor-default transition-transform duration-700 hover:scale-105">
     <span className="font-heading text-5xl leading-none text-primary-foreground relative z-10 group-hover:-translate-y-2 transition-transform duration-500">A</span>
-    <div className="w-16 h-px bg-primary-foreground my-1 relative z-10 group-hover:w-24 transition-all duration-500" />
+
     <span className="font-heading text-5xl leading-none text-primary-foreground relative z-10 group-hover:translate-y-2 transition-transform duration-500">B</span>
-    <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
   </div>
 );
 
@@ -80,7 +79,6 @@ export default function HomePage() {
   return (
     <div ref={containerRef} className="min-h-screen bg-background selection:bg-primary selection:text-white overflow-x-clip">
       <Header />
-
       {/* --- HERO SECTION: The "Ritornello" Layout --- */}
       {/* Replicating the 3-column structure: Orange Block | Image Slice | Light Content */}
       <section className="relative w-full min-h-[100vh] flex flex-col lg:grid lg:grid-cols-10 pt-20 lg:pt-0">
@@ -97,15 +95,6 @@ export default function HomePage() {
               Alliance<br />Board<br />Hub
             </h1>
             <div className="w-24 h-1 bg-primary-foreground mt-8" />
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="hidden lg:flex mb-12 relative z-10"
-          >
-            <Monogram />
           </motion.div>
 
           {/* Decorative background texture for depth */}
@@ -173,7 +162,6 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
       {/* --- SECTION 2: THE ESSENCE (Cinematic Scroll) --- */}
       <section className="relative w-full bg-secondary text-secondary-foreground py-32 lg:py-48 overflow-hidden">
         {/* Background Noise Texture */}
@@ -233,7 +221,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* --- SECTION 3: CORE VALUES (Staggered Grid) --- */}
       <section className="w-full py-32 bg-background relative">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
@@ -261,9 +248,9 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
             {isLoadingValues ? (
               // Skeleton Loading
-              [1, 2, 3].map((i) => (
+              ([1, 2, 3].map((i) => (
                 <div key={i} className="h-96 bg-secondary/5 animate-pulse rounded-sm" />
-              ))
+              )))
             ) : (
               coreValues.map((value, index) => (
                 <ValueCard key={value._id} value={value} index={index} />
@@ -272,7 +259,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* --- SECTION 4: VISUAL BREATHER (Full Bleed Image) --- */}
       <section className="w-full h-[80vh] relative overflow-hidden clip-path-slant">
         <div className="absolute inset-0 bg-black/40 z-10" />
@@ -304,7 +290,6 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
       {/* --- SECTION 5: CALL TO ACTION (The Finale) --- */}
       <section className="w-full py-32 lg:py-40 bg-primary text-primary-foreground relative overflow-hidden">
         {/* Decorative large typography background */}
@@ -343,9 +328,7 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
       <Footer />
-      
       {/* Custom Styles for specific effects */}
       <style>{`
         .clip-path-slant {
