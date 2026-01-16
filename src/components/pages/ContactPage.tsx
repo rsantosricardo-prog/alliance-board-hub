@@ -29,8 +29,8 @@ export default function ContactPage() {
     await new Promise(resolve => setTimeout(resolve, 1500));
 
     toast({
-      title: 'Message Sent Successfully',
-      description: 'Thank you for reaching out. We will get back to you soon.',
+      title: 'Mensagem Enviada com Sucesso',
+      description: 'Obrigado por entrar em contato. Retornaremos em breve.',
     });
 
     // Reset form
@@ -58,10 +58,10 @@ export default function ContactPage() {
             className="text-center"
           >
             <h1 className="font-heading text-5xl lg:text-7xl text-primary-foreground mb-6">
-              Get in Touch
+              Entre em Contato
             </h1>
             <p className="font-paragraph text-lg lg:text-xl text-primary-foreground/90 max-w-3xl mx-auto">
-              Connect with us to learn more about ethical and sustainable corporate governance, or to explore partnership opportunities.
+              Conecte-se conosco para saber mais sobre governança corporativa ética e sustentável, ou para explorar oportunidades de parceria.
             </p>
           </motion.div>
         </div>
@@ -78,14 +78,14 @@ export default function ContactPage() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="font-heading text-3xl lg:text-4xl text-secondary mb-8">
-                Send Us a Message
+                Envie-nos uma Mensagem
               </h2>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name */}
                 <div>
                   <label htmlFor="name" className="block font-paragraph text-base text-secondary mb-2">
-                    Full Name *
+                    Nome Completo *
                   </label>
                   <input
                     type="text"
@@ -95,14 +95,14 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 font-paragraph text-base bg-white border border-secondary/20 rounded-lg focus:outline-none focus:border-primary transition-colors"
-                    placeholder="John Doe"
+                    placeholder="João Silva"
                   />
                 </div>
 
                 {/* Email */}
                 <div>
                   <label htmlFor="email" className="block font-paragraph text-base text-secondary mb-2">
-                    Email Address *
+                    Endereço de E-mail *
                   </label>
                   <input
                     type="email"
@@ -112,14 +112,14 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 font-paragraph text-base bg-white border border-secondary/20 rounded-lg focus:outline-none focus:border-primary transition-colors"
-                    placeholder="john@example.com"
+                    placeholder="joao@exemplo.com"
                   />
                 </div>
 
                 {/* Organization */}
                 <div>
                   <label htmlFor="organization" className="block font-paragraph text-base text-secondary mb-2">
-                    Organization
+                    Organização
                   </label>
                   <input
                     type="text"
@@ -128,14 +128,14 @@ export default function ContactPage() {
                     value={formData.organization}
                     onChange={handleChange}
                     className="w-full px-4 py-3 font-paragraph text-base bg-white border border-secondary/20 rounded-lg focus:outline-none focus:border-primary transition-colors"
-                    placeholder="Your Company"
+                    placeholder="Sua Empresa"
                   />
                 </div>
 
                 {/* Subject */}
                 <div>
                   <label htmlFor="subject" className="block font-paragraph text-base text-secondary mb-2">
-                    Subject *
+                    Assunto *
                   </label>
                   <input
                     type="text"
@@ -145,14 +145,14 @@ export default function ContactPage() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 font-paragraph text-base bg-white border border-secondary/20 rounded-lg focus:outline-none focus:border-primary transition-colors"
-                    placeholder="How can we help?"
+                    placeholder="Como podemos ajudar?"
                   />
                 </div>
 
                 {/* Message */}
                 <div>
                   <label htmlFor="message" className="block font-paragraph text-base text-secondary mb-2">
-                    Message *
+                    Mensagem *
                   </label>
                   <textarea
                     id="message"
@@ -162,7 +162,7 @@ export default function ContactPage() {
                     required
                     rows={6}
                     className="w-full px-4 py-3 font-paragraph text-base bg-white border border-secondary/20 rounded-lg focus:outline-none focus:border-primary transition-colors resize-none"
-                    placeholder="Tell us more about your inquiry..."
+                    placeholder="Conte-nos mais sobre sua consulta..."
                   />
                 </div>
 
@@ -173,11 +173,11 @@ export default function ContactPage() {
                   className="w-full flex items-center justify-center gap-2 font-paragraph text-base bg-secondary text-secondary-foreground px-8 py-4 rounded-full hover:bg-secondary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
-                    'Sending...'
+                    'Enviando...'
                   ) : (
                     <>
                       <Send className="w-5 h-5" />
-                      Send Message
+                      Enviar Mensagem
                     </>
                   )}
                 </button>
@@ -191,7 +191,7 @@ export default function ContactPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <h2 className="font-heading text-3xl lg:text-4xl text-secondary mb-8">
-                Contact Information
+                Informações de Contato
               </h2>
 
               <div className="space-y-8 mb-12">
@@ -201,7 +201,7 @@ export default function ContactPage() {
                     <Mail className="w-6 h-6 text-primary-foreground" />
                   </div>
                   <div>
-                    <h3 className="font-heading text-xl text-secondary mb-2">Email</h3>
+                    <h3 className="font-heading text-xl text-secondary mb-2">E-mail</h3>
                     <a
                       href="mailto:contact@allianceboardhub.com"
                       className="font-paragraph text-base text-secondary/80 hover:text-primary transition-colors"
@@ -217,7 +217,7 @@ export default function ContactPage() {
                     <Phone className="w-6 h-6 text-primary-foreground" />
                   </div>
                   <div>
-                    <h3 className="font-heading text-xl text-secondary mb-2">Phone</h3>
+                    <h3 className="font-heading text-xl text-secondary mb-2">Telefone</h3>
                     <a
                       href="tel:+15551234567"
                       className="font-paragraph text-base text-secondary/80 hover:text-primary transition-colors"
@@ -233,11 +233,11 @@ export default function ContactPage() {
                     <MapPin className="w-6 h-6 text-primary-foreground" />
                   </div>
                   <div>
-                    <h3 className="font-heading text-xl text-secondary mb-2">Office</h3>
+                    <h3 className="font-heading text-xl text-secondary mb-2">Escritório</h3>
                     <p className="font-paragraph text-base text-secondary/80">
-                      123 Governance Street<br />
-                      Corporate District<br />
-                      New York, NY 10001
+                      Rua da Governança, 123<br />
+                      Distrito Corporativo<br />
+                      São Paulo, SP 01000-000
                     </p>
                   </div>
                 </div>
@@ -245,15 +245,15 @@ export default function ContactPage() {
 
               {/* Additional Info Box */}
               <div className="bg-secondary text-secondary-foreground p-8 rounded-lg">
-                <h3 className="font-heading text-2xl mb-4">Office Hours</h3>
+                <h3 className="font-heading text-2xl mb-4">Horário de Atendimento</h3>
                 <div className="space-y-2 font-paragraph text-base">
-                  <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                  <p>Saturday: 10:00 AM - 2:00 PM</p>
-                  <p>Sunday: Closed</p>
+                  <p>Segunda - Sexta: 9:00 - 18:00</p>
+                  <p>Sábado: 10:00 - 14:00</p>
+                  <p>Domingo: Fechado</p>
                 </div>
                 <div className="mt-6 pt-6 border-t border-secondary-foreground/20">
                   <p className="font-paragraph text-sm text-secondary-foreground/80">
-                    We typically respond to all inquiries within 24-48 hours during business days.
+                    Normalmente respondemos a todas as consultas dentro de 24-48 horas durante dias úteis.
                   </p>
                 </div>
               </div>
@@ -273,10 +273,10 @@ export default function ContactPage() {
             className="text-center"
           >
             <h2 className="font-heading text-4xl lg:text-5xl text-secondary-foreground mb-6">
-              Join Our Network
+              Junte-se à Nossa Rede
             </h2>
             <p className="font-paragraph text-lg text-secondary-foreground/80 max-w-3xl mx-auto mb-8">
-              Become part of a community dedicated to advancing ethical and sustainable corporate governance practices.
+              Faça parte de uma comunidade dedicada a promover práticas de governança corporativa éticas e sustentáveis.
             </p>
           </motion.div>
         </div>

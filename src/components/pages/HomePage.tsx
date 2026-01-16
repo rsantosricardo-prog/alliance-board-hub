@@ -151,13 +151,13 @@ export default function HomePage() {
           >
             <div className="space-y-4">
               <span className="font-paragraph text-xs font-bold tracking-[0.2em] uppercase text-secondary/60">
-                Next Chapter
+                Próximo Capítulo
               </span>
               <h2 className="font-heading text-4xl lg:text-5xl text-secondary leading-tight">
-                {brandEssence?.title || "Strategic Governance"}
+                {brandEssence?.title || "Governança Estratégica"}
               </h2>
               <p className="font-paragraph text-secondary/70 max-w-md text-lg leading-relaxed">
-                {brandEssence?.tagline || "Connecting counselors and organizations for ethical decisions."}
+                {brandEssence?.tagline || "Conectando conselheiros e organizações para decisões éticas."}
               </p>
             </div>
 
@@ -166,7 +166,7 @@ export default function HomePage() {
                 to="/events" 
                 className="group flex items-center justify-between w-full bg-secondary text-secondary-foreground px-8 py-5 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300"
               >
-                <span className="font-paragraph font-medium tracking-wide">Explore Events</span>
+                <span className="font-paragraph font-medium tracking-wide">Explorar Eventos</span>
                 <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -195,10 +195,10 @@ export default function HomePage() {
                 >
                   <div className="w-12 h-1 bg-primary" />
                   <h2 className="font-heading text-5xl lg:text-7xl text-white">
-                    Our<br />Essence
+                    Nossa<br />Essência
                   </h2>
                   <p className="font-paragraph text-white/60 text-lg max-w-xs">
-                    Defining the standards of modern corporate governance through independence and excellence.
+                    Definindo os padrões da governança corporativa moderna através da independência e excelência.
                   </p>
                 </motion.div>
               </div>
@@ -213,19 +213,19 @@ export default function HomePage() {
                 transition={{ duration: 0.8 }}
               >
                 <p className="font-heading text-3xl lg:text-5xl leading-[1.4] text-white/90 indent-12 lg:indent-24">
-                  {brandEssence?.content || "We are the bridge between visionary leadership and sustainable execution. In a world of complexity, we provide the clarity needed for boards to navigate the future with confidence."}
+                  {brandEssence?.content || "Somos a ponte entre liderança visionária e execução sustentável. Em um mundo de complexidade, fornecemos a clareza necessária para que os conselhos naveguem o futuro com confiança."}
                 </p>
                 
                 <div className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-12">
                   <div className="border-t border-white/20 pt-8">
                     <ShieldCheck className="w-10 h-10 text-primary mb-6" />
-                    <h3 className="font-heading text-2xl mb-4">Ethical Leadership</h3>
-                    <p className="font-paragraph text-white/60">Upholding the highest standards of integrity in every decision and connection we facilitate.</p>
+                    <h3 className="font-heading text-2xl mb-4">Liderança Ética</h3>
+                    <p className="font-paragraph text-white/60">Mantendo os mais altos padrões de integridade em cada decisão e conexão que facilitamos.</p>
                   </div>
                   <div className="border-t border-white/20 pt-8">
                     <Globe className="w-10 h-10 text-primary mb-6" />
-                    <h3 className="font-heading text-2xl mb-4">Global Perspective</h3>
-                    <p className="font-paragraph text-white/60">Bringing diverse viewpoints and international best practices to local boardrooms.</p>
+                    <h3 className="font-heading text-2xl mb-4">Perspectiva Global</h3>
+                    <p className="font-paragraph text-white/60">Trazendo pontos de vista diversos e melhores práticas internacionais para salas de conselho locais.</p>
                   </div>
                 </div>
               </motion.div>
@@ -245,7 +245,7 @@ export default function HomePage() {
               viewport={{ once: true }}
               className="font-heading text-5xl lg:text-7xl text-secondary"
             >
-              Core Values
+              Valores Fundamentais
             </motion.h2>
             <motion.div 
               initial={{ opacity: 0 }}
@@ -253,7 +253,7 @@ export default function HomePage() {
               viewport={{ once: true }}
               className="hidden lg:flex items-center gap-4 text-secondary/60"
             >
-              <span className="font-paragraph text-sm uppercase tracking-widest">Scroll to Explore</span>
+              <span className="font-paragraph text-sm uppercase tracking-widest">Role para Explorar</span>
               <ChevronDown className="w-4 h-4 animate-bounce" />
             </motion.div>
           </div>
@@ -299,7 +299,7 @@ export default function HomePage() {
             className="text-center px-6"
           >
             <p className="font-heading text-4xl lg:text-6xl text-white max-w-4xl leading-tight">
-              "Governance is not just about compliance.<br/>It is about performance."
+              "Governança não é apenas sobre conformidade.<br/>É sobre desempenho."
             </p>
           </motion.div>
         </div>
@@ -320,10 +320,10 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="font-heading text-5xl lg:text-7xl mb-8">
-              Join the Alliance
+              Junte-se à Aliança
             </h2>
             <p className="font-paragraph text-xl lg:text-2xl mb-12 opacity-90 max-w-2xl mx-auto">
-              Connect with a network of distinguished counselors and organizations shaping the future.
+              Conecte-se com uma rede de conselheiros e organizações distintas moldando o futuro.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -331,13 +331,13 @@ export default function HomePage() {
                 to="/contact"
                 className="min-w-[200px] bg-secondary text-secondary-foreground px-10 py-5 rounded-full font-paragraph font-medium hover:bg-white hover:text-black transition-colors duration-300 shadow-lg hover:shadow-xl"
               >
-                Get in Touch
+                Entre em Contato
               </Link>
               <Link 
                 to="/events"
                 className="min-w-[200px] border border-primary-foreground text-primary-foreground px-10 py-5 rounded-full font-paragraph font-medium hover:bg-primary-foreground hover:text-primary transition-colors duration-300"
               >
-                View Calendar
+                Ver Calendário
               </Link>
             </div>
           </motion.div>

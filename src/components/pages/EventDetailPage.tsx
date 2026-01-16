@@ -64,7 +64,7 @@ export default function EventDetailPage() {
             className="inline-flex items-center gap-2 font-paragraph text-base text-secondary hover:text-primary transition-colors mb-8"
           >
             <ArrowLeft className="w-5 h-5" />
-            Back to Events
+            Voltar aos Eventos
           </Link>
 
           <div className="min-h-[600px]">
@@ -80,16 +80,16 @@ export default function EventDetailPage() {
                 className="text-center py-20"
               >
                 <h2 className="font-heading text-3xl text-secondary mb-4">
-                  Event Not Found
+                  Evento Não Encontrado
                 </h2>
                 <p className="font-paragraph text-lg text-secondary/60 mb-8">
-                  The event you're looking for doesn't exist or has been removed.
+                  O evento que você está procurando não existe ou foi removido.
                 </p>
                 <Link
                   to="/events"
                   className="inline-block font-paragraph text-base bg-secondary text-secondary-foreground px-8 py-3 rounded-full hover:bg-secondary/90 transition-colors"
                 >
-                  View All Events
+                  Ver Todos os Eventos
                 </Link>
               </motion.div>
             ) : (
@@ -121,7 +121,7 @@ export default function EventDetailPage() {
                     {event.agendaDescription && (
                       <div className="mb-12">
                         <h2 className="font-heading text-2xl lg:text-3xl text-secondary mb-6">
-                          Event Agenda
+                          Agenda do Evento
                         </h2>
                         <p className="font-paragraph text-lg text-secondary/80 leading-relaxed whitespace-pre-line">
                           {event.agendaDescription}
@@ -133,7 +133,7 @@ export default function EventDetailPage() {
                   {/* Sidebar - Event Details */}
                   <div className="lg:col-span-1">
                     <div className="bg-secondary text-secondary-foreground p-8 rounded-lg sticky top-8">
-                      <h3 className="font-heading text-2xl mb-6">Event Details</h3>
+                      <h3 className="font-heading text-2xl mb-6">Detalhes do Evento</h3>
 
                       {/* Date and Time */}
                       {event.eventDateTime && (
@@ -174,7 +174,7 @@ export default function EventDetailPage() {
                             className="flex items-center justify-center gap-2 font-paragraph text-base bg-primary text-primary-foreground px-6 py-3 rounded-full hover:bg-primary/90 transition-colors w-full"
                           >
                             <ExternalLink className="w-5 h-5" />
-                            Join Virtual Event
+                            Participar do Evento Virtual
                           </a>
                         </div>
                       )}
@@ -182,13 +182,13 @@ export default function EventDetailPage() {
                       {/* Contact CTA */}
                       <div className="mt-8 pt-6 border-t border-secondary-foreground/20">
                         <p className="font-paragraph text-sm text-secondary-foreground/70 mb-4">
-                          Have questions about this event?
+                          Tem dúvidas sobre este evento?
                         </p>
                         <Link
                           to="/contact"
                           className="block text-center font-paragraph text-base bg-secondary-foreground text-secondary px-6 py-3 rounded-full hover:bg-secondary-foreground/90 transition-colors"
                         >
-                          Contact Us
+                          Fale Conosco
                         </Link>
                       </div>
                     </div>

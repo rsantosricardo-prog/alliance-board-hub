@@ -65,10 +65,10 @@ export default function EventsPage() {
             className="text-center"
           >
             <h1 className="font-heading text-5xl lg:text-7xl text-primary-foreground mb-6">
-              Governance Events
+              Eventos de Governança
             </h1>
             <p className="font-paragraph text-lg lg:text-xl text-primary-foreground/90 max-w-3xl mx-auto">
-              Join us for insightful discussions, workshops, and networking opportunities focused on ethical and sustainable corporate governance.
+              Junte-se a nós para discussões perspicazes, workshops e oportunidades de networking focadas em governança corporativa ética e sustentável.
             </p>
           </motion.div>
         </div>
@@ -135,7 +135,7 @@ export default function EventsPage() {
                             <div className="flex items-center gap-2 mt-4">
                               <ExternalLink className="w-4 h-4 text-primary" />
                               <span className="font-paragraph text-sm text-primary">
-                                Virtual Event Available
+                                Evento Virtual Disponível
                               </span>
                             </div>
                           )}
@@ -159,7 +159,7 @@ export default function EventsPage() {
                       onClick={handleLoadMore}
                       className="font-paragraph text-base bg-secondary text-secondary-foreground px-10 py-4 rounded-full hover:bg-secondary/90 transition-colors"
                     >
-                      Load More Events
+                      Carregar Mais Eventos
                     </button>
                   </div>
                 )}
@@ -172,10 +172,10 @@ export default function EventsPage() {
                 className="text-center py-20"
               >
                 <h2 className="font-heading text-3xl text-secondary mb-4">
-                  No Events Available
+                  Nenhum Evento Disponível
                 </h2>
                 <p className="font-paragraph text-lg text-secondary/60">
-                  Check back soon for upcoming governance events.
+                  Volte em breve para eventos de governança futuros.
                 </p>
               </motion.div>
             )}

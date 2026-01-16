@@ -15,7 +15,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
             <Image 
-              src="https://static.wixstatic.com/media/904ff8_60f5e0c7c27d43e49b0942c2168b02b5~mv2.png" 
+              src="https://static.wixstatic.com/media/904ff8_221626201da24a26afb276a4d7f32230~mv2.png" 
               alt="Alliance Board Hub Logo" 
               width={180}
               className="h-12 w-auto"
@@ -30,7 +30,7 @@ export default function Header() {
                 isActive('/') ? 'text-primary' : 'text-secondary hover:text-primary'
               }`}
             >
-              Home
+              Início
             </Link>
             <Link
               to="/events"
@@ -38,7 +38,7 @@ export default function Header() {
                 isActive('/events') ? 'text-primary' : 'text-secondary hover:text-primary'
               }`}
             >
-              Events
+              Eventos
             </Link>
             <Link
               to="/contact"
@@ -46,7 +46,7 @@ export default function Header() {
                 isActive('/contact') ? 'text-primary' : 'text-secondary hover:text-primary'
               }`}
             >
-              Contact
+              Contato
             </Link>
           </nav>
 
@@ -54,7 +54,7 @@ export default function Header() {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden text-secondary"
-            aria-label="Toggle menu"
+            aria-label="Alternar menu"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -70,7 +70,7 @@ export default function Header() {
                 isActive('/') ? 'text-primary' : 'text-secondary hover:text-primary'
               }`}
             >
-              Home
+              Início
             </Link>
             <Link
               to="/events"
@@ -79,7 +79,7 @@ export default function Header() {
                 isActive('/events') ? 'text-primary' : 'text-secondary hover:text-primary'
               }`}
             >
-              Events
+              Eventos
             </Link>
             <Link
               to="/contact"
@@ -88,7 +88,7 @@ export default function Header() {
                 isActive('/contact') ? 'text-primary' : 'text-secondary hover:text-primary'
               }`}
             >
-              Contact
+              Contato
             </Link>
           </nav>
         )}

@@ -9,37 +9,37 @@ export default function Footer() {
           <div>
             <h3 className="font-heading text-xl mb-4">Alliance Board Hub</h3>
             <p className="font-paragraph text-sm text-secondary-foreground/80">
-              Connecting board members and organizations to strengthen corporate governance with clarity, independence, and excellence.
+              Conectando conselheiros e organizações para fortalecer a governança corporativa com clareza, independência e excelência.
             </p>
           </div>
 
           {/* Navigation Column */}
           <div>
-            <h4 className="font-heading text-lg mb-4">Navigation</h4>
+            <h4 className="font-heading text-lg mb-4">Navegação</h4>
             <nav className="flex flex-col gap-3">
               <Link to="/" className="font-paragraph text-sm text-secondary-foreground/80 hover:text-secondary-foreground transition-colors">
-                Home
+                Início
               </Link>
               <Link to="/events" className="font-paragraph text-sm text-secondary-foreground/80 hover:text-secondary-foreground transition-colors">
-                Events
+                Eventos
               </Link>
               <Link to="/contact" className="font-paragraph text-sm text-secondary-foreground/80 hover:text-secondary-foreground transition-colors">
-                Contact
+                Contato
               </Link>
             </nav>
           </div>
 
           {/* Contact Column */}
           <div>
-            <h4 className="font-heading text-lg mb-4">Get in Touch</h4>
+            <h4 className="font-heading text-lg mb-4">Entre em Contato</h4>
             <p className="font-paragraph text-sm text-secondary-foreground/80 mb-2">
-              Reach out to learn more about ethical and sustainable governance.
+              Entre em contato para saber mais sobre governança ética e sustentável.
             </p>
             <Link
               to="/contact"
               className="inline-block font-paragraph text-sm text-secondary-foreground bg-primary px-6 py-2 rounded-full hover:bg-primary/90 transition-colors"
             >
-              Contact Us
+              Fale Conosco
             </Link>
           </div>
         </div>
