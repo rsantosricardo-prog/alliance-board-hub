@@ -29,8 +29,8 @@ export default {
                 background: '#F0F0F0',
                 secondary: '#000000',
                 'secondary-foreground': '#FFFFFF',
-                'primary-foreground': '#000000',
-                primary: '#F04E23'
+                'primary-foreground': '#FFFFFF',
+                primary: '#006B7D'
             },
         },
     },
