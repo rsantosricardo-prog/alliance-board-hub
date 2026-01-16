@@ -23,7 +23,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8">
             <Link
               to="/"
               className={`font-paragraph text-base transition-colors ${
@@ -31,6 +31,30 @@ export default function Header() {
               }`}
             >
               Início
+            </Link>
+            <Link
+              to="/about"
+              className={`font-paragraph text-base transition-colors ${
+                isActive('/about') ? 'text-primary' : 'text-secondary hover:text-primary'
+              }`}
+            >
+              Quem Somos
+            </Link>
+            <Link
+              to="/solutions"
+              className={`font-paragraph text-base transition-colors ${
+                isActive('/solutions') ? 'text-primary' : 'text-secondary hover:text-primary'
+              }`}
+            >
+              Soluções
+            </Link>
+            <Link
+              to="/governance"
+              className={`font-paragraph text-base transition-colors ${
+                isActive('/governance') ? 'text-primary' : 'text-secondary hover:text-primary'
+              }`}
+            >
+              Governança na Prática
             </Link>
             <Link
               to="/events"
@@ -53,7 +77,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-secondary"
+            className="lg:hidden text-secondary"
             aria-label="Alternar menu"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -62,7 +86,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-6 flex flex-col gap-4 pb-4">
+          <nav className="lg:hidden mt-6 flex flex-col gap-4 pb-4">
             <Link
               to="/"
               onClick={() => setIsMenuOpen(false)}
@@ -71,6 +95,33 @@ export default function Header() {
               }`}
             >
               Início
+            </Link>
+            <Link
+              to="/about"
+              onClick={() => setIsMenuOpen(false)}
+              className={`font-paragraph text-base transition-colors ${
+                isActive('/about') ? 'text-primary' : 'text-secondary hover:text-primary'
+              }`}
+            >
+              Quem Somos
+            </Link>
+            <Link
+              to="/solutions"
+              onClick={() => setIsMenuOpen(false)}
+              className={`font-paragraph text-base transition-colors ${
+                isActive('/solutions') ? 'text-primary' : 'text-secondary hover:text-primary'
+              }`}
+            >
+              Soluções
+            </Link>
+            <Link
+              to="/governance"
+              onClick={() => setIsMenuOpen(false)}
+              className={`font-paragraph text-base transition-colors ${
+                isActive('/governance') ? 'text-primary' : 'text-secondary hover:text-primary'
+              }`}
+            >
+              Governança na Prática
             </Link>
             <Link
               to="/events"

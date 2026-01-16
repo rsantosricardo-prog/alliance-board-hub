@@ -20,6 +20,15 @@ export default function Footer() {
               <Link to="/" className="font-paragraph text-sm text-secondary-foreground/80 hover:text-secondary-foreground transition-colors">
                 Início
               </Link>
+              <Link to="/about" className="font-paragraph text-sm text-secondary-foreground/80 hover:text-secondary-foreground transition-colors">
+                Quem Somos
+              </Link>
+              <Link to="/solutions" className="font-paragraph text-sm text-secondary-foreground/80 hover:text-secondary-foreground transition-colors">
+                Soluções
+              </Link>
+              <Link to="/governance" className="font-paragraph text-sm text-secondary-foreground/80 hover:text-secondary-foreground transition-colors">
+                Governança na Prática
+              </Link>
               <Link to="/events" className="font-paragraph text-sm text-secondary-foreground/80 hover:text-secondary-foreground transition-colors">
                 Eventos
               </Link>

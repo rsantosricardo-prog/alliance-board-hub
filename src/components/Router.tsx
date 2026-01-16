@@ -3,6 +3,9 @@ import { createBrowserRouter, RouterProvider, Navigate, Outlet } from 'react-rou
 import { ScrollToTop } from '@/lib/scroll-to-top';
 import ErrorPage from '@/integrations/errorHandlers/ErrorPage';
 import HomePage from '@/components/pages/HomePage';
+import AboutPage from '@/components/pages/AboutPage';
+import SolutionsPage from '@/components/pages/SolutionsPage';
+import GovernancePage from '@/components/pages/GovernancePage';
 import EventsPage from '@/components/pages/EventsPage';
 import EventDetailPage from '@/components/pages/EventDetailPage';
 import ContactPage from '@/components/pages/ContactPage';
@@ -28,6 +31,27 @@ const router = createBrowserRouter([
         element: <HomePage />,
         routeMetadata: {
           pageIdentifier: 'home',
+        },
+      },
+      {
+        path: "about",
+        element: <AboutPage />,
+        routeMetadata: {
+          pageIdentifier: 'about',
+        },
+      },
+      {
+        path: "solutions",
+        element: <SolutionsPage />,
+        routeMetadata: {
+          pageIdentifier: 'solutions',
+        },
+      },
+      {
+        path: "governance",
+        element: <GovernancePage />,
+        routeMetadata: {
+          pageIdentifier: 'governance',
         },
       },
       {
