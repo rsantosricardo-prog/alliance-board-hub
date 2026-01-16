@@ -17,8 +17,8 @@ export default function Header() {
             <Image 
               src="https://static.wixstatic.com/media/904ff8_221626201da24a26afb276a4d7f32230~mv2.png" 
               alt="Alliance Board Hub Logo" 
-              width={180}
-              className="h-12 w-auto"
+              width={240}
+              className="h-16 w-auto"
             />
           </Link>
 
