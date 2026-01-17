@@ -91,10 +91,13 @@ export default function HomePage() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="mt-12 lg:mt-24 relative z-10"
           >
-            <h1 className="font-heading text-6xl lg:text-8xl leading-[0.9] tracking-tight uppercase">
+            <h1 className="font-heading text-7xl lg:text-9xl leading-[0.85] tracking-tight uppercase drop-shadow-[0_4px_12px_rgba(0,0,0,0.15)]">
               Alliance<br />Board<br />Hub
             </h1>
-            <div className="w-24 h-1 bg-primary-foreground mt-8" />
+            <div className="w-32 h-1.5 bg-primary-foreground mt-10 shadow-lg" />
+            <p className="font-paragraph text-base lg:text-lg text-primary-foreground/90 mt-6 tracking-wide">
+              Governança Estratégica de Excelência
+            </p>
           </motion.div>
 
           {/* Decorative background texture for depth */}
