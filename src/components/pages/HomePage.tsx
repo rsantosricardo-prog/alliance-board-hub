@@ -91,6 +91,21 @@ export default function HomePage() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="mt-12 lg:mt-24 relative z-10"
           >
+            {/* Decorative Figure */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.3 }}
+              className="mb-8"
+            >
+              <div className="relative w-32 h-32 lg:w-40 lg:h-40">
+                <div className="absolute inset-0 border-4 border-primary-foreground/30 rounded-full" />
+                <div className="absolute inset-4 border-2 border-primary-foreground/50 rounded-full" />
+                <div className="absolute inset-8 bg-primary-foreground/20 rounded-full flex items-center justify-center">
+                  <ShieldCheck className="w-12 h-12 lg:w-16 lg:h-16 text-primary-foreground" />
+                </div>
+              </div>
+            </motion.div>
 
             <div className="w-32 h-1.5 bg-primary-foreground mt-10 shadow-lg" />
             <p className="font-paragraph text-base lg:text-lg text-primary-foreground/90 mt-6 tracking-wide">
