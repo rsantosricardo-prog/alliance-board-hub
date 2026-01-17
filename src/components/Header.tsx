@@ -10,7 +10,7 @@ export default function Header() {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="w-full bg-background border-b border-secondary/10">
+    <header className="w-full bg-white border-b border-secondary/10">
       <div className="max-w-[120rem] mx-auto px-6 lg:px-12 py-6">
         <div className="flex items-center justify-between">
           {/* Desktop Navigation */}
@@ -18,7 +18,7 @@ export default function Header() {
             <Link
               to="/"
               className={`font-paragraph text-base transition-colors ${
-                isActive('/') ? 'text-primary' : 'text-secondary hover:text-primary'
+                isActive('/') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
               }`}
             >
               Início
@@ -26,7 +26,7 @@ export default function Header() {
             <Link
               to="/about"
               className={`font-paragraph text-base transition-colors ${
-                isActive('/about') ? 'text-primary' : 'text-secondary hover:text-primary'
+                isActive('/about') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
               }`}
             >
               Quem Somos
@@ -34,7 +34,7 @@ export default function Header() {
             <Link
               to="/solutions"
               className={`font-paragraph text-base transition-colors ${
-                isActive('/solutions') ? 'text-primary' : 'text-secondary hover:text-primary'
+                isActive('/solutions') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
               }`}
             >
               Soluções
@@ -42,7 +42,7 @@ export default function Header() {
             <Link
               to="/governance"
               className={`font-paragraph text-base transition-colors ${
-                isActive('/governance') ? 'text-primary' : 'text-secondary hover:text-primary'
+                isActive('/governance') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
               }`}
             >
               Governança na Prática
@@ -50,7 +50,7 @@ export default function Header() {
             <Link
               to="/events"
               className={`font-paragraph text-base transition-colors ${
-                isActive('/events') ? 'text-primary' : 'text-secondary hover:text-primary'
+                isActive('/events') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
               }`}
             >
               Eventos
@@ -58,7 +58,7 @@ export default function Header() {
             <Link
               to="/contact"
               className={`font-paragraph text-base transition-colors ${
-                isActive('/contact') ? 'text-primary' : 'text-secondary hover:text-primary'
+                isActive('/contact') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
               }`}
             >
               Contato
@@ -77,7 +77,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden text-secondary"
+            className="lg:hidden text-foreground"
             aria-label="Alternar menu"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -91,7 +91,7 @@ export default function Header() {
               to="/"
               onClick={() => setIsMenuOpen(false)}
               className={`font-paragraph text-base transition-colors ${
-                isActive('/') ? 'text-primary' : 'text-secondary hover:text-primary'
+                isActive('/') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
               }`}
             >
               Início
@@ -100,7 +100,7 @@ export default function Header() {
               to="/about"
               onClick={() => setIsMenuOpen(false)}
               className={`font-paragraph text-base transition-colors ${
-                isActive('/about') ? 'text-primary' : 'text-secondary hover:text-primary'
+                isActive('/about') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
               }`}
             >
               Quem Somos
@@ -109,7 +109,7 @@ export default function Header() {
               to="/solutions"
               onClick={() => setIsMenuOpen(false)}
               className={`font-paragraph text-base transition-colors ${
-                isActive('/solutions') ? 'text-primary' : 'text-secondary hover:text-primary'
+                isActive('/solutions') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
               }`}
             >
               Soluções
@@ -118,7 +118,7 @@ export default function Header() {
               to="/governance"
               onClick={() => setIsMenuOpen(false)}
               className={`font-paragraph text-base transition-colors ${
-                isActive('/governance') ? 'text-primary' : 'text-secondary hover:text-primary'
+                isActive('/governance') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
               }`}
             >
               Governança na Prática
@@ -127,7 +127,7 @@ export default function Header() {
               to="/events"
               onClick={() => setIsMenuOpen(false)}
               className={`font-paragraph text-base transition-colors ${
-                isActive('/events') ? 'text-primary' : 'text-secondary hover:text-primary'
+                isActive('/events') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
               }`}
             >
               Eventos
@@ -136,7 +136,7 @@ export default function Header() {
               to="/contact"
               onClick={() => setIsMenuOpen(false)}
               className={`font-paragraph text-base transition-colors ${
-                isActive('/contact') ? 'text-primary' : 'text-secondary hover:text-primary'
+                isActive('/contact') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
               }`}
             >
               Contato

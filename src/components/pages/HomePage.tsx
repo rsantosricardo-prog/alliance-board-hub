@@ -105,7 +105,7 @@ export default function HomePage() {
         </div>
 
         {/* Column 2: The Window (Image) - 30% */}
-        <div className="lg:col-span-3 relative h-[50vh] lg:h-auto bg-secondary overflow-hidden order-2 lg:order-2 group">
+        <div className="lg:col-span-3 relative h-[50vh] lg:h-auto bg-foreground overflow-hidden order-2 lg:order-2 group">
           <div className="absolute inset-0 bg-black/20 z-10 group-hover:bg-black/0 transition-colors duration-700" />
           
           {/* Parallax Image Container */}
@@ -140,21 +140,21 @@ export default function HomePage() {
             className="flex flex-col gap-8 mb-12"
           >
             <div className="space-y-4">
-              <span className="font-paragraph text-xs font-bold tracking-[0.2em] uppercase text-secondary/60">
+              <span className="font-paragraph text-xs font-bold tracking-[0.2em] uppercase text-foreground/60">
                 Próximo Capítulo
               </span>
-              <h2 className="font-heading text-4xl lg:text-5xl text-secondary leading-tight">
+              <h2 className="font-heading text-4xl lg:text-5xl text-foreground leading-tight">
                 {brandEssence?.title || "Governança Estratégica"}
               </h2>
-              <p className="font-paragraph text-secondary/70 max-w-md text-lg leading-relaxed">
+              <p className="font-paragraph text-foreground/70 max-w-md text-lg leading-relaxed">
                 {brandEssence?.tagline || "Conectando conselheiros e organizações para decisões éticas."}
               </p>
             </div>
 
-            <div className="pt-8 border-t border-secondary/10">
+            <div className="pt-8 border-t border-foreground/10">
               <Link 
                 to="/events" 
-                className="group flex items-center justify-between w-full bg-secondary text-secondary-foreground px-8 py-5 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                className="group flex items-center justify-between w-full bg-foreground text-white px-8 py-5 rounded-full hover:bg-primary hover:text-white transition-all duration-300"
               >
                 <span className="font-paragraph font-medium tracking-wide">Explorar Eventos</span>
                 <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
@@ -164,7 +164,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* --- SECTION 2: THE ESSENCE (Cinematic Scroll) --- */}
-      <section className="relative w-full bg-secondary text-secondary-foreground py-32 lg:py-48 overflow-hidden">
+      <section className="relative w-full bg-foreground text-white py-32 lg:py-48 overflow-hidden">
         {/* Background Noise Texture */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay"
              style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}>
@@ -208,12 +208,12 @@ export default function HomePage() {
                 <div className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-12">
                   <div className="border-t border-white/20 pt-8">
                     <ShieldCheck className="w-10 h-10 text-primary mb-6" />
-                    <h3 className="font-heading text-2xl mb-4">Liderança Ética</h3>
+                    <h3 className="font-heading text-2xl mb-4 text-white">Liderança Ética</h3>
                     <p className="font-paragraph text-white/60">Mantendo os mais altos padrões de integridade em cada decisão e conexão que facilitamos.</p>
                   </div>
                   <div className="border-t border-white/20 pt-8">
                     <Globe className="w-10 h-10 text-primary mb-6" />
-                    <h3 className="font-heading text-2xl mb-4">Perspectiva Global</h3>
+                    <h3 className="font-heading text-2xl mb-4 text-white">Perspectiva Global</h3>
                     <p className="font-paragraph text-white/60">Trazendo pontos de vista diversos e melhores práticas internacionais para salas de conselho locais.</p>
                   </div>
                 </div>
@@ -226,12 +226,12 @@ export default function HomePage() {
       <section className="w-full py-32 bg-background relative">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
           
-          <div className="flex flex-col lg:flex-row justify-between items-end mb-24 border-b border-secondary/10 pb-12">
+          <div className="flex flex-col lg:flex-row justify-between items-end mb-24 border-b border-foreground/10 pb-12">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-heading text-5xl lg:text-7xl text-secondary"
+              className="font-heading text-5xl lg:text-7xl text-foreground"
             >
               Valores Fundamentais
             </motion.h2>
@@ -239,7 +239,7 @@ export default function HomePage() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="hidden lg:flex items-center gap-4 text-secondary/60"
+              className="hidden lg:flex items-center gap-4 text-foreground/60"
             >
               <span className="font-paragraph text-sm uppercase tracking-widest">Role para Explorar</span>
               <ChevronDown className="w-4 h-4 animate-bounce" />
@@ -250,7 +250,7 @@ export default function HomePage() {
             {isLoadingValues ? (
               // Skeleton Loading
               ([1, 2, 3].map((i) => (
-                <div key={i} className="h-96 bg-secondary/5 animate-pulse rounded-sm" />
+                <div key={i} className="h-96 bg-foreground/5 animate-pulse rounded-sm" />
               )))
             ) : (
               coreValues.map((value, index) => (
@@ -315,13 +315,13 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link 
                 to="/contact"
-                className="min-w-[200px] bg-secondary text-secondary-foreground px-10 py-5 rounded-full font-paragraph font-medium hover:bg-white hover:text-black transition-colors duration-300 shadow-lg hover:shadow-xl"
+                className="min-w-[200px] bg-foreground text-white px-10 py-5 rounded-full font-paragraph font-medium hover:bg-white hover:text-foreground transition-colors duration-300 shadow-lg hover:shadow-xl"
               >
                 Entre em Contato
               </Link>
               <Link 
                 to="/events"
-                className="min-w-[200px] border border-primary-foreground text-primary-foreground px-10 py-5 rounded-full font-paragraph font-medium hover:bg-primary-foreground hover:text-primary transition-colors duration-300"
+                className="min-w-[200px] border-2 border-white text-white px-10 py-5 rounded-full font-paragraph font-medium hover:bg-white hover:text-primary transition-colors duration-300"
               >
                 Ver Calendário
               </Link>
@@ -352,14 +352,14 @@ function ValueCard({ value, index }: { value: CoreValues; index: number }) {
       whileInView={{ opacity: 1, y: yOffset }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.7, delay: index * 0.1 }}
-      className={`group relative bg-white border border-secondary/10 p-10 lg:p-12 h-full min-h-[400px] flex flex-col justify-between hover:border-primary/50 transition-colors duration-500 ${index % 2 !== 0 ? 'lg:mt-16' : ''}`}
+      className={`group relative bg-white border border-foreground/10 p-10 lg:p-12 h-full min-h-[400px] flex flex-col justify-between hover:border-primary/50 transition-colors duration-500 ${index % 2 !== 0 ? 'lg:mt-16' : ''}`}
     >
       {/* Hover Reveal Background */}
-      <div className="absolute inset-0 bg-secondary transform scale-y-0 origin-bottom transition-transform duration-500 group-hover:scale-y-100 z-0" />
+      <div className="absolute inset-0 bg-foreground transform scale-y-0 origin-bottom transition-transform duration-500 group-hover:scale-y-100 z-0" />
       
       <div className="relative z-10">
         <div className="flex justify-between items-start mb-8">
-          <span className="font-heading text-6xl text-secondary/10 group-hover:text-white/20 transition-colors">
+          <span className="font-heading text-6xl text-foreground/10 group-hover:text-white/20 transition-colors">
             0{index + 1}
           </span>
           {value.icon && (
@@ -374,20 +374,20 @@ function ValueCard({ value, index }: { value: CoreValues; index: number }) {
           )}
         </div>
         
-        <h3 className="font-heading text-3xl text-secondary mb-4 group-hover:text-white transition-colors">
+        <h3 className="font-heading text-3xl text-foreground mb-4 group-hover:text-white transition-colors">
           {value.valueName}
         </h3>
         
         <div className="w-12 h-px bg-primary mb-6 group-hover:bg-white/50 transition-colors" />
         
-        <p className="font-paragraph text-secondary/70 leading-relaxed group-hover:text-white/80 transition-colors">
+        <p className="font-paragraph text-foreground/70 leading-relaxed group-hover:text-white/80 transition-colors">
           {value.description}
         </p>
       </div>
 
       {value.exampleOfApplication && (
-        <div className="relative z-10 mt-8 pt-6 border-t border-secondary/5 group-hover:border-white/10">
-          <p className="font-paragraph text-sm text-secondary/50 italic group-hover:text-white/40">
+        <div className="relative z-10 mt-8 pt-6 border-t border-foreground/5 group-hover:border-white/10">
+          <p className="font-paragraph text-sm text-foreground/50 italic group-hover:text-white/40">
             "{value.exampleOfApplication}"
           </p>
         </div>
