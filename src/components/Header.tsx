@@ -13,15 +13,6 @@ export default function Header() {
     <header className="w-full bg-background border-b border-secondary/10">
       <div className="max-w-[120rem] mx-auto px-6 lg:px-12 py-6">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3">
-            <Image 
-              src="https://static.wixstatic.com/media/904ff8_221626201da24a26afb276a4d7f32230~mv2.png" 
-              alt="Alliance Board Hub Logo" 
-              width={240}
-              className="h-16 w-auto"
-            />
-          </Link>
-
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             <Link
@@ -73,6 +64,15 @@ export default function Header() {
               Contato
             </Link>
           </nav>
+
+          <Link to="/" className="flex items-center gap-3">
+            <Image
+              src="https://static.wixstatic.com/media/904ff8_e139363c186d4f4f8a5fd7c11421908a~mv2.png"
+              width={240}
+              className="h-16 w-auto"
+              originWidth={1002}
+              originHeight={366} />
+          </Link>
 
           {/* Mobile Menu Button */}
           <button
