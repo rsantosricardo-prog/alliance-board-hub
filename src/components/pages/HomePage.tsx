@@ -166,7 +166,14 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="pt-8 border-t border-foreground/10">
+            <div className="pt-8 border-t border-foreground/10 flex flex-col gap-4">
+              <Link 
+                to="/institutional" 
+                className="group flex items-center justify-between w-full bg-primary text-white px-8 py-5 rounded-full hover:bg-foreground transition-all duration-300"
+              >
+                <span className="font-paragraph font-medium tracking-wide">Conheça Nossa Rede</span>
+                <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
+              </Link>
               <Link 
                 to="/events" 
                 className="group flex items-center justify-between w-full bg-foreground text-white px-8 py-5 rounded-full hover:bg-primary hover:text-white transition-all duration-300"
@@ -329,16 +336,16 @@ export default function HomePage() {
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link 
-                to="/contact"
+                to="/institutional"
                 className="min-w-[200px] bg-foreground text-white px-10 py-5 rounded-full font-paragraph font-medium hover:bg-white hover:text-foreground transition-colors duration-300 shadow-lg hover:shadow-xl"
               >
-                Entre em Contato
+                Faça Parte da Rede
               </Link>
               <Link 
-                to="/events"
+                to="/contact"
                 className="min-w-[200px] border-2 border-white text-white px-10 py-5 rounded-full font-paragraph font-medium hover:bg-white hover:text-primary transition-colors duration-300"
               >
-                Ver Calendário
+                Entre em Contato
               </Link>
             </div>
           </motion.div>

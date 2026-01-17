@@ -32,6 +32,14 @@ export default function Header() {
               Quem Somos
             </Link>
             <Link
+              to="/institutional"
+              className={`font-paragraph text-base transition-colors ${
+                isActive('/institutional') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
+              }`}
+            >
+              Definição Institucional
+            </Link>
+            <Link
               to="/solutions"
               className={`font-paragraph text-base transition-colors ${
                 isActive('/solutions') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
@@ -104,6 +112,15 @@ export default function Header() {
               }`}
             >
               Quem Somos
+            </Link>
+            <Link
+              to="/institutional"
+              onClick={() => setIsMenuOpen(false)}
+              className={`font-paragraph text-base transition-colors ${
+                isActive('/institutional') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
+              }`}
+            >
+              Definição Institucional
             </Link>
             <Link
               to="/solutions"
