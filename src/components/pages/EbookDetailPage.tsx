@@ -186,7 +186,7 @@ export default function EbookDetailPage() {
                       </a>
                     </div>
                     <div className="font-paragraph text-base text-foreground/90 leading-relaxed whitespace-pre-line text-justify">
-                      Profissional com mais de 25 anos de experiência em Marketing, Comunicação e Estratégia de Negócios, Rodrigo Domingorena é focado no crescimento real e sustentável das empresas. Sua trajetória é marcada pela combinação de visão de longo prazo, responsabilidade corporativa e consciência socioambiental.
+                      Profissional com mais de 25 anos de experiência em Marketing, Comunicação e Estratégia de Negócios, <strong>Rodrigo Domingorena</strong> é focado no crescimento real e sustentável das empresas. Sua trajetória é marcada pela combinação de visão de longo prazo, responsabilidade corporativa e consciência socioambiental.
 
 Atualmente, atua como consultor e conselheiro, apoiando organizações no desenvolvimento de estratégias orientadas por propósito, execução disciplinada e geração de impacto mensurável nos resultados. Seu trabalho integra marketing, governança e inovação como alavancas para criação de valor.
 
