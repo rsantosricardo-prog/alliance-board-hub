@@ -56,9 +56,7 @@ export default function ContactPage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h1 className="font-heading text-5xl lg:text-7xl text-primary-foreground mb-6">
-              Entre em Contato
-            </h1>
+            <h1 className="font-heading text-5xl lg:text-7xl text-primary-foreground mb-6">{"Entre em Contato"}</h1>
             <p className="font-paragraph text-lg lg:text-xl text-primary-foreground/90 max-w-3xl mx-auto">
               Conecte-se conosco para saber mais sobre governança corporativa ética e sustentável, ou para explorar oportunidades de parceria.
             </p>
