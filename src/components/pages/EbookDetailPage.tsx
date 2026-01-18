@@ -102,12 +102,12 @@ export default function EbookDetailPage() {
                 {/* Left Column - Cover Image */}
                 <div>
                   <div className="sticky top-8">
-                    <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-2xl">
+                    <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-2xl max-w-md mx-auto">
                       <Image
-                        src="https://static.wixstatic.com/media/904ff8_415c022e3c0044d4b3135ef26e58e231~mv2.png"
+                        src="https://static.wixstatic.com/media/904ff8_6ba79499851f47dc8427ab473fe30ef8~mv2.png"
                         alt={ebook?.title || 'E-book cover'}
-                        width={600}
-                        className="w-full h-full object-cover"
+                        width={500}
+                        className="w-full h-full object-contain bg-black"
                       />
                     </div>
                     
