@@ -116,22 +116,22 @@ export default function HomePage() {
             className="relative z-10 mb-8 space-y-4"
           >
             <div className="flex items-start gap-3">
-              <Globe className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
-              <div>
-                <p className="font-paragraph text-sm text-primary-foreground/80 leading-relaxed">
-                  São Paulo, Brasil
-                </p>
-              </div>
+            <Users className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+            <div>
+              <p className="font-paragraph text-sm text-primary-foreground/80 leading-relaxed">
+                Conectando Líderes e Organizações
+              </p>
             </div>
-            <div className="flex items-start gap-3">
-              <Users className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
-              <div>
-                <p className="font-paragraph text-sm text-primary-foreground/80 leading-relaxed">
-                  Conectando Líderes e Organizações
-                </p>
+          </div>
+          <div className="flex items-start gap-3">
+                <Globe className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                <div>
+                  <p className="font-paragraph text-sm text-primary-foreground/80 leading-relaxed">
+                    São Paulo, Brasil
+                  </p>
+                </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
 
           <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/10 pointer-events-none" />
         </div>

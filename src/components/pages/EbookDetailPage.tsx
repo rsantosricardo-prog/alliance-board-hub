@@ -142,14 +142,12 @@ export default function EbookDetailPage() {
                   <h1 className="font-heading text-4xl md:text-5xl text-foreground mb-4">
                     {ebook.title}
                   </h1>
-                  
                   {/* Subtitle */}
                   {ebook.subtitle && (
                     <p className="font-paragraph text-xl md:text-2xl text-muted mb-8">
                       {ebook.subtitle}
                     </p>
                   )}
-                  
                   {/* Download CTA */}
                   <div className="mb-12">
                     <Button 
@@ -161,7 +159,6 @@ export default function EbookDetailPage() {
                       {ebook.ctaText || 'Download gratuito do e-book'}
                     </Button>
                   </div>
-                  
                   {/* Full Description */}
                   {ebook.fullDescription && (
                     <div className="prose prose-lg max-w-none">
@@ -170,32 +167,8 @@ export default function EbookDetailPage() {
                       </div>
                     </div>
                   )}
-                  
                   {/* About the Author - Rodrigo Domingorena */}
-                  <div className="mt-12 p-8 bg-secondary/5 rounded-lg border border-border">
-                    <div className="flex items-center justify-between mb-6">
-                      <h3 className="font-heading text-2xl text-foreground">Sobre o autor</h3>
-                      <a 
-                        href="http://linkedin.com/in/rodrigodomingorena" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-accent hover:text-accent/80 transition-colors"
-                        aria-label="LinkedIn de Rodrigo Domingorena"
-                      >
-                        <Linkedin className="w-6 h-6" />
-                      </a>
-                    </div>
-                    <div className="font-paragraph text-base text-foreground/90 leading-relaxed whitespace-pre-line text-justify">
-                      Profissional com mais de 25 anos de experiência em Marketing, Comunicação e Estratégia de Negócios, <strong>Rodrigo Domingorena</strong> é focado no crescimento real e sustentável das empresas. Sua trajetória é marcada pela combinação de visão de longo prazo, responsabilidade corporativa e consciência socioambiental.
 
-Atualmente, atua como consultor e conselheiro, apoiando organizações no desenvolvimento de estratégias orientadas por propósito, execução disciplinada e geração de impacto mensurável nos resultados. Seu trabalho integra marketing, governança e inovação como alavancas para criação de valor.
-
-Ao longo da carreira, liderou projetos de growth marketing, posicionamento de marca, transformação digital e expansão de mercado para mais de 70 marcas em toda a América Latina, atendendo setores como educação, saúde, seguros, consumo, mídia, esportes, automotivo e entretenimento.
-
-É formado como Conselheiro pelo PFCC – Programa de Formação e Certificação de Conselheiros da Board Academy Brasil, com foco na conexão entre marketing, estratégia e governança aplicada a negócios de impacto e sustentabilidade corporativa.
-                    </div>
-                  </div>
-                  
                   {/* Author Section */}
                   {ebook.authorName && (
                     <div className="mt-12 p-8 bg-secondary/5 rounded-lg border border-border">
@@ -238,7 +211,6 @@ Ao longo da carreira, liderou projetos de growth marketing, posicionamento de ma
                       </div>
                     </div>
                   )}
-                  
                   {/* Institutional Note */}
                   <div className="mt-8 p-6 bg-secondary/5 border-l-4 border-accent rounded-r-lg">
                     <p className="font-paragraph text-sm text-foreground/80 italic">
