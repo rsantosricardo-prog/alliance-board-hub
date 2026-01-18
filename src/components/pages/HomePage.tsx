@@ -102,15 +102,17 @@ export default function HomePage() {
             </motion.div>
 
             {/* Main Title */}
-            <h1 className="font-heading text-5xl lg:text-7xl leading-[1.1] mb-8 text-primary-foreground">
-              Alliance<br />
-              Board<br />
-              Institute
+            <h1 className="font-heading text-4xl lg:text-6xl leading-[1.2] mb-8 text-primary-foreground">
+              Governança estratégica por meio da aliança de conselheiros experientes
             </h1>
 
             <div className="w-32 h-1.5 bg-accent shadow-lg" />
-            <p className="font-paragraph text-base lg:text-xl mt-6 tracking-wide text-primary-foreground leading-relaxed max-w-md">
-              Governança Estratégica de Excelência para o Futuro Corporativo
+            <p className="font-paragraph text-base lg:text-lg mt-6 tracking-wide text-primary-foreground leading-relaxed max-w-md">
+              Conectamos organizações e conselheiros independentes para apoiar decisões estratégicas éticas, sustentáveis e alinhadas às melhores práticas de governança corporativa.
+            </p>
+            
+            <p className="font-paragraph text-sm lg:text-base mt-6 tracking-wide text-primary-foreground/80 leading-relaxed max-w-md">
+              Atuamos como um hub institucional que promove diálogo qualificado, visão externa e maturidade decisória em ambientes corporativos complexos.
             </p>
           </motion.div>
 
