@@ -75,7 +75,7 @@ export default function HomePage() {
   // --- Render ---
 
   return (
-    <div ref={containerRef} className="min-h-screen bg-background selection:bg-primary selection:text-white overflow-x-clip">
+    <div ref={containerRef} className="min-h-screen bg-background selection:bg-primary selection:text-white overflow-x-clip pt-28">
       <Header />
       {/* --- HERO SECTION: The "Ritornello" Layout --- */}
       {/* Replicating the 3-column structure: Orange Block | Image Slice | Light Content */}

@@ -52,7 +52,7 @@ export default function EventsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pt-28">
       <Header />
       {/* Hero Section */}
       <section className="w-full bg-primary py-20 lg:py-32">

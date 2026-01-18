@@ -67,7 +67,7 @@ export default function EbookDetailPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pt-28">
       <Header />
       <main className="w-full">
         <div className="max-w-[100rem] mx-auto px-6 py-12" style={{ minHeight: '600px' }}>

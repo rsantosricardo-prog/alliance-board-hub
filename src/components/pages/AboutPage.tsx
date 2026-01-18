@@ -48,7 +48,7 @@ export default function AboutPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pt-28">
       <Header />
       {/* Hero Section */}
       <section className="relative w-full min-h-[70vh] flex items-center justify-center bg-secondary text-secondary-foreground overflow-hidden">

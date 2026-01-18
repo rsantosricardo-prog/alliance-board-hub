@@ -26,7 +26,7 @@ export default function EbooksPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pt-28">
       <Header />
       <main className="w-full">
         {/* Hero Section */}
