@@ -5,7 +5,7 @@ import { BaseCrudService } from '@/integrations';
 import { Ebooks } from '@/entities';
 import { Image } from '@/components/ui/image';
 import { Button } from '@/components/ui/button';
-import { Download } from 'lucide-react';
+import { Download, Linkedin } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -134,6 +134,40 @@ export default function EbooksPage() {
                 </p>
               </div>
             )}
+          </div>
+        </section>
+
+        {/* LinkedIn CTA Section */}
+        <section className="w-full bg-primary text-primary-foreground py-20 px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="flex justify-center mb-6">
+                <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center">
+                  <Linkedin className="w-8 h-8 text-accent-foreground" />
+                </div>
+              </div>
+              <h2 className="font-heading text-3xl md:text-4xl mb-4">
+                Acompanhe Nossas Publicações
+              </h2>
+              <p className="font-paragraph text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+                Siga a Alliance Board Hub no LinkedIn para receber atualizações sobre novas publicações, 
+                insights sobre governança corporativa e conteúdos exclusivos.
+              </p>
+              <a
+                href="https://www.linkedin.com/company/alliance-board-hub/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-accent text-accent-foreground px-8 py-4 rounded-full font-paragraph font-medium hover:bg-accent/90 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                <Linkedin className="w-5 h-5" />
+                Seguir no LinkedIn
+              </a>
+            </motion.div>
           </div>
         </section>
 
