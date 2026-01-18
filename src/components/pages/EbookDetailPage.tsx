@@ -173,7 +173,18 @@ export default function EbookDetailPage() {
                   
                   {/* About the Author - Rodrigo Domingorena */}
                   <div className="mt-12 p-8 bg-secondary/5 rounded-lg border border-border">
-                    <h3 className="font-heading text-2xl text-foreground mb-6">Sobre o autor</h3>
+                    <div className="flex items-center justify-between mb-6">
+                      <h3 className="font-heading text-2xl text-foreground">Sobre o autor</h3>
+                      <a 
+                        href="http://linkedin.com/in/rodrigodomingorena" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-accent hover:text-accent/80 transition-colors"
+                        aria-label="LinkedIn de Rodrigo Domingorena"
+                      >
+                        <Linkedin className="w-6 h-6" />
+                      </a>
+                    </div>
                     <div className="font-paragraph text-base text-foreground/90 leading-relaxed whitespace-pre-line text-justify">
                       Profissional com mais de 25 anos de experiência em Marketing, Comunicação e Estratégia de Negócios, Rodrigo Domingorena é focado no crescimento real e sustentável das empresas. Sua trajetória é marcada pela combinação de visão de longo prazo, responsabilidade corporativa e consciência socioambiental.
 
