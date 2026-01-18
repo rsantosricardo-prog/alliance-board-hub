@@ -84,7 +84,7 @@ export default function HomePage() {
       <section className="relative w-full min-h-[100vh] flex flex-col lg:grid lg:grid-cols-10 pt-20 lg:pt-0">
         
         {/* Column 1: The Anchor (Orange) - 40% */}
-        <div className="lg:col-span-4 text-primary-foreground flex flex-col justify-between p-8 lg:p-16 relative overflow-hidden order-1 bg-primary-foreground">
+        <div className="lg:col-span-4 text-primary-foreground flex flex-col justify-between p-8 lg:p-16 relative overflow-hidden order-1 bg-primary">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -99,15 +99,15 @@ export default function HomePage() {
               className="mb-8"
             >
               <Image
-                src="https://static.wixstatic.com/media/904ff8_221626201da24a26afb276a4d7f32230~mv2.png"
+                src="https://static.wixstatic.com/media/904ff8_b2e86e051730467c8af8aa531bb0a164~mv2.jpg"
                 className="w-32 h-32 lg:w-40 lg:h-40 object-contain border-gray-200 border border-none"
                 width={160}
-                originWidth={1536}
-                originHeight={1024} />
+                originWidth={759}
+                originHeight={503} />
             </motion.div>
 
             <div className="w-32 h-1.5 bg-primary-foreground mt-10 shadow-lg" />
-            <p className="font-paragraph text-base lg:text-lg mt-6 tracking-wide text-primary">
+            <p className="font-paragraph text-base lg:text-lg mt-6 tracking-wide text-primary-foreground">
               Governança Estratégica de Excelência
             </p>
           </motion.div>
@@ -119,12 +119,7 @@ export default function HomePage() {
             transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
             className="relative z-10 mb-8"
           >
-            <p className="font-paragraph text-sm lg:text-base text-primary leading-relaxed">
-              Rua Funchal, 538<br />
-              Itaim Bibi<br />
-              São Paulo - SP<br />
-              04548-060
-            </p>
+
           </motion.div>
 
           {/* Decorative background texture for depth */}
