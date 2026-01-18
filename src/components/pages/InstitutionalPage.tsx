@@ -25,7 +25,7 @@ export default function InstitutionalPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative w-full bg-foreground text-white py-32 lg:py-40 overflow-hidden">
+      <section className="relative w-full bg-primary text-primary-foreground py-32 lg:py-40 overflow-hidden">
         <div className="absolute inset-0 opacity-10 pointer-events-none"
              style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px' }}>
         </div>
@@ -37,11 +37,11 @@ export default function InstitutionalPage() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl"
           >
-            <div className="w-16 h-1 bg-primary mb-8" />
+            <div className="w-16 h-1 bg-accent mb-8" />
             <h1 className="font-heading text-5xl lg:text-7xl mb-6">
               Definição Institucional
             </h1>
-            <p className="font-paragraph text-xl lg:text-2xl text-white/80 leading-relaxed">
+            <p className="font-paragraph text-xl lg:text-2xl text-primary-foreground/80 leading-relaxed">
               Conectando excelência em governança corporativa através de uma rede qualificada de conselheiros independentes e empresas parceiras comprometidas com as melhores práticas.
             </p>
           </motion.div>
@@ -49,7 +49,7 @@ export default function InstitutionalPage() {
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="w-full py-24 bg-white">
+      <section className="w-full py-24 bg-background">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
             <motion.div
@@ -59,8 +59,8 @@ export default function InstitutionalPage() {
               className="space-y-8"
             >
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Target className="w-6 h-6 text-primary" />
+                <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                  <Target className="w-6 h-6 text-accent" />
                 </div>
                 <div>
                   <h2 className="font-heading text-3xl lg:text-4xl text-foreground mb-4">
@@ -80,8 +80,8 @@ export default function InstitutionalPage() {
               className="space-y-8"
             >
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <TrendingUp className="w-6 h-6 text-primary" />
+                <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                  <TrendingUp className="w-6 h-6 text-accent" />
                 </div>
                 <div>
                   <h2 className="font-heading text-3xl lg:text-4xl text-foreground mb-4">
@@ -105,8 +105,8 @@ export default function InstitutionalPage() {
               onClick={() => setActiveTab('advisors')}
               className={`flex items-center justify-center gap-3 px-8 py-4 rounded-full font-paragraph font-medium transition-all duration-300 ${
                 activeTab === 'advisors'
-                  ? 'bg-primary text-white shadow-lg'
-                  : 'bg-white text-foreground border border-foreground/20 hover:border-primary/50'
+                  ? 'bg-accent text-accent-foreground shadow-lg'
+                  : 'bg-white text-foreground border border-muted/30 hover:border-accent'
               }`}
             >
               <UserCheck className="w-5 h-5" />
@@ -116,8 +116,8 @@ export default function InstitutionalPage() {
               onClick={() => setActiveTab('companies')}
               className={`flex items-center justify-center gap-3 px-8 py-4 rounded-full font-paragraph font-medium transition-all duration-300 ${
                 activeTab === 'companies'
-                  ? 'bg-primary text-white shadow-lg'
-                  : 'bg-white text-foreground border border-foreground/20 hover:border-primary/50'
+                  ? 'bg-accent text-accent-foreground shadow-lg'
+                  : 'bg-white text-foreground border border-muted/30 hover:border-accent'
               }`}
             >
               <Building2 className="w-5 h-5" />
@@ -132,7 +132,7 @@ export default function InstitutionalPage() {
       {activeTab === 'companies' && <CompaniesSection />}
 
       {/* CTA Section */}
-      <section className="w-full py-24 bg-primary text-white">
+      <section className="w-full py-24 bg-secondary text-secondary-foreground">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -142,12 +142,12 @@ export default function InstitutionalPage() {
             <h2 className="font-heading text-4xl lg:text-5xl mb-6">
               Pronto para Fazer Parte?
             </h2>
-            <p className="font-paragraph text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+            <p className="font-paragraph text-xl text-secondary-foreground/90 mb-10 max-w-2xl mx-auto">
               Entre em contato conosco e descubra como podemos fortalecer sua jornada em governança corporativa.
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-3 bg-foreground text-white px-10 py-5 rounded-full font-paragraph font-medium hover:bg-white hover:text-foreground transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center gap-3 bg-accent text-accent-foreground px-10 py-5 rounded-full font-paragraph font-medium hover:bg-accent/80 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Entre em Contato
               <ArrowRight className="w-5 h-5" />
@@ -206,7 +206,7 @@ function AdvisorsSection() {
   ];
 
   return (
-    <section className="w-full py-24 bg-white">
+    <section className="w-full py-24 bg-background">
       <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
         {/* Introduction */}
         <motion.div
@@ -231,7 +231,7 @@ function AdvisorsSection() {
           
           <div className="relative">
             {/* Connecting Line */}
-            <div className="hidden lg:block absolute left-[60px] top-0 bottom-0 w-px bg-primary/20" />
+            <div className="hidden lg:block absolute left-[60px] top-0 bottom-0 w-px bg-muted/30" />
             
             <div className="space-y-12">
               {advisorSteps.map((step, index) => (
@@ -244,15 +244,15 @@ function AdvisorsSection() {
                   className="relative flex flex-col lg:flex-row gap-6 lg:gap-12"
                 >
                   {/* Step Number Circle */}
-                  <div className="flex-shrink-0 w-[120px] h-[120px] rounded-full bg-primary text-white flex items-center justify-center relative z-10 shadow-lg">
+                  <div className="flex-shrink-0 w-[120px] h-[120px] rounded-full bg-accent text-accent-foreground flex items-center justify-center relative z-10 shadow-lg">
                     <span className="font-heading text-3xl">{step.number}</span>
                   </div>
 
                   {/* Content */}
-                  <div className="flex-1 bg-background p-8 lg:p-10 border border-foreground/10 hover:border-primary/30 transition-colors">
+                  <div className="flex-1 bg-background p-8 lg:p-10 border border-muted/20 hover:border-accent transition-colors">
                     <div className="flex items-start gap-4 mb-4">
-                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <step.icon className="w-6 h-6 text-primary" />
+                      <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                        <step.icon className="w-6 h-6 text-accent" />
                       </div>
                       <h4 className="font-heading text-2xl text-foreground">
                         {step.title}
@@ -273,7 +273,7 @@ function AdvisorsSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-foreground text-white p-12 lg:p-16"
+          className="bg-primary text-primary-foreground p-12 lg:p-16"
         >
           <h3 className="font-heading text-3xl lg:text-4xl mb-10">
             Benefícios de Integrar a Rede
@@ -281,8 +281,8 @@ function AdvisorsSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {advisorBenefits.map((benefit, index) => (
               <div key={index} className="flex items-start gap-4">
-                <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <p className="font-paragraph text-white/90 leading-relaxed">
+                <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                <p className="font-paragraph text-primary-foreground/90 leading-relaxed">
                   {benefit}
                 </p>
               </div>
@@ -345,7 +345,7 @@ function CompaniesSection() {
   ];
 
   return (
-    <section className="w-full py-24 bg-white">
+    <section className="w-full py-24 bg-background">
       <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
         {/* Introduction */}
         <motion.div
@@ -370,7 +370,7 @@ function CompaniesSection() {
           
           <div className="relative">
             {/* Connecting Line */}
-            <div className="hidden lg:block absolute left-[60px] top-0 bottom-0 w-px bg-primary/20" />
+            <div className="hidden lg:block absolute left-[60px] top-0 bottom-0 w-px bg-muted/30" />
             
             <div className="space-y-12">
               {companySteps.map((step, index) => (
@@ -383,15 +383,15 @@ function CompaniesSection() {
                   className="relative flex flex-col lg:flex-row gap-6 lg:gap-12"
                 >
                   {/* Step Number Circle */}
-                  <div className="flex-shrink-0 w-[120px] h-[120px] rounded-full bg-primary text-white flex items-center justify-center relative z-10 shadow-lg">
+                  <div className="flex-shrink-0 w-[120px] h-[120px] rounded-full bg-accent text-accent-foreground flex items-center justify-center relative z-10 shadow-lg">
                     <span className="font-heading text-3xl">{step.number}</span>
                   </div>
 
                   {/* Content */}
-                  <div className="flex-1 bg-background p-8 lg:p-10 border border-foreground/10 hover:border-primary/30 transition-colors">
+                  <div className="flex-1 bg-background p-8 lg:p-10 border border-muted/20 hover:border-accent transition-colors">
                     <div className="flex items-start gap-4 mb-4">
-                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <step.icon className="w-6 h-6 text-primary" />
+                      <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                        <step.icon className="w-6 h-6 text-accent" />
                       </div>
                       <h4 className="font-heading text-2xl text-foreground">
                         {step.title}
@@ -412,7 +412,7 @@ function CompaniesSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-foreground text-white p-12 lg:p-16"
+          className="bg-primary text-primary-foreground p-12 lg:p-16"
         >
           <h3 className="font-heading text-3xl lg:text-4xl mb-10">
             Benefícios para Empresas Parceiras
@@ -420,8 +420,8 @@ function CompaniesSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {companyBenefits.map((benefit, index) => (
               <div key={index} className="flex items-start gap-4">
-                <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <p className="font-paragraph text-white/90 leading-relaxed">
+                <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                <p className="font-paragraph text-primary-foreground/90 leading-relaxed">
                   {benefit}
                 </p>
               </div>

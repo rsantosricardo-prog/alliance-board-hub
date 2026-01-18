@@ -39,7 +39,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             className="max-w-5xl"
           >
-            <div className="w-16 h-1 bg-primary mb-8" />
+            <div className="w-16 h-1 bg-accent mb-8" />
             <h1 className="font-heading text-6xl lg:text-8xl mb-8 leading-tight">
               Quem Somos
             </h1>
@@ -61,14 +61,14 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="bg-white border border-secondary/10 p-12 lg:p-16"
+              className="bg-white border border-muted/20 p-12 lg:p-16"
             >
-              <Target className="w-12 h-12 text-primary mb-8" />
-              <h2 className="font-heading text-4xl lg:text-5xl text-secondary mb-6">
+              <Target className="w-12 h-12 text-accent mb-8" />
+              <h2 className="font-heading text-4xl lg:text-5xl text-primary mb-6">
                 Nossa Missão
               </h2>
-              <div className="w-16 h-1 bg-primary mb-8" />
-              <p className="font-paragraph text-lg text-secondary/80 leading-relaxed">
+              <div className="w-16 h-1 bg-accent mb-8" />
+              <p className="font-paragraph text-lg text-foreground/80 leading-relaxed">
                 Fortalecer a governança corporativa conectando conselheiros independentes de excelência com organizações que buscam decisões estratégicas éticas, transparentes e sustentáveis. Promovemos a cultura de integridade e performance através de práticas inovadoras e alinhadas às melhores referências globais.
               </p>
             </motion.div>
@@ -96,7 +96,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story Section */}
-      <section className="w-full py-32 bg-white">
+      <section className="w-full py-32 bg-background">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             
@@ -107,11 +107,11 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 className="sticky top-32"
               >
-                <h2 className="font-heading text-5xl lg:text-6xl text-secondary mb-8">
+                <h2 className="font-heading text-5xl lg:text-6xl text-primary mb-8">
                   Nossa História
                 </h2>
-                <div className="w-16 h-1 bg-primary mb-8" />
-                <p className="font-paragraph text-lg text-secondary/70 leading-relaxed">
+                <div className="w-16 h-1 bg-accent mb-8" />
+                <p className="font-paragraph text-lg text-foreground/70 leading-relaxed">
                   Nascemos da necessidade de transformar a governança corporativa em um diferencial competitivo real, conectando expertise independente com visão estratégica.
                 </p>
               </motion.div>
@@ -124,7 +124,7 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
               >
-                <p className="font-paragraph text-xl text-secondary/80 leading-relaxed indent-12">
+                <p className="font-paragraph text-xl text-foreground/80 leading-relaxed indent-12">
                   {brandEssence?.content || "A Alliance Board Hub foi fundada por profissionais com décadas de experiência em conselhos de administração, consultoria estratégica e governança corporativa. Identificamos uma lacuna crítica: organizações buscando conselheiros independentes qualificados e conselheiros buscando oportunidades alinhadas aos seus valores e expertise."}
                 </p>
               </motion.div>
@@ -134,9 +134,9 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="border-l-4 border-primary pl-8"
+                className="border-l-4 border-accent pl-8"
               >
-                <p className="font-paragraph text-xl text-secondary/80 leading-relaxed">
+                <p className="font-paragraph text-xl text-foreground/80 leading-relaxed">
                   Hoje, somos uma rede global de profissionais comprometidos com a excelência, conectando talentos diversos a organizações que valorizam governança de alto impacto. Nossa abordagem combina rigor técnico, ética inabalável e visão de futuro.
                 </p>
               </motion.div>
@@ -147,7 +147,7 @@ export default function AboutPage() {
       </section>
 
       {/* Differentials Section */}
-      <section className="w-full py-32 bg-[#EAEAEA]">
+      <section className="w-full py-32 bg-background">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
           
           <motion.div
@@ -156,10 +156,10 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <h2 className="font-heading text-5xl lg:text-6xl text-secondary mb-6">
+            <h2 className="font-heading text-5xl lg:text-6xl text-primary mb-6">
               Nossos Diferenciais
             </h2>
-            <p className="font-paragraph text-lg text-secondary/70 max-w-3xl mx-auto">
+            <p className="font-paragraph text-lg text-foreground/70 max-w-3xl mx-auto">
               O que nos torna únicos no ecossistema de governança corporativa
             </p>
           </motion.div>
@@ -204,13 +204,13 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white border border-secondary/10 p-8 hover:border-primary/50 transition-colors duration-300"
+                className="bg-white border border-muted/20 p-8 hover:border-accent transition-colors duration-300"
               >
-                <item.icon className="w-10 h-10 text-primary mb-6" />
-                <h3 className="font-heading text-2xl text-secondary mb-4">
+                <item.icon className="w-10 h-10 text-accent mb-6" />
+                <h3 className="font-heading text-2xl text-primary mb-4">
                   {item.title}
                 </h3>
-                <p className="font-paragraph text-secondary/70 leading-relaxed">
+                <p className="font-paragraph text-foreground/70 leading-relaxed">
                   {item.description}
                 </p>
               </motion.div>

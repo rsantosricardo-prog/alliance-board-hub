@@ -10,7 +10,7 @@ export default function Header() {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="w-full bg-white border-b border-secondary/10">
+    <header className="w-full bg-background border-b border-muted/20">
       <div className="max-w-[120rem] mx-auto px-6 lg:px-12 py-6">
         <div className="flex items-center justify-between">
           {/* Desktop Navigation */}

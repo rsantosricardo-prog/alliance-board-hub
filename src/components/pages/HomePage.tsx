@@ -145,8 +145,8 @@ export default function HomePage() {
         </div>
 
         {/* Column 3: The Context (Light) - 30% */}
-        <div className="lg:col-span-3 bg-[#EAEAEA] flex flex-col justify-end p-8 lg:p-16 relative order-3">
-          <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black/5 to-transparent pointer-events-none lg:hidden" />
+        <div className="lg:col-span-3 bg-background flex flex-col justify-end p-8 lg:p-16 relative order-3">
+          <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-muted/5 to-transparent pointer-events-none lg:hidden" />
           
           <motion.div
             initial={{ opacity: 0, x: 20 }}
@@ -169,14 +169,14 @@ export default function HomePage() {
             <div className="pt-8 border-t border-foreground/10 flex flex-col gap-4">
               <Link 
                 to="/institutional" 
-                className="group flex items-center justify-between w-full bg-primary text-white px-8 py-5 rounded-full hover:bg-foreground transition-all duration-300"
+                className="group flex items-center justify-between w-full bg-primary text-primary-foreground px-8 py-5 rounded-full hover:bg-secondary transition-all duration-300"
               >
                 <span className="font-paragraph font-medium tracking-wide">Conheça Nossa Rede</span>
                 <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link 
                 to="/events" 
-                className="group flex items-center justify-between w-full bg-foreground text-white px-8 py-5 rounded-full hover:bg-primary hover:text-white transition-all duration-300"
+                className="group flex items-center justify-between w-full bg-accent text-accent-foreground px-8 py-5 rounded-full hover:bg-accent/80 transition-all duration-300"
               >
                 <span className="font-paragraph font-medium tracking-wide">Explorar Eventos</span>
                 <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
@@ -186,7 +186,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* --- SECTION 2: THE ESSENCE (Cinematic Scroll) --- */}
-      <section className="relative w-full bg-foreground text-white py-32 lg:py-48 overflow-hidden">
+      <section className="relative w-full bg-primary text-primary-foreground py-32 lg:py-48 overflow-hidden">
         {/* Background Noise Texture */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay"
              style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}>
@@ -204,11 +204,11 @@ export default function HomePage() {
                   viewport={{ once: true }}
                   className="flex flex-col gap-6"
                 >
-                  <div className="w-12 h-1 bg-primary" />
-                  <h2 className="font-heading text-5xl lg:text-7xl text-white">
+                  <div className="w-12 h-1 bg-accent" />
+                  <h2 className="font-heading text-5xl lg:text-7xl text-primary-foreground">
                     Nossa<br />Essência
                   </h2>
-                  <p className="font-paragraph text-white/60 text-lg max-w-xs">
+                  <p className="font-paragraph text-primary-foreground/70 text-lg max-w-xs">
                     Definindo os padrões da governança corporativa moderna através da independência e excelência.
                   </p>
                 </motion.div>
@@ -223,20 +223,20 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               >
-                <p className="font-heading text-3xl lg:text-5xl leading-[1.4] text-white/90 indent-12 lg:indent-24">
+                <p className="font-heading text-3xl lg:text-5xl leading-[1.4] text-primary-foreground/90 indent-12 lg:indent-24">
                   {brandEssence?.content || "Somos a ponte entre liderança visionária e execução sustentável. Em um mundo de complexidade, fornecemos a clareza necessária para que os conselhos naveguem o futuro com confiança."}
                 </p>
                 
                 <div className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-12">
-                  <div className="border-t border-white/20 pt-8">
-                    <ShieldCheck className="w-10 h-10 text-primary mb-6" />
-                    <h3 className="font-heading text-2xl mb-4 text-white">Liderança Ética</h3>
-                    <p className="font-paragraph text-white/60">Mantendo os mais altos padrões de integridade em cada decisão e conexão que facilitamos.</p>
+                  <div className="border-t border-primary-foreground/20 pt-8">
+                    <ShieldCheck className="w-10 h-10 text-accent mb-6" />
+                    <h3 className="font-heading text-2xl mb-4 text-primary-foreground">Liderança Ética</h3>
+                    <p className="font-paragraph text-primary-foreground/70">Mantendo os mais altos padrões de integridade em cada decisão e conexão que facilitamos.</p>
                   </div>
-                  <div className="border-t border-white/20 pt-8">
-                    <Globe className="w-10 h-10 text-primary mb-6" />
-                    <h3 className="font-heading text-2xl mb-4 text-white">Perspectiva Global</h3>
-                    <p className="font-paragraph text-white/60">Trazendo pontos de vista diversos e melhores práticas internacionais para salas de conselho locais.</p>
+                  <div className="border-t border-primary-foreground/20 pt-8">
+                    <Globe className="w-10 h-10 text-accent mb-6" />
+                    <h3 className="font-heading text-2xl mb-4 text-primary-foreground">Perspectiva Global</h3>
+                    <p className="font-paragraph text-primary-foreground/70">Trazendo pontos de vista diversos e melhores práticas internacionais para salas de conselho locais.</p>
                   </div>
                 </div>
               </motion.div>
@@ -337,13 +337,13 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link 
                 to="/institutional"
-                className="min-w-[200px] bg-foreground text-white px-10 py-5 rounded-full font-paragraph font-medium hover:bg-white hover:text-foreground transition-colors duration-300 shadow-lg hover:shadow-xl"
+                className="min-w-[200px] bg-accent text-accent-foreground px-10 py-5 rounded-full font-paragraph font-medium hover:bg-accent/80 transition-colors duration-300 shadow-lg hover:shadow-xl"
               >
                 Faça Parte da Rede
               </Link>
               <Link 
                 to="/contact"
-                className="min-w-[200px] border-2 border-white text-white px-10 py-5 rounded-full font-paragraph font-medium hover:bg-white hover:text-primary transition-colors duration-300"
+                className="min-w-[200px] border-2 border-primary-foreground text-primary-foreground px-10 py-5 rounded-full font-paragraph font-medium hover:bg-primary-foreground hover:text-primary transition-colors duration-300"
               >
                 Entre em Contato
               </Link>
@@ -374,18 +374,18 @@ function ValueCard({ value, index }: { value: CoreValues; index: number }) {
       whileInView={{ opacity: 1, y: yOffset }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.7, delay: index * 0.1 }}
-      className={`group relative bg-white border border-foreground/10 p-10 lg:p-12 h-full min-h-[400px] flex flex-col justify-between hover:border-primary/50 transition-colors duration-500 ${index % 2 !== 0 ? 'lg:mt-16' : ''}`}
+      className={`group relative bg-white border border-muted/20 p-10 lg:p-12 h-full min-h-[400px] flex flex-col justify-between hover:border-accent transition-colors duration-500 ${index % 2 !== 0 ? 'lg:mt-16' : ''}`}
     >
       {/* Hover Reveal Background */}
-      <div className="absolute inset-0 bg-foreground transform scale-y-0 origin-bottom transition-transform duration-500 group-hover:scale-y-100 z-0" />
+      <div className="absolute inset-0 bg-secondary transform scale-y-0 origin-bottom transition-transform duration-500 group-hover:scale-y-100 z-0" />
       
       <div className="relative z-10">
         <div className="flex justify-between items-start mb-8">
-          <span className="font-heading text-6xl text-foreground/10 group-hover:text-white/20 transition-colors">
+          <span className="font-heading text-6xl text-foreground/10 group-hover:text-secondary-foreground/20 transition-colors">
             0{index + 1}
           </span>
           {value.icon && (
-            <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors">
+            <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center group-hover:bg-accent transition-colors">
               <Image 
                 src={value.icon} 
                 alt="" 
@@ -396,20 +396,20 @@ function ValueCard({ value, index }: { value: CoreValues; index: number }) {
           )}
         </div>
         
-        <h3 className="font-heading text-3xl text-foreground mb-4 group-hover:text-white transition-colors">
+        <h3 className="font-heading text-3xl text-foreground mb-4 group-hover:text-secondary-foreground transition-colors">
           {value.valueName}
         </h3>
         
-        <div className="w-12 h-px bg-primary mb-6 group-hover:bg-white/50 transition-colors" />
+        <div className="w-12 h-px bg-accent mb-6 group-hover:bg-secondary-foreground/50 transition-colors" />
         
-        <p className="font-paragraph text-foreground/70 leading-relaxed group-hover:text-white/80 transition-colors">
+        <p className="font-paragraph text-foreground/70 leading-relaxed group-hover:text-secondary-foreground/80 transition-colors">
           {value.description}
         </p>
       </div>
 
       {value.exampleOfApplication && (
-        <div className="relative z-10 mt-8 pt-6 border-t border-foreground/5 group-hover:border-white/10">
-          <p className="font-paragraph text-sm text-foreground/50 italic group-hover:text-white/40">
+        <div className="relative z-10 mt-8 pt-6 border-t border-foreground/5 group-hover:border-secondary-foreground/10">
+          <p className="font-paragraph text-sm text-foreground/50 italic group-hover:text-secondary-foreground/60">
             "{value.exampleOfApplication}"
           </p>
         </div>
