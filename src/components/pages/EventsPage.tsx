@@ -61,7 +61,7 @@ export default function EventsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center"
+            className="text-center mx-auto"
           >
             <h1 className="font-heading text-5xl lg:text-7xl text-primary-foreground mb-6">
               Eventos de Governança
