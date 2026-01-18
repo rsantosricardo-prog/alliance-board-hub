@@ -99,7 +99,7 @@ export default function HomePage() {
             <p className="font-paragraph text-base lg:text-lg mt-6 tracking-wide text-primary-foreground leading-relaxed max-w-md text-justify">
               Conectamos organizações e conselheiros independentes para apoiar decisões estratégicas éticas, sustentáveis e alinhadas às melhores práticas de governança corporativa.
             </p>
-            <p className="font-paragraph text-sm lg:text-base mt-6 tracking-wide text-primary-foreground/80 leading-relaxed max-w-md">{"Atuamos como um hub institucional que promove diálogo qualificado, visão externa e maturidade decisória em ambientes corporativos complexos."}</p>
+            <p className="font-paragraph text-sm lg:text-base mt-6 tracking-wide text-primary-foreground/80 leading-relaxed max-w-md text-justify">{"Atuamos como um hub institucional que promove diálogo qualificado, visão externa e maturidade decisória em ambientes corporativos complexos."}</p>
           </motion.div>
 
           {/* Contact Information Section */}
@@ -240,7 +240,7 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               >
-                <p className="font-heading text-3xl lg:text-5xl leading-[1.4] text-primary-foreground/90 indent-12 lg:indent-24">
+                <p className="font-heading text-3xl lg:text-5xl leading-[1.4] text-primary-foreground/90 indent-12 lg:indent-24 text-left">
                   {brandEssence?.content || "Somos a ponte entre liderança visionária e execução sustentável. Em um mundo de complexidade, fornecemos a clareza necessária para que os conselhos naveguem o futuro com confiança."}
                 </p>
                 
