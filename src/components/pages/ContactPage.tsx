@@ -47,7 +47,6 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-
       {/* Hero Section */}
       <section className="w-full bg-primary py-20 lg:py-32">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
@@ -66,7 +65,6 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Form and Info Section */}
       <section className="w-full py-20 lg:py-32">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
@@ -197,33 +195,17 @@ export default function ContactPage() {
               <div className="space-y-8 mb-12">
                 {/* Email */}
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-primary-foreground" />
-                  </div>
+
                   <div>
-                    <h3 className="font-heading text-xl text-secondary mb-2">E-mail</h3>
-                    <a
-                      href="mailto:contact@allianceboardhub.com"
-                      className="font-paragraph text-base text-secondary/80 hover:text-primary transition-colors"
-                    >
-                      contact@allianceboardhub.com
-                    </a>
+
                   </div>
                 </div>
 
                 {/* Phone */}
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-primary-foreground" />
-                  </div>
+
                   <div>
-                    <h3 className="font-heading text-xl text-secondary mb-2">Telefone</h3>
-                    <a
-                      href="tel:+15551234567"
-                      className="font-paragraph text-base text-secondary/80 hover:text-primary transition-colors"
-                    >
-                      +1 (555) 123-4567
-                    </a>
+
                   </div>
                 </div>
 
@@ -248,8 +230,7 @@ export default function ContactPage() {
                 <h3 className="font-heading text-2xl mb-4">Horário de Atendimento</h3>
                 <div className="space-y-2 font-paragraph text-base">
                   <p>Segunda - Sexta: 9:00 - 18:00</p>
-                  <p>Sábado: 10:00 - 14:00</p>
-                  <p>Domingo: Fechado</p>
+
                 </div>
                 <div className="mt-6 pt-6 border-t border-secondary-foreground/20">
                   <p className="font-paragraph text-sm text-secondary-foreground/80">
@@ -261,7 +242,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
       {/* Map or Additional CTA Section */}
       <section className="w-full py-20 lg:py-32 bg-secondary">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
@@ -281,7 +261,6 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
