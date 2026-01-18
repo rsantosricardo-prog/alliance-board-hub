@@ -82,8 +82,16 @@ export interface Ebooks {
   _id: string;
   _createdDate?: Date;
   _updatedDate?: Date;
+  /** @wixFieldType image - Contains image URL, render with <Image> component, NOT as text */
+  authorPhoto?: string;
+  /** @wixFieldType url */
+  authorLinkedIn?: string;
+  /** @wixFieldType text */
+  authorBio?: string;
   /** @wixFieldType text */
   title?: string;
+  /** @wixFieldType text */
+  authorName?: string;
   /** @wixFieldType text */
   subtitle?: string;
   /** @wixFieldType text */
@@ -104,14 +112,6 @@ export interface Ebooks {
   ctaText?: string;
   /** @wixFieldType text */
   status?: string;
-  /** @wixFieldType text */
-  authorName?: string;
-  /** @wixFieldType text */
-  authorBio?: string;
-  /** @wixFieldType image - Contains image URL, render with <Image> component, NOT as text */
-  authorPhoto?: string;
-  /** @wixFieldType url */
-  authorLinkedIn?: string;
 }
 
 

@@ -171,6 +171,20 @@ export default function EbookDetailPage() {
                     </div>
                   )}
                   
+                  {/* About the Author - Rodrigo Domingorena */}
+                  <div className="mt-12 p-8 bg-secondary/5 rounded-lg border border-border">
+                    <h3 className="font-heading text-2xl text-foreground mb-6">Sobre o autor</h3>
+                    <div className="font-paragraph text-base text-foreground/90 leading-relaxed whitespace-pre-line text-justify">
+                      Profissional com mais de 25 anos de experiência em Marketing, Comunicação e Estratégia de Negócios, Rodrigo Domingorena é focado no crescimento real e sustentável das empresas. Sua trajetória é marcada pela combinação de visão de longo prazo, responsabilidade corporativa e consciência socioambiental.
+
+Atualmente, atua como consultor e conselheiro, apoiando organizações no desenvolvimento de estratégias orientadas por propósito, execução disciplinada e geração de impacto mensurável nos resultados. Seu trabalho integra marketing, governança e inovação como alavancas para criação de valor.
+
+Ao longo da carreira, liderou projetos de growth marketing, posicionamento de marca, transformação digital e expansão de mercado para mais de 70 marcas em toda a América Latina, atendendo setores como educação, saúde, seguros, consumo, mídia, esportes, automotivo e entretenimento.
+
+É formado como Conselheiro pelo PFCC – Programa de Formação e Certificação de Conselheiros da Board Academy Brasil, com foco na conexão entre marketing, estratégia e governança aplicada a negócios de impacto e sustentabilidade corporativa.
+                    </div>
+                  </div>
+                  
                   {/* Author Section */}
                   {ebook.authorName && (
                     <div className="mt-12 p-8 bg-secondary/5 rounded-lg border border-border">
