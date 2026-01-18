@@ -112,6 +112,21 @@ export default function HomePage() {
             </p>
           </motion.div>
 
+          {/* Address Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            className="relative z-10 mb-8"
+          >
+            <p className="font-paragraph text-sm lg:text-base text-primary leading-relaxed">
+              Rua Funchal, 538<br />
+              Itaim Bibi<br />
+              São Paulo - SP<br />
+              04548-060
+            </p>
+          </motion.div>
+
           {/* Decorative background texture for depth */}
           <div className="absolute inset-0 opacity-10 pointer-events-none" 
                style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, black 1px, transparent 0)', backgroundSize: '40px 40px' }}>
