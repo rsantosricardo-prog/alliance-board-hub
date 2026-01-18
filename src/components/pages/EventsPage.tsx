@@ -54,7 +54,6 @@ export default function EventsPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-
       {/* Hero Section */}
       <section className="w-full bg-primary py-20 lg:py-32">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
@@ -73,7 +72,6 @@ export default function EventsPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Events List Section */}
       <section className="w-full py-20 lg:py-32">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
@@ -95,12 +93,7 @@ export default function EventsPage() {
                         {/* Event Image */}
                         {event.eventImage && (
                           <div className="relative w-full aspect-[4/3] mb-6 overflow-hidden bg-secondary">
-                            <Image
-                              src={event.eventImage}
-                              alt={event.eventTitle || 'Event'}
-                              className="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-500"
-                              width={600}
-                            />
+
                           </div>
                         )}
 
@@ -182,7 +175,6 @@ export default function EventsPage() {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
