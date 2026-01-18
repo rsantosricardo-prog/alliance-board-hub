@@ -27,6 +27,31 @@ export interface BrandEssence {
 
 
 /**
+ * Collection ID: conselheiros
+ * Interface for Conselheiros
+ */
+export interface Conselheiros {
+  _id: string;
+  _createdDate?: Date;
+  _updatedDate?: Date;
+  /** @wixFieldType text */
+  fullName?: string;
+  /** @wixFieldType text */
+  position?: string;
+  /** @wixFieldType text */
+  institutionalBio?: string;
+  /** @wixFieldType image - Contains image URL, render with <Image> component, NOT as text */
+  professionalPhoto?: string;
+  /** @wixFieldType url */
+  linkedInUrl?: string;
+  /** @wixFieldType number */
+  displayOrder?: number;
+  /** @wixFieldType boolean */
+  isActive?: boolean;
+}
+
+
+/**
  * Collection ID: corevalues
  * Interface for CoreValues
  */

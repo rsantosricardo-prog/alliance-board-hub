@@ -5,11 +5,24 @@ import { BrandEssence } from '@/entities';
 import { Image } from '@/components/ui/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Target, Users, Globe, TrendingUp, Award, Lightbulb } from 'lucide-react';
+import { Target, Users, Globe, TrendingUp, Award, Lightbulb, Linkedin } from 'lucide-react';
+
+interface Conselheiros {
+  _id: string;
+  fullName?: string;
+  position?: string;
+  institutionalBio?: string;
+  professionalPhoto?: string;
+  linkedInUrl?: string;
+  displayOrder?: number;
+  isActive?: boolean;
+}
 
 export default function AboutPage() {
   const [brandEssence, setBrandEssence] = useState<BrandEssence | null>(null);
+  const [conselheiros, setConselheiros] = useState<Conselheiros[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isLoadingConselheiros, setIsLoadingConselheiros] = useState(true);
 
   useEffect(() => {
     const loadData = async () => {
@@ -20,6 +33,18 @@ export default function AboutPage() {
       setIsLoading(false);
     };
     loadData();
+  }, []);
+
+  useEffect(() => {
+    const loadConselheiros = async () => {
+      const result = await BaseCrudService.getAll<Conselheiros>('conselheiros');
+      const activeConselheiros = result.items
+        .filter(c => c.isActive !== false)
+        .sort((a, b) => (a.displayOrder || 0) - (b.displayOrder || 0));
+      setConselheiros(activeConselheiros);
+      setIsLoadingConselheiros(false);
+    };
+    loadConselheiros();
   }, []);
 
   return (
@@ -229,6 +254,102 @@ export default function AboutPage() {
           className="w-full h-full object-cover"
           width={1920}
         />
+      </section>
+
+      {/* Board Members Section - Nossos Conselheiros */}
+      <section className="w-full py-32 bg-background">
+        <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <h2 className="font-heading text-5xl lg:text-6xl text-primary mb-6">
+              Nossos Conselheiros
+            </h2>
+            <p className="font-paragraph text-xl text-foreground/70 max-w-3xl mx-auto">
+              Comprometidos com a excelência
+            </p>
+            <div className="w-24 h-1 bg-accent mx-auto mt-8" />
+          </motion.div>
+
+          <div className="min-h-[400px]">
+            {isLoadingConselheiros ? null : conselheiros.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                {conselheiros.map((conselheiro, index) => (
+                  <motion.div
+                    key={conselheiro._id}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.15, duration: 0.6 }}
+                    className="bg-white border border-muted/20 overflow-hidden hover:border-accent transition-all duration-300"
+                  >
+                    {/* Photo */}
+                    <div className="relative w-full aspect-square overflow-hidden bg-muted/10">
+                      <Image
+                        src={conselheiro.professionalPhoto || "https://static.wixstatic.com/media/904ff8_8294477977694a8ba1fa0432e2f8455b~mv2.png?originWidth=384&originHeight=384"}
+                        alt={conselheiro.fullName || "Board Member"}
+                        className="w-full h-full object-cover"
+                        width={400}
+                      />
+                    </div>
+
+                    {/* Content */}
+                    <div className="p-8">
+                      <h3 className="font-heading text-2xl text-primary mb-2">
+                        {conselheiro.fullName}
+                      </h3>
+                      <p className="font-paragraph text-sm text-accent uppercase tracking-wider mb-6">
+                        {conselheiro.position}
+                      </p>
+                      <div className="w-12 h-0.5 bg-accent mb-6" />
+                      <p className="font-paragraph text-foreground/70 leading-relaxed mb-6 text-sm">
+                        {conselheiro.institutionalBio}
+                      </p>
+                      
+                      {/* LinkedIn Link */}
+                      {conselheiro.linkedInUrl && (
+                        <a
+                          href={conselheiro.linkedInUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors duration-300"
+                          aria-label={`LinkedIn de ${conselheiro.fullName}`}
+                        >
+                          <Linkedin className="w-5 h-5" />
+                          <span className="font-paragraph text-sm">LinkedIn</span>
+                        </a>
+                      )}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-20">
+                <p className="font-paragraph text-foreground/50 text-lg">
+                  Nenhum conselheiro disponível no momento.
+                </p>
+              </div>
+            )}
+          </div>
+
+          {/* Tagline */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="text-center mt-20"
+          >
+            <p className="font-paragraph text-lg text-foreground/60 italic">
+              Experiência, independência e compromisso com decisões responsáveis.
+            </p>
+          </motion.div>
+
+        </div>
       </section>
 
       <Footer />
