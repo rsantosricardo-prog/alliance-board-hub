@@ -165,8 +165,8 @@ export default function EbookDetailPage() {
                   {/* Full Description */}
                   {ebook.fullDescription && (
                     <div className="prose prose-lg max-w-none">
-                      <div className="font-paragraph text-lg text-foreground/90 leading-relaxed whitespace-pre-line">
-                        {ebook.fullDescription}
+                      <div className="font-paragraph text-lg text-foreground/90 leading-relaxed whitespace-pre-line text-justify">
+                        A publicação foi concebida como uma aproximação inicial ao tema da governança corporativa, especialmente direcionada a donos, proprietários, fundadores e executivos C-Level que buscam compreender, de forma clara e acessível, a relevância das boas práticas de governança para a condução de seus negócios.
                       </div>
                     </div>
                   )}
