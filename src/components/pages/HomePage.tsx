@@ -91,36 +91,61 @@ export default function HomePage() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="mt-12 lg:mt-24 relative z-10"
           >
-            {/* Decorative Figure */}
+            {/* Decorative Monogram */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.3 }}
-              className="mb-8"
+              className="mb-12"
             >
-
+              <Monogram />
             </motion.div>
 
-            <div className="w-32 h-1.5 bg-primary-foreground mt-10 shadow-lg" />
-            <p className="font-paragraph text-base lg:text-lg mt-6 tracking-wide text-primary-foreground">
-              Governança Estratégica de Excelência
+            {/* Main Title */}
+            <h1 className="font-heading text-5xl lg:text-7xl leading-[1.1] mb-8 text-primary-foreground">
+              Alliance<br />
+              Board<br />
+              Institute
+            </h1>
+
+            <div className="w-32 h-1.5 bg-accent shadow-lg" />
+            <p className="font-paragraph text-base lg:text-xl mt-6 tracking-wide text-primary-foreground leading-relaxed max-w-md">
+              Governança Estratégica de Excelência para o Futuro Corporativo
             </p>
           </motion.div>
 
-          {/* Address Section */}
+          {/* Contact Information Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="relative z-10 mb-8"
+            className="relative z-10 mb-8 space-y-4"
           >
-
+            <div className="flex items-start gap-3">
+              <Globe className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+              <div>
+                <p className="font-paragraph text-sm text-primary-foreground/80 leading-relaxed">
+                  São Paulo, Brasil
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <Users className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+              <div>
+                <p className="font-paragraph text-sm text-primary-foreground/80 leading-relaxed">
+                  Conectando Líderes e Organizações
+                </p>
+              </div>
+            </div>
           </motion.div>
 
           {/* Decorative background texture for depth */}
           <div className="absolute inset-0 opacity-10 pointer-events-none" 
                style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, black 1px, transparent 0)', backgroundSize: '40px 40px' }}>
           </div>
+          
+          {/* Subtle gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/10 pointer-events-none" />
         </div>
 
         {/* Column 2: The Window (Image) - 30% */}
