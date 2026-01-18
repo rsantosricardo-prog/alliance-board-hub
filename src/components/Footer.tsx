@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone, Linkedin } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -110,6 +110,16 @@ export default function Footer() {
               <Link to="/contact" className="font-paragraph text-sm text-primary-foreground/70 hover:text-accent transition-colors">
                 Política de Privacidade
               </Link>
+              <span className="text-primary-foreground/30">|</span>
+              <a 
+                href="https://www.allianceboardhub.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary-foreground/70 hover:text-accent transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
             </div>
           </div>
         </div>
