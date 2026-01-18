@@ -99,7 +99,7 @@ export default function HomePage() {
               className="mb-8"
             >
               <Image 
-                src="https://static.wixstatic.com/media/904ff8_9d4bce30edf74f49b3b8d560f72a0d47~mv2.png"
+                src="https://static.wixstatic.com/media/904ff8_6ca72462973243e58e7418300c826600~mv2.png"
                 alt="Alliance Board Hub Logo"
                 className="w-32 h-32 lg:w-40 lg:h-40 object-contain"
                 width={160}
