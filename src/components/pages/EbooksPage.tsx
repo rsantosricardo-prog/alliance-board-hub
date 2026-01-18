@@ -72,11 +72,11 @@ export default function EbooksPage() {
                         {/* Cover Image */}
                         <div className="aspect-[3/4] overflow-hidden bg-muted">
                           <Image
-                            src="https://static.wixstatic.com/media/904ff8_f139b07d7bcd4edeafc98bded0f8ea2b~mv2.png"
-                            alt={ebook.title || 'E-book cover'}
+                            src="https://static.wixstatic.com/media/904ff8_ad0de4799899451689516fe331d4a3a7~mv2.png"
                             width={400}
                             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                          />
+                            originWidth={2475}
+                            originHeight={2475} />
                         </div>
                         
                         {/* Content */}
@@ -89,26 +89,18 @@ export default function EbooksPage() {
                               </span>
                             </div>
                           )}
-                          
                           {/* Title */}
                           <h3 className="font-heading text-2xl text-foreground mb-3 group-hover:text-accent transition-colors">
                             {ebook.title}
                           </h3>
-                          
                           {/* Subtitle */}
                           {ebook.subtitle && (
                             <p className="font-paragraph text-lg text-muted mb-4">
                               {ebook.subtitle}
                             </p>
                           )}
-                          
                           {/* Short Description */}
-                          {ebook.shortDescription && (
-                            <p className="font-paragraph text-base text-foreground/80 mb-6 flex-grow text-justify">
-                              A publicação foi concebida como uma aproximação inicial ao tema da governança corporativa, especialmente direcionada a donos, proprietários, fundadores e executivos C-Level que buscam compreender, de forma clara e acessível, a relevância das boas práticas de governança para a condução de seus negócios.
-                            </p>
-                          )}
-                          
+
                           {/* Format & CTA */}
                           <div className="flex items-center justify-between mt-auto pt-4 border-t border-border">
                             <span className="font-paragraph text-sm text-muted">
