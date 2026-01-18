@@ -235,9 +235,9 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-heading text-xl text-secondary mb-2">Escritório</h3>
                     <p className="font-paragraph text-base text-secondary/80">
-                      Rua da Governança, 123<br />
-                      Distrito Corporativo<br />
-                      São Paulo, SP 01000-000
+                      Rua Funchal, 538<br />
+                      Itaim Bibi, São Paulo - SP<br />
+                      04548-060 / Eixo Faria Lima
                     </p>
                   </div>
                 </div>

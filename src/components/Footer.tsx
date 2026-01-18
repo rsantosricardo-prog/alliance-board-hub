@@ -42,7 +42,9 @@ export default function Footer() {
           <div>
             <h4 className="font-heading text-lg mb-4 text-primary-foreground">Entre em Contato</h4>
             <p className="font-paragraph text-sm text-primary-foreground/80 mb-4">
-              Entre em contato para saber mais sobre governança ética e sustentável.
+              Rua Funchal, 538<br />
+              Itaim Bibi, São Paulo - SP<br />
+              04548-060 / Eixo Faria Lima
             </p>
             <Link
               to="/contact"
