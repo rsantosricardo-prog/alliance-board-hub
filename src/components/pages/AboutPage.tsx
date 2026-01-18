@@ -282,8 +282,40 @@ export default function AboutPage() {
                     className="bg-white border border-muted/20 overflow-hidden hover:border-accent transition-all duration-300"
                   >
                     {/* Photo */}
+                    {conselheiro.professionalPhoto && (
+                      <div className="aspect-[4/5] overflow-hidden bg-muted/10">
+                        <Image
+                          src={conselheiro.professionalPhoto}
+                          alt={conselheiro.fullName || 'Conselheiro'}
+                          className="w-full h-full object-cover"
+                          width={400}
+                        />
+                      </div>
+                    )}
 
                     {/* Content */}
+                    <div className="p-8">
+                      <h3 className="font-heading text-2xl text-primary mb-2">
+                        {conselheiro.fullName}
+                      </h3>
+                      <p className="font-paragraph text-accent font-medium mb-4">
+                        {conselheiro.position}
+                      </p>
+                      <p className="font-paragraph text-foreground/70 leading-relaxed mb-6">
+                        {conselheiro.institutionalBio}
+                      </p>
+                      {conselheiro.linkedInUrl && (
+                        <a
+                          href={conselheiro.linkedInUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-secondary hover:text-accent transition-colors"
+                        >
+                          <Linkedin className="w-5 h-5" />
+                          <span className="font-paragraph text-sm">LinkedIn</span>
+                        </a>
+                      )}
+                    </div>
                   </motion.div>
                 ))}
               </div>
