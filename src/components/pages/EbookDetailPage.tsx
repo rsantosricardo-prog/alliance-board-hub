@@ -69,7 +69,6 @@ export default function EbookDetailPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
       <main className="w-full">
         <div className="max-w-[100rem] mx-auto px-6 py-12" style={{ minHeight: '600px' }}>
           {isLoading ? (
@@ -104,11 +103,11 @@ export default function EbookDetailPage() {
                   <div className="sticky top-8">
                     <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-2xl max-w-md mx-auto">
                       <Image
-                        src="https://static.wixstatic.com/media/904ff8_6ba79499851f47dc8427ab473fe30ef8~mv2.png"
-                        alt={ebook?.title || 'E-book cover'}
+                        src="https://static.wixstatic.com/media/904ff8_77a2ed534869425590c84c7f1923f99c~mv2.png"
                         width={500}
                         className="w-full h-full object-contain bg-black"
-                      />
+                        originWidth={1024}
+                        originHeight={1024} />
                     </div>
                     
                     {/* Metadata */}
@@ -129,7 +128,7 @@ export default function EbookDetailPage() {
                         <div className="flex items-center gap-2 text-muted">
                           <Calendar className="w-4 h-4" />
                           <span className="font-paragraph text-sm">
-                            {format(new Date(ebook.publicationDate), "MMMM 'de' yyyy", { locale: ptBR })}
+                            Janeiro 2026
                           </span>
                         </div>
                       )}
@@ -185,9 +184,7 @@ export default function EbookDetailPage() {
           )}
         </div>
       </main>
-
       <Footer />
-
       {/* Lead Capture Dialog */}
       <Dialog open={showLeadForm} onOpenChange={setShowLeadForm}>
         <DialogContent className="sm:max-w-md">
