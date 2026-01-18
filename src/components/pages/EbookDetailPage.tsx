@@ -120,7 +120,7 @@ export default function EbookDetailPage() {
                         </div>
                       )}
                       {ebook?.language && (
-                        <div className="flex items-center gap-2 text-muted">
+                        <div className="flex items-center gap-2 text-muted bg-transparent">
                           <Globe className="w-4 h-4" />
                           <span className="font-paragraph text-sm">{ebook.language}</span>
                         </div>
