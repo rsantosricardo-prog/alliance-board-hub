@@ -104,6 +104,14 @@ export interface Ebooks {
   ctaText?: string;
   /** @wixFieldType text */
   status?: string;
+  /** @wixFieldType text */
+  authorName?: string;
+  /** @wixFieldType text */
+  authorBio?: string;
+  /** @wixFieldType image - Contains image URL, render with <Image> component, NOT as text */
+  authorPhoto?: string;
+  /** @wixFieldType url */
+  authorLinkedIn?: string;
 }
 
 

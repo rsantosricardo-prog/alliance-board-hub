@@ -9,7 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { LoadingSpinner } from '@/components/ui/loading-spinner';
-import { Download, ArrowLeft, Calendar, Globe } from 'lucide-react';
+import { Download, ArrowLeft, Calendar, Globe, Linkedin } from 'lucide-react';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import Header from '@/components/Header';
@@ -171,8 +171,51 @@ export default function EbookDetailPage() {
                     </div>
                   )}
                   
+                  {/* Author Section */}
+                  {ebook.authorName && (
+                    <div className="mt-12 p-8 bg-secondary/5 rounded-lg border border-border">
+                      <h3 className="font-heading text-2xl text-foreground mb-6">Sobre o Autor</h3>
+                      <div className="flex flex-col sm:flex-row gap-6">
+                        {/* Author Photo */}
+                        {ebook.authorPhoto && (
+                          <div className="flex-shrink-0">
+                            <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-accent">
+                              <Image
+                                src={ebook.authorPhoto}
+                                alt={ebook.authorName}
+                                width={96}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          </div>
+                        )}
+                        
+                        {/* Author Info */}
+                        <div className="flex-grow">
+                          <h4 className="font-heading text-xl text-foreground mb-2">{ebook.authorName}</h4>
+                          {ebook.authorBio && (
+                            <p className="font-paragraph text-base text-foreground/80 mb-4 leading-relaxed">
+                              {ebook.authorBio}
+                            </p>
+                          )}
+                          {ebook.authorLinkedIn && (
+                            <a
+                              href={ebook.authorLinkedIn}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors font-paragraph text-sm"
+                            >
+                              <Linkedin className="w-4 h-4" />
+                              Conectar no LinkedIn
+                            </a>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  
                   {/* Institutional Note */}
-                  <div className="mt-12 p-6 bg-secondary/5 border-l-4 border-accent rounded-r-lg">
+                  <div className="mt-8 p-6 bg-secondary/5 border-l-4 border-accent rounded-r-lg">
                     <p className="font-paragraph text-sm text-foreground/80 italic">
                       Este material é disponibilizado gratuitamente como parte do compromisso da Alliance Board Hub 
                       com a disseminação das boas práticas de governança corporativa.
