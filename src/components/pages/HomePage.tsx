@@ -98,13 +98,12 @@ export default function HomePage() {
               transition={{ duration: 1, delay: 0.3 }}
               className="mb-8"
             >
-              <div className="relative w-32 h-32 lg:w-40 lg:h-40">
-                <div className="absolute inset-0 border-4 border-primary-foreground/30 rounded-full" />
-                <div className="absolute inset-4 border-2 border-primary-foreground/50 rounded-full" />
-                <div className="absolute inset-8 bg-primary-foreground/20 rounded-full flex items-center justify-center">
-                  <ShieldCheck className="w-12 h-12 lg:w-16 lg:h-16 text-primary-foreground" />
-                </div>
-              </div>
+              <Image 
+                src="https://static.wixstatic.com/media/904ff8_9d4bce30edf74f49b3b8d560f72a0d47~mv2.png"
+                alt="Alliance Board Hub Logo"
+                className="w-32 h-32 lg:w-40 lg:h-40 object-contain"
+                width={160}
+              />
             </motion.div>
 
             <div className="w-32 h-1.5 bg-primary-foreground mt-10 shadow-lg" />
