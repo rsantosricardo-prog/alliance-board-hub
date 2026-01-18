@@ -253,7 +253,7 @@ export default function ContactPage() {
                 </div>
                 <div className="mt-6 pt-6 border-t border-secondary-foreground/20">
                   <p className="font-paragraph text-sm text-secondary-foreground/80">
-                    Normalmente respondemos a todas as consultas dentro de 24-48 horas durante dias úteis.
+                    Normalmente respondemos a todas as consultas dentro de 24 horas durante dias úteis.
                   </p>
                 </div>
               </div>
