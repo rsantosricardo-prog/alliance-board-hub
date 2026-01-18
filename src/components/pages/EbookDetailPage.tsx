@@ -139,10 +139,10 @@ export default function EbookDetailPage() {
                 {/* Right Column - Content */}
                 <div>
                   {/* Title */}
+                  {/* Subtitle */}
                   <h1 className="font-heading text-4xl md:text-5xl text-foreground mb-4">
                     {ebook.title}
                   </h1>
-                  {/* Subtitle */}
                   {ebook.subtitle && (
                     <p className="font-paragraph text-xl md:text-2xl text-muted mb-8">
                       {ebook.subtitle}
