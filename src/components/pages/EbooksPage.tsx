@@ -73,16 +73,14 @@ export default function EbooksPage() {
                     >
                       <div className="bg-white border border-border rounded-lg overflow-hidden h-full flex flex-col transition-all duration-300 hover:shadow-xl hover:border-accent">
                         {/* Cover Image */}
-                        {ebook.coverImage && (
-                          <div className="aspect-[3/4] overflow-hidden bg-muted">
-                            <Image
-                              src={ebook.coverImage}
-                              alt={ebook.title || 'E-book cover'}
-                              width={400}
-                              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                            />
-                          </div>
-                        )}
+                        <div className="aspect-[3/4] overflow-hidden bg-muted">
+                          <Image
+                            src="https://static.wixstatic.com/media/904ff8_f139b07d7bcd4edeafc98bded0f8ea2b~mv2.png"
+                            alt={ebook.title || 'E-book cover'}
+                            width={400}
+                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                          />
+                        </div>
                         
                         {/* Content */}
                         <div className="p-8 flex flex-col flex-grow">
