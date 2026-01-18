@@ -96,7 +96,7 @@ export default function HomePage() {
               Governança estratégica por meio da aliança de conselheiros experientes
             </h1>
             <div className="w-32 h-1.5 bg-accent shadow-lg" />
-            <p className="font-paragraph text-base lg:text-lg mt-6 tracking-wide text-primary-foreground leading-relaxed max-w-md">
+            <p className="font-paragraph text-base lg:text-lg mt-6 tracking-wide text-primary-foreground leading-relaxed max-w-md text-justify">
               Conectamos organizações e conselheiros independentes para apoiar decisões estratégicas éticas, sustentáveis e alinhadas às melhores práticas de governança corporativa.
             </p>
             <p className="font-paragraph text-sm lg:text-base mt-6 tracking-wide text-primary-foreground/80 leading-relaxed max-w-md">{"Atuamos como um hub institucional que promove diálogo qualificado, visão externa e maturidade decisória em ambientes corporativos complexos."}</p>
