@@ -98,12 +98,7 @@ export default function HomePage() {
               transition={{ duration: 1, delay: 0.3 }}
               className="mb-8"
             >
-              <Image
-                src="https://static.wixstatic.com/media/904ff8_b2e86e051730467c8af8aa531bb0a164~mv2.jpg"
-                className="w-32 h-32 lg:w-40 lg:h-40 object-contain border-gray-200 border border-none"
-                width={160}
-                originWidth={759}
-                originHeight={503} />
+
             </motion.div>
 
             <div className="w-32 h-1.5 bg-primary-foreground mt-10 shadow-lg" />
