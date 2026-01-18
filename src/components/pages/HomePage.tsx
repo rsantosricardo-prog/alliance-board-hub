@@ -262,10 +262,10 @@ export default function HomePage() {
         </div>
       </section>
       {/* --- SECTION 3: CORE VALUES (Staggered Grid) --- */}
-      <section className="w-full py-32 bg-background relative">
+      <section className="w-full py-24 lg:py-32 bg-background relative">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
           
-          <div className="flex flex-col lg:flex-row justify-between items-end mb-24 border-b border-foreground/10 pb-12">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 lg:mb-20 border-b border-foreground/10 pb-8 lg:pb-10 gap-6 lg:gap-0">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -285,7 +285,7 @@ export default function HomePage() {
             </motion.div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
             {isLoadingValues ? (
               // Skeleton Loading
               ([1, 2, 3].map((i) => (
