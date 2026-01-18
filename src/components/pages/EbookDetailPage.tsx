@@ -101,42 +101,40 @@ export default function EbookDetailPage() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
                 {/* Left Column - Cover Image */}
                 <div>
-                  {ebook.coverImage && (
-                    <div className="sticky top-8">
-                      <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-2xl">
-                        <Image
-                          src={ebook.coverImage}
-                          alt={ebook.title || 'E-book cover'}
-                          width={600}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      
-                      {/* Metadata */}
-                      <div className="mt-6 space-y-3">
-                        {ebook.category && (
-                          <div className="flex items-center gap-2 text-muted">
-                            <span className="font-paragraph text-sm">Categoria:</span>
-                            <span className="font-paragraph text-sm font-medium text-foreground">{ebook.category}</span>
-                          </div>
-                        )}
-                        {ebook.language && (
-                          <div className="flex items-center gap-2 text-muted">
-                            <Globe className="w-4 h-4" />
-                            <span className="font-paragraph text-sm">{ebook.language}</span>
-                          </div>
-                        )}
-                        {ebook.publicationDate && (
-                          <div className="flex items-center gap-2 text-muted">
-                            <Calendar className="w-4 h-4" />
-                            <span className="font-paragraph text-sm">
-                              {format(new Date(ebook.publicationDate), "MMMM 'de' yyyy", { locale: ptBR })}
-                            </span>
-                          </div>
-                        )}
-                      </div>
+                  <div className="sticky top-8">
+                    <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-2xl">
+                      <Image
+                        src="https://static.wixstatic.com/media/904ff8_415c022e3c0044d4b3135ef26e58e231~mv2.png"
+                        alt={ebook?.title || 'E-book cover'}
+                        width={600}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
-                  )}
+                    
+                    {/* Metadata */}
+                    <div className="mt-6 space-y-3">
+                      {ebook?.category && (
+                        <div className="flex items-center gap-2 text-muted">
+                          <span className="font-paragraph text-sm">Categoria:</span>
+                          <span className="font-paragraph text-sm font-medium text-foreground">{ebook.category}</span>
+                        </div>
+                      )}
+                      {ebook?.language && (
+                        <div className="flex items-center gap-2 text-muted">
+                          <Globe className="w-4 h-4" />
+                          <span className="font-paragraph text-sm">{ebook.language}</span>
+                        </div>
+                      )}
+                      {ebook?.publicationDate && (
+                        <div className="flex items-center gap-2 text-muted">
+                          <Calendar className="w-4 h-4" />
+                          <span className="font-paragraph text-sm">
+                            {format(new Date(ebook.publicationDate), "MMMM 'de' yyyy", { locale: ptBR })}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
                 </div>
 
                 {/* Right Column - Content */}
