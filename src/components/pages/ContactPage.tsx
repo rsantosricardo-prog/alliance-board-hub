@@ -225,6 +225,20 @@ export default function ContactPage() {
                 </div>
               </div>
 
+              {/* Map */}
+              <div className="w-full h-80 rounded-lg overflow-hidden border border-secondary/20 mb-12">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.7446788891!2d-46.68504!3d-23.5868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce574d7c4e5c8d%3A0x7e5c5e5c5e5c5e5c!2sRua%20Funchal%2C%20538%20-%20Itaim%20Bibi%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004548-060!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Localização do Escritório"
+                />
+              </div>
+
               {/* Additional Info Box */}
               <div className="bg-secondary text-secondary-foreground p-8 rounded-lg">
                 <h3 className="font-heading text-2xl mb-4">Horário de Atendimento</h3>
