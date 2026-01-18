@@ -84,7 +84,7 @@ export default function HomePage() {
       <section className="relative w-full min-h-[100vh] flex flex-col lg:grid lg:grid-cols-10 pt-20 lg:pt-0">
         
         {/* Column 1: The Anchor (Orange) - 40% */}
-        <div className="lg:col-span-4 bg-primary text-primary-foreground flex flex-col justify-between p-8 lg:p-16 relative overflow-hidden order-1">
+        <div className="lg:col-span-4 text-primary-foreground flex flex-col justify-between p-8 lg:p-16 relative overflow-hidden order-1 bg-primary-foreground">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -98,16 +98,16 @@ export default function HomePage() {
               transition={{ duration: 1, delay: 0.3 }}
               className="mb-8"
             >
-              <Image 
-                src="https://static.wixstatic.com/media/904ff8_6ca72462973243e58e7418300c826600~mv2.png"
-                alt="Alliance Board Hub Logo"
-                className="w-32 h-32 lg:w-40 lg:h-40 object-contain"
+              <Image
+                src="https://static.wixstatic.com/media/904ff8_221626201da24a26afb276a4d7f32230~mv2.png"
+                className="w-32 h-32 lg:w-40 lg:h-40 object-contain border-gray-200 border border-none"
                 width={160}
-              />
+                originWidth={1536}
+                originHeight={1024} />
             </motion.div>
 
             <div className="w-32 h-1.5 bg-primary-foreground mt-10 shadow-lg" />
-            <p className="font-paragraph text-base lg:text-lg text-primary-foreground/90 mt-6 tracking-wide">
+            <p className="font-paragraph text-base lg:text-lg mt-6 tracking-wide text-primary">
               Governança Estratégica de Excelência
             </p>
           </motion.div>
