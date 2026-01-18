@@ -38,9 +38,7 @@ export default function EbooksPage() {
               transition={{ duration: 0.6 }}
               className="text-center max-w-4xl mx-auto"
             >
-              <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl mb-6">
-                Conhecimento Estratégico para Fortalecer a Governança
-              </h1>
+              <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl mb-6">{"Conhecimento Estratégico para Fortalecer a Governança"}</h1>
               <p className="font-paragraph text-xl md:text-2xl text-primary-foreground/90">
                 Publicações desenvolvidas pela Alliance Board Hub para apoiar decisões éticas, 
                 sustentáveis e alinhadas às melhores práticas de governança corporativa.
