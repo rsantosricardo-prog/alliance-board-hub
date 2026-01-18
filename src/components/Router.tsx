@@ -9,6 +9,8 @@ import SolutionsPage from '@/components/pages/SolutionsPage';
 import GovernancePage from '@/components/pages/GovernancePage';
 import EventsPage from '@/components/pages/EventsPage';
 import EventDetailPage from '@/components/pages/EventDetailPage';
+import EbooksPage from '@/components/pages/EbooksPage';
+import EbookDetailPage from '@/components/pages/EbookDetailPage';
 import ContactPage from '@/components/pages/ContactPage';
 
 // Layout component that includes ScrollToTop
@@ -74,6 +76,20 @@ const router = createBrowserRouter([
         element: <EventDetailPage />,
         routeMetadata: {
           pageIdentifier: 'event-detail',
+        },
+      },
+      {
+        path: "ebooks",
+        element: <EbooksPage />,
+        routeMetadata: {
+          pageIdentifier: 'ebooks',
+        },
+      },
+      {
+        path: "ebooks/:id",
+        element: <EbookDetailPage />,
+        routeMetadata: {
+          pageIdentifier: 'ebook-detail',
         },
       },
       {

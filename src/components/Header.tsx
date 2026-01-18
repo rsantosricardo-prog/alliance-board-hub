@@ -64,6 +64,14 @@ export default function Header() {
               Eventos
             </Link>
             <Link
+              to="/ebooks"
+              className={`font-paragraph text-base transition-colors ${
+                isActive('/ebooks') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
+              }`}
+            >
+              Publicações & E-books
+            </Link>
+            <Link
               to="/contact"
               className={`font-paragraph text-base transition-colors ${
                 isActive('/contact') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
@@ -148,6 +156,15 @@ export default function Header() {
               }`}
             >
               Eventos
+            </Link>
+            <Link
+              to="/ebooks"
+              onClick={() => setIsMenuOpen(false)}
+              className={`font-paragraph text-base transition-colors ${
+                isActive('/ebooks') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
+              }`}
+            >
+              Publicações & E-books
             </Link>
             <Link
               to="/contact"

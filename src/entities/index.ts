@@ -50,6 +50,39 @@ export interface CoreValues {
 
 
 /**
+ * Collection ID: ebooks
+ * Interface for Ebooks
+ */
+export interface Ebooks {
+  _id: string;
+  _createdDate?: Date;
+  _updatedDate?: Date;
+  /** @wixFieldType text */
+  title?: string;
+  /** @wixFieldType text */
+  subtitle?: string;
+  /** @wixFieldType text */
+  shortDescription?: string;
+  /** @wixFieldType text */
+  fullDescription?: string;
+  /** @wixFieldType image - Contains image URL, render with <Image> component, NOT as text */
+  coverImage?: string;
+  /** @wixFieldType url */
+  downloadLink?: string;
+  /** @wixFieldType text */
+  category?: string;
+  /** @wixFieldType text */
+  language?: string;
+  /** @wixFieldType date */
+  publicationDate?: Date | string;
+  /** @wixFieldType text */
+  ctaText?: string;
+  /** @wixFieldType text */
+  status?: string;
+}
+
+
+/**
  * Collection ID: events
  * Interface for Events
  */
