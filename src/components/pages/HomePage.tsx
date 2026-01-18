@@ -394,7 +394,7 @@ function ValueCard({ value, index }: { value: CoreValues; index: number }) {
       className={`group relative bg-white border border-muted/20 p-10 lg:p-12 h-full min-h-[400px] flex flex-col justify-between hover:border-accent transition-colors duration-500 ${index % 2 !== 0 ? 'lg:mt-16' : ''}`}
     >
       {/* Hover Reveal Background */}
-      <div className="absolute inset-0 bg-secondary transform scale-y-0 origin-bottom transition-transform duration-500 group-hover:scale-y-100 z-0" />
+      <div className="absolute inset-0 bg-secondary transform scale-y-0 origin-bottom transition-transform duration-500 group-hover:scale-y-100 z-0 mt-8" />
       
       <div className="relative z-10">
         <div className="flex justify-between items-start mb-8">
