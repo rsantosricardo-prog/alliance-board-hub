@@ -93,7 +93,12 @@ export default function EventsPage() {
                         {/* Event Image */}
                         {event.eventImage && (
                           <div className="relative w-full aspect-[4/3] mb-6 overflow-hidden bg-secondary">
-
+                            <Image
+                              src={event.eventImage}
+                              alt={event.eventTitle || 'Event image'}
+                              width={600}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            />
                           </div>
                         )}
 
