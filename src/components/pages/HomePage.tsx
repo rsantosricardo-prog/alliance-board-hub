@@ -19,9 +19,7 @@ const SectionDivider = () => (
 
 const Monogram = () => (
   <div className="relative w-32 h-48 border-[3px] border-primary-foreground rounded-[100%] flex flex-col items-center justify-center overflow-hidden group cursor-default transition-transform duration-700 hover:scale-105">
-    <span className="font-heading text-5xl leading-none text-primary-foreground relative z-10 group-hover:-translate-y-2 transition-transform duration-500">A</span>
 
-    <span className="font-heading text-5xl leading-none text-primary-foreground relative z-10 group-hover:translate-y-2 transition-transform duration-500">B</span>
   </div>
 );
 
@@ -92,31 +90,25 @@ export default function HomePage() {
             className="mt-12 lg:mt-24 relative z-10"
           >
             {/* Decorative Monogram */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.3 }}
-              className="mb-12"
-            >
-              <Monogram />
-            </motion.div>
 
             {/* Main Title */}
             <h1 className="font-heading text-4xl lg:text-6xl leading-[1.2] mb-8 text-primary-foreground">
               Governança estratégica por meio da aliança de conselheiros experientes
             </h1>
-
             <div className="w-32 h-1.5 bg-accent shadow-lg" />
             <p className="font-paragraph text-base lg:text-lg mt-6 tracking-wide text-primary-foreground leading-relaxed max-w-md">
               Conectamos organizações e conselheiros independentes para apoiar decisões estratégicas éticas, sustentáveis e alinhadas às melhores práticas de governança corporativa.
             </p>
-            
-            <p className="font-paragraph text-sm lg:text-base mt-6 tracking-wide text-primary-foreground/80 leading-relaxed max-w-md">
-              Atuamos como um hub institucional que promove diálogo qualificado, visão externa e maturidade decisória em ambientes corporativos complexos.
-            </p>
+            <p className="font-paragraph text-sm lg:text-base mt-6 tracking-wide text-primary-foreground/80 leading-relaxed max-w-md">{"Atuamos como um hub institucional que promove diálogo qualificado, visão externa e maturidade decisória em ambientes corporativos complexos."}</p>
           </motion.div>
 
           {/* Contact Information Section */}
+          {/* Decorative background texture for depth */}
+          <div className="absolute inset-0 opacity-10 pointer-events-none" 
+               style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, black 1px, transparent 0)', backgroundSize: '40px 40px' }}>
+          </div>
+          
+          {/* Subtle gradient overlay */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -141,12 +133,6 @@ export default function HomePage() {
             </div>
           </motion.div>
 
-          {/* Decorative background texture for depth */}
-          <div className="absolute inset-0 opacity-10 pointer-events-none" 
-               style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, black 1px, transparent 0)', backgroundSize: '40px 40px' }}>
-          </div>
-          
-          {/* Subtle gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/10 pointer-events-none" />
         </div>
 
