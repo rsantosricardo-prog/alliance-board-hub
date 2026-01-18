@@ -117,9 +117,9 @@ export interface Ebooks {
 
 /**
  * Collection ID: events
- * Interface for Events
+ * Interface for Eventos
  */
-export interface Events {
+export interface Eventos {
   _id: string;
   _createdDate?: Date;
   _updatedDate?: Date;
