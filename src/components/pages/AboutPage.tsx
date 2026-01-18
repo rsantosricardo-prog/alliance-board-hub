@@ -50,7 +50,6 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-
       {/* Hero Section */}
       <section className="relative w-full min-h-[70vh] flex items-center justify-center bg-secondary text-secondary-foreground overflow-hidden">
         <div className="absolute inset-0 opacity-10" 
@@ -74,7 +73,6 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Mission & Vision Section */}
       <section className="w-full py-32 bg-background">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
@@ -119,7 +117,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Our Story Section */}
       <section className="w-full py-32 bg-background">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
@@ -170,7 +167,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Differentials Section */}
       <section className="w-full py-32 bg-background">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
@@ -244,7 +240,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Image Breather */}
       <section className="w-full h-[60vh] relative overflow-hidden">
         <div className="absolute inset-0 bg-black/30 z-10" />
@@ -255,7 +250,6 @@ export default function AboutPage() {
           width={1920}
         />
       </section>
-
       {/* Board Members Section - Nossos Conselheiros */}
       <section className="w-full py-32 bg-background">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
@@ -288,42 +282,8 @@ export default function AboutPage() {
                     className="bg-white border border-muted/20 overflow-hidden hover:border-accent transition-all duration-300"
                   >
                     {/* Photo */}
-                    <div className="relative w-full aspect-square overflow-hidden bg-muted/10">
-                      <Image
-                        src={conselheiro.professionalPhoto || "https://static.wixstatic.com/media/904ff8_8294477977694a8ba1fa0432e2f8455b~mv2.png?originWidth=384&originHeight=384"}
-                        alt={conselheiro.fullName || "Board Member"}
-                        className="w-full h-full object-cover"
-                        width={400}
-                      />
-                    </div>
 
                     {/* Content */}
-                    <div className="p-8">
-                      <h3 className="font-heading text-2xl text-primary mb-2">
-                        {conselheiro.fullName}
-                      </h3>
-                      <p className="font-paragraph text-sm text-accent uppercase tracking-wider mb-6">
-                        {conselheiro.position}
-                      </p>
-                      <div className="w-12 h-0.5 bg-accent mb-6" />
-                      <p className="font-paragraph text-foreground/70 leading-relaxed mb-6 text-sm">
-                        {conselheiro.institutionalBio}
-                      </p>
-                      
-                      {/* LinkedIn Link */}
-                      {conselheiro.linkedInUrl && (
-                        <a
-                          href={conselheiro.linkedInUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors duration-300"
-                          aria-label={`LinkedIn de ${conselheiro.fullName}`}
-                        >
-                          <Linkedin className="w-5 h-5" />
-                          <span className="font-paragraph text-sm">LinkedIn</span>
-                        </a>
-                      )}
-                    </div>
                   </motion.div>
                 ))}
               </div>
@@ -351,7 +311,6 @@ export default function AboutPage() {
 
         </div>
       </section>
-
       <Footer />
     </div>
   );
