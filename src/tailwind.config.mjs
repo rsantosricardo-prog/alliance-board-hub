@@ -23,14 +23,21 @@ export default {
                 paragraph: "proxima-n-w01-reg"
             },
             colors: {
-                foreground: '#000000',
+                foreground: '#0B2C4D',
                 destructive: '#DF3131',
                 destructiveforeground: '#FFFFFF',
-                background: '#F0F0F0',
-                secondary: '#000000',
+                background: '#FFFFFF',
+                secondary: '#1F4E79',
                 'secondary-foreground': '#FFFFFF',
                 'primary-foreground': '#FFFFFF',
-                primary: '#006B7D'
+                primary: '#0B2C4D',
+                accent: '#C9A24D',
+                'accent-foreground': '#0B2C4D',
+                muted: '#6D6E71',
+                'muted-foreground': '#FFFFFF',
+                border: '#C9A24D',
+                input: '#6D6E71',
+                ring: '#0B2C4D'
             },
         },
     },
