@@ -41,7 +41,7 @@ export default function Header() {
       <div className="max-w-[120rem] mx-auto px-6 lg:px-12 py-4">
         <div className="flex items-center justify-between gap-6">
           {/* Logo */}
-          <Link to="/" className="flex items-center justify-center">
+          <Link to="/" className="flex items-center justify-center mx-auto lg:mx-0">
             <Image 
               src="https://static.wixstatic.com/media/904ff8_e139363c186d4f4f8a5fd7c11421908a~mv2.png" 
               width={200}
