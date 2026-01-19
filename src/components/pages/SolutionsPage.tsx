@@ -108,7 +108,6 @@ export default function SolutionsPage() {
   return (
     <div className="min-h-screen bg-background pt-28">
       <Header />
-
       {/* Hero Section */}
       <section className="relative w-full min-h-[70vh] flex items-center bg-gradient-to-br from-primary to-primary/80 text-primary-foreground overflow-hidden">
         <div className="absolute inset-0 opacity-10" 
@@ -147,7 +146,6 @@ export default function SolutionsPage() {
           </div>
         </div>
       </section>
-
       {/* Solutions Grid */}
       <section className="w-full py-32 bg-background">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
@@ -196,7 +194,7 @@ export default function SolutionsPage() {
                   {solution.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-3">
                       <ArrowRight className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="font-paragraph text-sm text-secondary/80">{feature}</span>
+
                     </li>
                   ))}
                 </ul>
@@ -205,7 +203,6 @@ export default function SolutionsPage() {
           </div>
         </div>
       </section>
-
       {/* Conselho as a Service Section */}
       <section className="w-full py-32 bg-gradient-to-br from-[#EAEAEA] to-white">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
@@ -391,7 +388,6 @@ export default function SolutionsPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Sectors Section */}
       <section className="w-full py-32 bg-secondary text-secondary-foreground">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
@@ -429,7 +425,6 @@ export default function SolutionsPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="w-full py-32 bg-[#EAEAEA]">
         <div className="max-w-4xl mx-auto px-6 text-center">
@@ -454,7 +449,6 @@ export default function SolutionsPage() {
           </motion.div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
