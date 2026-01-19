@@ -179,7 +179,7 @@ export default function HomePage() {
                 {brandEssence?.title || "Governança Estratégica"}
               </h2>
               <p className="font-paragraph text-foreground/70 max-w-md text-lg leading-relaxed">
-                {brandEssence?.tagline || "Conectando conselheiros e organizações para decisões éticas."}
+                Governança como alavanca de performance empresarial.
               </p>
             </div>
 
