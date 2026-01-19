@@ -38,8 +38,20 @@ export default function Header() {
         isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
-      <div className="max-w-[120rem] mx-auto px-6 lg:px-12 py-6">
-        <div className="flex items-center justify-between">
+      <div className="max-w-[120rem] mx-auto px-6 lg:px-12 py-4">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+          {/* Logo - Centered on mobile, left on desktop */}
+          <Link to="/" className="flex items-center justify-center">
+            <Image 
+              src="https://static.wixstatic.com/media/904ff8_e139363c186d4f4f8a5fd7c11421908a~mv2.png" 
+              width={200}
+              className="h-14 w-auto hover:opacity-80 transition-opacity duration-300" 
+              originWidth={1002} 
+              originHeight={366}
+              alt="Logo"
+            />
+          </Link>
+
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             <Link
@@ -108,22 +120,13 @@ export default function Header() {
             </Link>
           </nav>
 
-          <Link to="/" className="flex items-center gap-3">
-            <Image
-              src="https://static.wixstatic.com/media/904ff8_e139363c186d4f4f8a5fd7c11421908a~mv2.png"
-              width={240}
-              className="h-16 w-auto"
-              originWidth={1002}
-              originHeight={366} />
-          </Link>
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden text-foreground"
+            className="lg:hidden text-foreground p-2"
             aria-label="Alternar menu"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
 
