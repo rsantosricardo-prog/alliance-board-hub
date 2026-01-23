@@ -159,7 +159,7 @@ export default function AboutPage() {
                 className="border-l-4 border-accent pl-8"
               >
                 <p className="font-paragraph text-xl text-foreground/80 leading-relaxed">
-                  Hoje, somos uma rede global de profissionais comprometidos com a excelência, conectando talentos diversos a organizações que valorizam governança de alto impacto. Nossa abordagem combina rigor técnico, ética inabalável e visão de futuro.
+                  Hoje, somos uma rede de profissionais comprometidos com a excelência, conectando talentos diversos a organizações que valorizam governança de alto impacto. Nossa abordagem combina rigor técnico, ética inabalável e visão de futuro.
                 </p>
               </motion.div>
             </div>
