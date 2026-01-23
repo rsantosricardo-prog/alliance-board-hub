@@ -19,10 +19,22 @@ export default function EventsPage() {
   const loadEvents = async (currentSkip: number = 0) => {
     try {
       const result = await BaseCrudService.getAll<Events>('events', {}, { limit, skip: currentSkip });
+      const sortedItems = result.items.sort((a, b) => {
+        const dateA = a.eventDateTime ? new Date(a.eventDateTime).getTime() : 0;
+        const dateB = b.eventDateTime ? new Date(b.eventDateTime).getTime() : 0;
+        return dateA - dateB;
+      });
       if (currentSkip === 0) {
-        setEvents(result.items);
+        setEvents(sortedItems);
       } else {
-        setEvents(prev => [...prev, ...result.items]);
+        setEvents(prev => {
+          const combined = [...prev, ...sortedItems];
+          return combined.sort((a, b) => {
+            const dateA = a.eventDateTime ? new Date(a.eventDateTime).getTime() : 0;
+            const dateB = b.eventDateTime ? new Date(b.eventDateTime).getTime() : 0;
+            return dateA - dateB;
+          });
+        });
       }
       setHasNext(result.hasNext);
       setSkip(result.nextSkip || 0);
