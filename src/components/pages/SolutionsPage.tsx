@@ -50,7 +50,6 @@ export default function SolutionsPage() {
       description: "Programas de formação e atualização para conselheiros e executivos em governança corporativa, ESG e tendências de mercado.",
       features: [
         "Workshops e treinamentos especializados",
-        "Certificações em governança",
         "Mentoria para novos conselheiros",
         "Conteúdo exclusivo e atualizado"
       ],
