@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Image } from '@/components/ui/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { 
@@ -113,7 +112,7 @@ export default function SolutionsPage() {
         </div>
         
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12 py-32 relative z-10 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -128,22 +127,7 @@ export default function SolutionsPage() {
               </p>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="hidden lg:flex items-center justify-center"
-            >
-              <div className="relative w-full h-96 flex items-center justify-center">
-                <Image
-                  src="https://static.wixstatic.com/media/904ff8_f94455c7953e40ea841a9e31b551e970~mv2.png?originWidth=768&originHeight=768"
-                  alt="Soluções e atuação do conselheiro"
-                  width={400}
-                  height={400}
-                  className="object-contain"
-                />
-              </div>
-            </motion.div>
+
           </div>
         </div>
       </section>
