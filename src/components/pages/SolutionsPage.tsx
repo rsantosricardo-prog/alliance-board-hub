@@ -49,7 +49,7 @@ export default function SolutionsPage() {
       title: "Capacitação & Desenvolvimento",
       description: "Programas de formação e atualização para conselheiros e executivos em governança corporativa, ESG e tendências de mercado.",
       features: [
-        "Workshops e treinamentos especializados",
+        "Workshops especializados",
         "Mentoria para novos conselheiros",
         "Conteúdo exclusivo e atualizado"
       ],
