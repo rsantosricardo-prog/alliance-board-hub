@@ -47,7 +47,7 @@ export default function SolutionsPage() {
     {
       icon: GraduationCap,
       title: "Capacitação & Desenvolvimento",
-      description: "Programas de formação e atualização para conselheiros e executivos em governança corporativa, ESG e tendências de mercado.",
+      description: "Palestras para conselheiros e executivos em governança corporativa, ESG e tendências de mercado.",
       features: [
         "Workshops especializados",
         "Mentoria para novos conselheiros",
