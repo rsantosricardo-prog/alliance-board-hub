@@ -140,15 +140,7 @@ export default function EventsPage() {
                             </div>
                           )}
 
-                          {/* Virtual Link Indicator */}
-                          {event.virtualLink && (
-                            <div className="flex items-center gap-2 mt-4">
-                              <ExternalLink className="w-4 h-4 text-primary" />
-                              <span className="font-paragraph text-sm text-primary">
-                                Evento Virtual Disponível
-                              </span>
-                            </div>
-                          )}
+
 
                           {/* Agenda Preview */}
                           {event.agendaDescription && (

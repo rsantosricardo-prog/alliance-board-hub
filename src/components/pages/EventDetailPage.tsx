@@ -164,21 +164,6 @@ export default function EventDetailPage() {
                         </div>
                       )}
 
-                      {/* Virtual Link */}
-                      {event.virtualLink && (
-                        <div className="mt-8 pt-6 border-t border-secondary-foreground/20">
-                          <a
-                            href={event.virtualLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-center gap-2 font-paragraph text-base bg-primary text-primary-foreground px-6 py-3 rounded-full hover:bg-primary/90 transition-colors w-full"
-                          >
-                            <ExternalLink className="w-5 h-5" />
-                            Participar do Evento Virtual
-                          </a>
-                        </div>
-                      )}
-
                       {/* Contact CTA */}
                       <div className="mt-8 pt-6 border-t border-secondary-foreground/20">
                         <p className="font-paragraph text-sm text-secondary-foreground/70 mb-4">
