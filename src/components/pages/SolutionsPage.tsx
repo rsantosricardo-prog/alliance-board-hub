@@ -11,7 +11,6 @@ import {
   FileCheck, 
   TrendingUp, 
   Shield,
-  Briefcase,
   Target,
   ArrowRight,
   Sparkles,
@@ -135,11 +134,14 @@ export default function SolutionsPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="hidden lg:flex items-center justify-center"
             >
-              <div className="relative w-full h-96">
-                <div className="absolute inset-0 bg-primary-foreground/10 backdrop-blur-sm rounded-lg" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Briefcase className="w-32 h-32 text-primary-foreground/30" />
-                </div>
+              <div className="relative w-full h-96 flex items-center justify-center">
+                <Image
+                  src="https://static.wixstatic.com/media/904ff8_f94455c7953e40ea841a9e31b551e970~mv2.png?originWidth=768&originHeight=768"
+                  alt="Soluções e atuação do conselheiro"
+                  width={400}
+                  height={400}
+                  className="object-contain"
+                />
               </div>
             </motion.div>
           </div>
