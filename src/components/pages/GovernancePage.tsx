@@ -43,7 +43,7 @@ export default function GovernancePage() {
     },
     {
       icon: Video,
-      title: "Webinars & Masterclasses",
+      title: "Webinars",
       description: "Conteúdo audiovisual com especialistas renomados em governança",
       items: [
         "Série: Conselheiro do Futuro",
