@@ -47,7 +47,7 @@ export default function GovernancePage() {
       description: "Conteúdo audiovisual com especialistas renomados em governança",
       items: [
         "Série: Conselheiro do Futuro",
-        "Masterclass: Gestão de Riscos",
+        "Webinar: Gestão de Riscos",
         "Workshop: Estratégia de Longo Prazo",
         "Painel: Transformação Digital"
       ]
