@@ -12,6 +12,7 @@ import EventDetailPage from '@/components/pages/EventDetailPage';
 import EbooksPage from '@/components/pages/EbooksPage';
 import EbookDetailPage from '@/components/pages/EbookDetailPage';
 import ContactPage from '@/components/pages/ContactPage';
+import DueDiligenceIAPage from '@/components/pages/DueDiligenceIAPage';
 
 // Layout component that includes ScrollToTop
 function Layout() {
@@ -97,6 +98,13 @@ const router = createBrowserRouter([
         element: <ContactPage />,
         routeMetadata: {
           pageIdentifier: 'contact',
+        },
+      },
+      {
+        path: "duediligence-ia",
+        element: <DueDiligenceIAPage />,
+        routeMetadata: {
+          pageIdentifier: 'duediligence-ia',
         },
       },
       {
