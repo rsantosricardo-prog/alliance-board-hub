@@ -54,7 +54,7 @@ export default function GovernancePage() {
     },
     {
       icon: Podcast,
-      title: "Podcast Alliance Talks",
+      title: "Podcast SE CONSELHO FOSSE BOM",
       description: "Conversas inspiradoras com líderes sobre governança e estratégia",
       items: [
         "Episódio 1: Independência Real",
