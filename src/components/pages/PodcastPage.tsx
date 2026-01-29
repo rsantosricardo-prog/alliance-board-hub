@@ -1,5 +1,5 @@
 import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
+import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 import { Headphones, Play, Share2, ArrowRight } from 'lucide-react';
 import { Image } from '@/components/ui/image';
