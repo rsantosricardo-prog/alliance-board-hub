@@ -190,7 +190,7 @@ export default function GovernancePage() {
                   {resource.items.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3">
                       <Download className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
-                      <span className="font-paragraph text-sm text-secondary/80">{item}</span>
+                      {item}
                     </li>
                   ))}
                 </ul>
