@@ -199,7 +199,6 @@ function AdvisorsSection() {
   const advisorBenefits = [
     'Acesso exclusivo a oportunidades em conselhos de empresas de diversos setores',
     'Participação em eventos de networking e desenvolvimento profissional',
-    'Certificações e treinamentos contínuos em governança corporativa',
     'Visibilidade no mercado através da plataforma Alliance',
     'Conexão com uma rede de profissionais de alto nível',
     'Suporte técnico e jurídico para atuação em conselhos',
