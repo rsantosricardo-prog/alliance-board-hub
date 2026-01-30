@@ -207,17 +207,14 @@ export default function ContactPage() {
               <div className="space-y-8 mb-12">
                 {/* Email */}
                 <div className="flex items-start gap-4">
-
-                  <div>
-
+                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-6 h-6 text-primary-foreground" />
                   </div>
-                </div>
-
-                {/* Phone */}
-                <div className="flex items-start gap-4">
-
                   <div>
-
+                    <h3 className="font-heading text-xl text-secondary mb-2">E-mail</h3>
+                    <a href="mailto:conselho@allianceboardhub.com" className="font-paragraph text-base text-secondary/80 hover:text-accent transition-colors">
+                      conselho@allianceboardhub.com
+                    </a>
                   </div>
                 </div>
 
