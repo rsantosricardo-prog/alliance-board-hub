@@ -13,8 +13,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <h3 className="font-heading text-2xl lg:text-3xl mb-6 text-accent">Alliance Board Hub</h3>
-            <p className="font-paragraph text-base text-primary-foreground/90 leading-relaxed mb-6">
+            <h3 className="font-heading text-2xl lg:text-3xl mb-6 text-accent text-center">Alliance Board Hub</h3>
+            <p className="font-paragraph text-base text-primary-foreground/90 leading-relaxed mb-6 text-justify">
               Conectando conselheiros e organizações para fortalecer a governança corporativa com clareza, independência e excelência.
             </p>
             <div className="h-1 w-20 bg-accent rounded-full"></div>
