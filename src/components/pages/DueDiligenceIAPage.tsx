@@ -98,7 +98,7 @@ export default function DueDiligenceIAPage() {
           className="text-center max-w-4xl mx-auto"
         >
           <h1 className="font-heading text-5xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
-            DueDiligence.IA
+            DueDiligence.Alliance
           </h1>
           <p className="font-heading text-2xl lg:text-3xl text-secondary mb-8 font-semibold">
             Inteligência Artificial para Análise de Riscos e Segurança Jurídica
@@ -125,7 +125,7 @@ export default function DueDiligenceIAPage() {
         </motion.div>
       </section>
 
-      {/* O que é DueDiligence.IA */}
+      {/* O que é DueDiligence.Alliance */}
       <section className="w-full bg-gradient-to-br from-foreground/5 to-secondary/5 py-20 lg:py-32">
         <div className="max-w-[100rem] mx-auto px-6">
           <motion.div
@@ -136,10 +136,10 @@ export default function DueDiligenceIAPage() {
             className="max-w-3xl"
           >
             <h2 className="font-heading text-4xl lg:text-5xl font-bold text-foreground mb-8">
-              O que é DueDiligence.IA?
+              O que é DueDiligence.Alliance?
             </h2>
             <p className="font-paragraph text-lg text-muted mb-6 leading-relaxed">
-              DueDiligence.IA é uma plataforma inteligente que realiza análises profundas e automatizadas de empresas, pessoas e ativos. Integrando dados públicos, jurídicos, financeiros e reputacionais em tempo real, nossa solução oferece insights estratégicos para tomada de decisão segura e fundamentada.
+              DueDiligence.Alliance é uma plataforma inteligente que realiza análises profundas e automatizadas de empresas, pessoas e ativos. Integrando dados públicos, jurídicos, financeiros e reputacionais em tempo real, nossa solução oferece insights estratégicos para tomada de decisão segura e fundamentada.
             </p>
             <p className="font-paragraph text-lg text-muted leading-relaxed">
               Com tecnologia de inteligência artificial de última geração, a plataforma identifica riscos, oportunidades e conformidade regulatória, permitindo que sua organização tome decisões estratégicas com confiança e velocidade.
@@ -251,7 +251,7 @@ export default function DueDiligenceIAPage() {
               Pronto para Transformar Sua Análise de Risco?
             </h2>
             <p className="font-paragraph text-lg text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
-              Fale com um especialista e descubra como DueDiligence.IA pode impulsionar sua governança corporativa e conformidade.
+              Fale com um especialista e descubra como DueDiligence.Alliance pode impulsionar sua governança corporativa e conformidade.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
