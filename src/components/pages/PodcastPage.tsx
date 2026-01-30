@@ -226,7 +226,7 @@ export default function PodcastPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-2">Vozes Autoridades</h3>
-                    <p className="text-gray-100">Conversas com conselheiros, CEOs, especialistas em governança e líderes de pensamento</p>
+                    <p className="text-gray-100">Conversas com Empresários, Conselheiros, CEOs, especialistas em governança e líderes de pensamento</p>
                   </div>
                 </div>
 
