@@ -108,7 +108,7 @@ export default function DueDiligenceIAPage() {
               size="lg"
               className="bg-primary hover:bg-secondary text-white font-semibold px-8 py-6 text-base rounded-lg"
             >
-              Utilize a ferramenta
+              Acesse a Plataforma
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button
