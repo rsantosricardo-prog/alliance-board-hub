@@ -258,9 +258,7 @@ export default function DueDiligenceIAPage() {
                 size="lg"
                 variant="outline"
                 className="border-2 border-white text-white hover:bg-white hover:text-foreground font-semibold px-8 py-6 text-base rounded-lg"
-              >
-                Agendar Demonstração
-              </Button>
+              >Acesse a Plataforma</Button>
             </div>
           </motion.div>
         </div>
