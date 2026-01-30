@@ -116,7 +116,7 @@ export default function Header() {
                 isActive('/duediligence-ia') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
               }`}
             >
-              Due Diligence IA
+              DueDiligence.Alliance
             </Link>
             <Link
               to="/podcast"
@@ -219,7 +219,7 @@ export default function Header() {
                 isActive('/duediligence-ia') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
               }`}
             >
-              Due Diligence IA
+              DueDiligence.Alliance
             </Link>
             <Link
               to="/podcast"
