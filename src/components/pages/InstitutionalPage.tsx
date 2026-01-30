@@ -191,7 +191,7 @@ function AdvisorsSection() {
     {
       number: '05',
       title: 'Aprovação e Integração',
-      description: 'Aprovação final pelo comitê de admissão, assinatura do termo de compromisso e integração à rede com acesso a eventos, treinamentos e oportunidades.',
+      description: 'Aprovação final pelo comitê de admissão, assinatura do termo de compromisso e integração à rede com acesso a eventos e oportunidades.',
       icon: Award,
     },
   ];
@@ -329,7 +329,7 @@ function CompaniesSection() {
     {
       number: '06',
       title: 'Acompanhamento Contínuo',
-      description: 'Suporte contínuo após a formação do conselho, incluindo avaliações periódicas, treinamentos e ajustes conforme necessário.',
+      description: 'Suporte contínuo após a formação do conselho, incluindo avaliações periódicas e ajustes conforme necessário.',
       icon: TrendingUp,
     },
   ];

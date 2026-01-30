@@ -292,7 +292,7 @@ export default function DueDiligenceIAPage() {
             </div>
             <div>
               <p className="font-heading text-4xl font-bold text-accent mb-2">ISO 27001</p>
-              <p className="font-paragraph text-muted">Certificação de Segurança</p>
+              <p className="font-paragraph text-muted">Padrão de Segurança</p>
             </div>
             <div>
               <p className="font-heading text-4xl font-bold text-accent mb-2">LGPD</p>
