@@ -88,7 +88,6 @@ export default function DueDiligenceIAPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-
       {/* Hero Section */}
       <section className="w-full max-w-[120rem] mx-auto px-6 py-20 lg:py-32">
         <motion.div
@@ -100,9 +99,7 @@ export default function DueDiligenceIAPage() {
           <h1 className="font-heading text-5xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
             DueDiligence.Alliance
           </h1>
-          <p className="font-heading text-2xl lg:text-3xl text-secondary mb-8 font-semibold">
-            Inteligência Artificial para Análise de Riscos e Segurança Jurídica
-          </p>
+          <p className="font-heading text-2xl lg:text-3xl text-secondary mb-8 font-semibold">Análise de Riscos e Segurança Jurídica</p>
           <p className="font-paragraph text-lg text-muted mb-12 max-w-3xl mx-auto leading-relaxed">
             Automatize processos de due diligence com inteligência artificial de ponta. Reduza tempo, custos e riscos operacionais enquanto garante conformidade com as mais altas práticas de governança corporativa.
           </p>
@@ -111,7 +108,7 @@ export default function DueDiligenceIAPage() {
               size="lg"
               className="bg-primary hover:bg-secondary text-white font-semibold px-8 py-6 text-base rounded-lg"
             >
-              Solicite uma Demonstração
+              Utilize a ferramenta
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button
@@ -124,7 +121,6 @@ export default function DueDiligenceIAPage() {
           </div>
         </motion.div>
       </section>
-
       {/* O que é DueDiligence.Alliance */}
       <section className="w-full bg-gradient-to-br from-foreground/5 to-secondary/5 py-20 lg:py-32">
         <div className="max-w-[100rem] mx-auto px-6">
@@ -147,7 +143,6 @@ export default function DueDiligenceIAPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Benefícios */}
       <section className="w-full max-w-[100rem] mx-auto px-6 py-20 lg:py-32">
         <motion.div
@@ -194,7 +189,6 @@ export default function DueDiligenceIAPage() {
           })}
         </motion.div>
       </section>
-
       {/* Para Quem é Indicado */}
       <section className="w-full bg-gradient-to-br from-secondary/10 to-foreground/5 py-20 lg:py-32">
         <div className="max-w-[100rem] mx-auto px-6">
@@ -237,7 +231,6 @@ export default function DueDiligenceIAPage() {
           </motion.div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="w-full bg-gradient-to-r from-foreground to-secondary py-20 lg:py-28">
         <div className="max-w-[100rem] mx-auto px-6 text-center">
@@ -272,7 +265,6 @@ export default function DueDiligenceIAPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Trust Indicators */}
       <section className="w-full max-w-[100rem] mx-auto px-6 py-16 lg:py-24">
         <motion.div
@@ -301,7 +293,6 @@ export default function DueDiligenceIAPage() {
           </div>
         </motion.div>
       </section>
-
       <Footer />
     </div>
   );
