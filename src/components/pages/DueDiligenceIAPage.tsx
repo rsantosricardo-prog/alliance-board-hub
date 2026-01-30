@@ -116,7 +116,7 @@ export default function DueDiligenceIAPage() {
               variant="outline"
               className="border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 py-6 text-base rounded-lg"
             >
-              Conheça a Plataforma
+              Assista à demo
             </Button>
           </div>
         </motion.div>
