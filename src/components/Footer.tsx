@@ -9,7 +9,6 @@ export default function Footer() {
         <div className="absolute top-0 right-0 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
       </div>
-
       <div className="max-w-[120rem] mx-auto px-6 lg:px-12 py-16 lg:py-20 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
           {/* Brand Column */}
@@ -46,12 +45,8 @@ export default function Footer() {
               <Link to="/ebooks" className="font-paragraph text-base text-primary-foreground/80 hover:text-accent hover:translate-x-1 transition-all duration-300">
                 E-books
               </Link>
-              <Link to="/duediligence-ia" className="font-paragraph text-base text-primary-foreground/80 hover:text-accent hover:translate-x-1 transition-all duration-300">
-                Due Diligence IA
-              </Link>
-              <Link to="/podcast" className="font-paragraph text-base text-primary-foreground/80 hover:text-accent hover:translate-x-1 transition-all duration-300">
-                Podcast
-              </Link>
+              <Link to="/duediligence-ia" className="font-paragraph text-base text-primary-foreground/80 hover:text-accent hover:translate-x-1 transition-all duration-300">DueDiligence IA</Link>
+              <Link to="/podcast" className="font-paragraph text-base text-primary-foreground/80 hover:text-accent hover:translate-x-1 transition-all duration-300">DueDiligence.Alliance</Link>
             </nav>
           </div>
 

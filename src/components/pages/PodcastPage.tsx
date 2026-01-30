@@ -31,7 +31,6 @@ export default function PodcastPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-
       {/* Hero Section */}
       <section className="w-full bg-gradient-to-br from-primary via-secondary to-primary py-20 md:py-32">
         <div className="max-w-[100rem] mx-auto px-4 md:px-8">
@@ -120,7 +119,6 @@ export default function PodcastPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Conceito Section */}
       <section className="w-full py-20 md:py-28 bg-gray-50">
         <div className="max-w-[100rem] mx-auto px-4 md:px-8">
@@ -152,7 +150,6 @@ export default function PodcastPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Temas Abordados Section */}
       <section className="w-full py-20 md:py-28 bg-white">
         <div className="max-w-[100rem] mx-auto px-4 md:px-8">
@@ -199,7 +196,6 @@ export default function PodcastPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Por Que Ouvir Section */}
       <section className="w-full py-20 md:py-28 bg-gradient-to-r from-primary to-secondary">
         <div className="max-w-[100rem] mx-auto px-4 md:px-8">
@@ -267,7 +263,7 @@ export default function PodcastPage() {
               <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-12 border border-white border-opacity-20">
                 <div className="space-y-8">
                   <div className="text-center">
-                    <div className="text-5xl font-bold text-accent mb-2">50+</div>
+                    <div className="text-5xl font-bold text-accent mb-2">15+</div>
                     <p className="text-white text-lg">Episódios Planejados</p>
                   </div>
                   <div className="h-px bg-white bg-opacity-20"></div>
@@ -277,7 +273,7 @@ export default function PodcastPage() {
                   </div>
                   <div className="h-px bg-white bg-opacity-20"></div>
                   <div className="text-center">
-                    <div className="text-5xl font-bold text-accent mb-2">Semanal</div>
+                    <div className="text-5xl font-bold text-accent mb-2">Quinzenal</div>
                     <p className="text-white text-lg">Novos Episódios</p>
                   </div>
                 </div>
@@ -286,7 +282,6 @@ export default function PodcastPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="w-full py-20 md:py-28 bg-gray-50">
         <div className="max-w-[100rem] mx-auto px-4 md:px-8">
@@ -319,7 +314,6 @@ export default function PodcastPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Keywords Section (SEO) */}
       <section className="w-full py-12 bg-white border-t border-gray-200">
         <div className="max-w-[100rem] mx-auto px-4 md:px-8">
@@ -330,7 +324,6 @@ export default function PodcastPage() {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
