@@ -1,7 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
-import { Headphones, Play, Share2, ArrowRight } from 'lucide-react';
+import { Headphones, Play, Share2, ArrowRight, Users, Briefcase, Target } from 'lucide-react';
 import { Image } from '@/components/ui/image';
 
 export default function PodcastPage() {
@@ -26,6 +26,12 @@ export default function PodcastPage() {
     { title: 'Ética e Compliance', description: 'Integridade, transparência e conformidade regulatória' },
     { title: 'Estratégia Corporativa', description: 'Visão de longo prazo e criação de valor sustentável' },
     { title: 'Tomada de Decisão', description: 'Processos, dilemas e responsabilidade compartilhada' }
+  ];
+
+  const entrepreneurialTopics = [
+    { icon: Briefcase, title: 'Desafios do Empresário', description: 'Como o conselho pode potencializar a visão e estratégia do empresário' },
+    { icon: Users, title: 'Dinâmica Conselho-Empresário', description: 'Construindo relacionamentos produtivos e confiança mútua' },
+    { icon: Target, title: 'Criação de Valor', description: 'Alinhamento entre objetivos empresariais e governança' }
   ];
 
   return (
@@ -62,10 +68,19 @@ export default function PodcastPage() {
               </motion.h1>
 
               <motion.p
-                className="text-2xl md:text-3xl text-accent font-semibold mb-8"
+                className="text-2xl md:text-3xl text-accent font-semibold mb-2"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
+              >
+                Empresário e Conselho em Diálogo
+              </motion.p>
+
+              <motion.p
+                className="text-lg md:text-xl text-gray-100 mb-8 font-medium"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.45, duration: 0.6 }}
               >
                 O poder da decisão colegiada
               </motion.p>
@@ -76,7 +91,7 @@ export default function PodcastPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
               >
-                Um espaço de reflexão prática, provocativa e educativa sobre o papel transformador dos conselhos, comitês e da governança na sustentabilidade e performance das organizações.
+                Um espaço de reflexão prática, provocativa e educativa sobre o papel transformador dos conselhos, comitês e da governança na sustentabilidade e performance das organizações. Conversas profundas entre empresários e conselheiros que exploram como construir relacionamentos produtivos e criar valor compartilhado.
               </motion.p>
 
               <motion.div
@@ -119,6 +134,55 @@ export default function PodcastPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Empresário e Conselho Connection Section */}
+      <section className="w-full py-20 md:py-28 bg-gradient-to-r from-secondary to-primary">
+        <div className="max-w-[100rem] mx-auto px-4 md:px-8">
+          <motion.div
+            className="text-center mb-16"
+            {...fadeInUp}
+          >
+            <h2 className="font-heading text-4xl md:text-5xl font-bold text-white mb-6">
+              A Conexão Empresário e Conselho
+            </h2>
+            <p className="text-xl text-gray-100 max-w-3xl mx-auto">
+              Exploramos como empresários e conselheiros trabalham juntos para criar valor, tomar decisões estratégicas e construir organizações mais fortes e sustentáveis.
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, margin: '-100px' }}
+          >
+            {entrepreneurialTopics.map((topic, index) => {
+              const Icon = topic.icon;
+              return (
+                <motion.div
+                  key={index}
+                  className="bg-white bg-opacity-10 backdrop-blur-md rounded-xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300"
+                  variants={fadeInUp}
+                >
+                  <div className="flex justify-center mb-6">
+                    <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center">
+                      <Icon className="w-8 h-8 text-primary" />
+                    </div>
+                  </div>
+                  <h3 className="font-heading text-xl font-bold text-white text-center mb-3">
+                    {topic.title}
+                  </h3>
+                  <p className="text-gray-100 text-center leading-relaxed">
+                    {topic.description}
+                  </p>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </div>
+      </section>
+
       {/* Conceito Section */}
       <section className="w-full py-20 md:py-28 bg-gray-50">
         <div className="max-w-[100rem] mx-auto px-4 md:px-8">
@@ -140,6 +204,10 @@ export default function PodcastPage() {
               </p>
 
               <p>
+                Especialmente, focamos na <span className="font-semibold text-primary">relação dinâmica entre empresário e conselho</span>: Como o empresário pode se beneficiar da sabedoria coletiva? Como o conselho pode potencializar a visão empreendedora? Como construir confiança e comunicação efetiva? Como transformar potenciais conflitos em oportunidades de crescimento?
+              </p>
+
+              <p>
                 Abordamos os desafios reais: Como construir conselhos verdadeiramente diversos? Como equilibrar autonomia com accountability? Como transformar conflito construtivo em decisões estratégicas? Como garantir que a governança não seja apenas compliance, mas catalisadora de valor?
               </p>
 
@@ -150,6 +218,7 @@ export default function PodcastPage() {
           </motion.div>
         </div>
       </section>
+
       {/* Temas Abordados Section */}
       <section className="w-full py-20 md:py-28 bg-white">
         <div className="max-w-[100rem] mx-auto px-4 md:px-8">
@@ -161,7 +230,7 @@ export default function PodcastPage() {
               Temas Que Exploramos
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl">
-              Uma cobertura abrangente dos pilares que sustentam a governança corporativa moderna
+              Uma cobertura abrangente dos pilares que sustentam a governança corporativa moderna e a relação produtiva entre empresário e conselho
             </p>
           </motion.div>
 
@@ -196,6 +265,7 @@ export default function PodcastPage() {
           </motion.div>
         </div>
       </section>
+
       {/* Por Que Ouvir Section */}
       <section className="w-full py-20 md:py-28 bg-gradient-to-r from-primary to-secondary">
         <div className="max-w-[100rem] mx-auto px-4 md:px-8">
@@ -282,6 +352,7 @@ export default function PodcastPage() {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="w-full py-20 md:py-28 bg-gray-50">
         <div className="max-w-[100rem] mx-auto px-4 md:px-8">
@@ -314,16 +385,18 @@ export default function PodcastPage() {
           </motion.div>
         </div>
       </section>
+
       {/* Keywords Section (SEO) */}
       <section className="w-full py-12 bg-white border-t border-gray-200">
         <div className="max-w-[100rem] mx-auto px-4 md:px-8">
           <div className="text-center">
             <p className="text-sm text-gray-600 mb-4">
-              <span className="font-semibold">Palavras-chave:</span> Governança corporativa • Conselho de administração • Decisão colegiada • Boas práticas de governança • Comitês especializados • Estratégia corporativa • Tomada de decisão • Compliance • Ética empresarial • Liderança estratégica
+              <span className="font-semibold">Palavras-chave:</span> Governança corporativa • Conselho de administração • Empresário • Decisão colegiada • Boas práticas de governança • Comitês especializados • Estratégia corporativa • Tomada de decisão • Compliance • Ética empresarial • Liderança estratégica • Relação empresário-conselho
             </p>
           </div>
         </div>
       </section>
+
       <Footer />
     </div>
   );
