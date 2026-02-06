@@ -134,9 +134,7 @@ export default function DueDiligenceIAPage() {
             <h2 className="font-heading text-4xl lg:text-5xl font-bold text-foreground mb-8">
               O que é eDue?
             </h2>
-            <p className="font-paragraph text-lg text-muted mb-6 leading-relaxed">
-              eDue é uma plataforma inteligente que realiza análises profundas e automatizadas de empresas, pessoas e ativos. Integrando dados públicos, jurídicos, financeiros e reputacionais em tempo real, nossa solução oferece insights estratégicos para tomada de decisão segura e fundamentada.
-            </p>
+            <p className="font-paragraph text-lg text-muted mb-6 leading-relaxed">eDue é uma plataforma inteligente que realiza análises profundas e automatizadas de empresas, pessoas e ativos. Integrando dados públicos jurídicos, financeiros e reputacionais em tempo real, nossa solução oferece insights estratégicos para tomada de decisão segura e fundamentada.</p>
             <p className="font-paragraph text-lg text-muted leading-relaxed">
               Com tecnologia de inteligência artificial de última geração, a plataforma identifica riscos, oportunidades e conformidade regulatória, permitindo que sua organização tome decisões estratégicas com confiança e velocidade.
             </p>
