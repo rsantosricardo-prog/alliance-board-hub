@@ -102,9 +102,9 @@ export default function PodcastPage() {
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-1 h-8 bg-gradient-to-b from-accent to-accent/50 rounded-full"></div>
-                    <p className="text-white text-3xl font-bold font-heading">Episódios em Produção</p>
+                    <p className="text-3xl font-bold font-heading text-primary">Episódios em Produção</p>
                   </div>
-                  <p className="text-gray-100 text-lg leading-relaxed">
+                  <p className="text-lg leading-relaxed text-primary">
                     Estamos preparando conversas profundas e inspiradoras com líderes, especialistas e pensadores sobre governança corporativa.
                   </p>
                 </motion.div>
@@ -160,8 +160,8 @@ export default function PodcastPage() {
                         <Users className="w-6 h-6 text-accent" />
                       </div>
                       <div>
-                        <p className="text-white font-semibold text-lg mb-1">Todas as Plataformas</p>
-                        <p className="text-gray-100 text-sm">Spotify, Apple Podcasts, YouTube e mais</p>
+                        <p className="font-semibold text-lg mb-1 text-primary">Todas as Plataformas</p>
+                        <p className="text-gray-100 text-sm">Spotify, Apple Podcasts, YouTube</p>
                       </div>
                     </div>
                   </motion.div>
@@ -207,9 +207,6 @@ export default function PodcastPage() {
           </motion.div>
         </div>
       </section>
-
-
-
       <Footer />
     </div>
   );
