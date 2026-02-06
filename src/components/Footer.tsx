@@ -45,7 +45,7 @@ export default function Footer() {
               <Link to="/ebooks" className="font-paragraph text-base text-primary-foreground/80 hover:text-accent hover:translate-x-1 transition-all duration-300">
                 E-books
               </Link>
-              <Link to="/duediligence-ia" className="font-paragraph text-base text-primary-foreground/80 hover:text-accent hover:translate-x-1 transition-all duration-300">DueDiligence.Alliance</Link>
+              <Link to="/duediligence-ia" className="font-paragraph text-base text-primary-foreground/80 hover:text-accent hover:translate-x-1 transition-all duration-300">eDue</Link>
               <Link to="/podcast" className="font-paragraph text-base text-primary-foreground/80 hover:text-accent hover:translate-x-1 transition-all duration-300">Podcast Se Conselho Fosse Bom</Link>
             </nav>
           </div>
