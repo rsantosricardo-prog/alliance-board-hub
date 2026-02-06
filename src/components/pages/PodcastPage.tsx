@@ -1,15 +1,23 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
-import { Headphones, Clock, Bell } from 'lucide-react';
+import { Headphones, Clock, Bell, CheckCircle2, Zap, Users } from 'lucide-react';
 import { Image } from '@/components/ui/image';
+import { useState } from 'react';
 
 export default function PodcastPage() {
+  const [isNotified, setIsNotified] = useState(false);
+
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
     transition: { duration: 0.6 },
     viewport: { once: true, margin: '-100px' }
+  };
+
+  const handleNotifyClick = () => {
+    setIsNotified(true);
+    setTimeout(() => setIsNotified(false), 3000);
   };
 
   return (
@@ -77,61 +85,113 @@ export default function PodcastPage() {
               Um espaço de reflexão prática, provocativa e educativa sobre o papel transformador dos conselhos, comitês e da governança na sustentabilidade e performance das organizações.
             </motion.p>
 
-            {/* Coming Soon Message */}
+            {/* Coming Soon Message - Enhanced Container */}
             <motion.div
-              className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-12 border border-white border-opacity-20 max-w-2xl w-full"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              className="bg-gradient-to-br from-white from-5% via-white via-50% to-accent to-95% bg-opacity-[0.08] backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-white border-opacity-30 max-w-3xl w-full shadow-2xl hover:shadow-accent/20 transition-all duration-300"
+              initial={{ opacity: 0, y: 20, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ delay: 0.7, duration: 0.6 }}
+              whileHover={{ y: -5 }}
             >
-              <div className="space-y-6">
-                <div>
-                  <p className="text-white text-2xl font-bold mb-2">Episódios em Produção</p>
-                  <p className="text-gray-100 text-lg">
+              <div className="space-y-8">
+                {/* Header Section */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.8, duration: 0.6 }}
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-1 h-8 bg-gradient-to-b from-accent to-accent/50 rounded-full"></div>
+                    <p className="text-white text-3xl font-bold font-heading">Episódios em Produção</p>
+                  </div>
+                  <p className="text-gray-100 text-lg leading-relaxed">
                     Estamos preparando conversas profundas e inspiradoras com líderes, especialistas e pensadores sobre governança corporativa.
                   </p>
-                </div>
+                </motion.div>
 
-                <div className="h-px bg-white bg-opacity-20"></div>
+                <div className="h-px bg-gradient-to-r from-transparent via-white via-opacity-20 to-transparent"></div>
 
-                <div className="space-y-4">
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-primary font-bold text-sm">✓</span>
+                {/* Features Grid */}
+                <motion.div
+                  className="grid grid-cols-1 md:grid-cols-3 gap-6"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.9, duration: 0.6 }}
+                >
+                  {/* Feature 1 */}
+                  <motion.div
+                    className="bg-white bg-opacity-5 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-10 hover:border-opacity-30 transition-all duration-300 group"
+                    whileHover={{ y: -4, backgroundColor: 'rgba(255, 255, 255, 0.08)' }}
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-accent bg-opacity-20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-opacity-30 transition-all duration-300">
+                        <Zap className="w-6 h-6 text-accent" />
+                      </div>
+                      <div>
+                        <p className="text-white font-semibold text-lg mb-1">15+ Episódios</p>
+                        <p className="text-gray-100 text-sm">Conversas aprofundadas de 30-45 minutos</p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="text-white font-semibold">15+ Episódios Planejados</p>
-                      <p className="text-gray-100 text-sm">Conversas aprofundadas de 30-45 minutos</p>
-                    </div>
-                  </div>
+                  </motion.div>
 
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-primary font-bold text-sm">✓</span>
+                  {/* Feature 2 */}
+                  <motion.div
+                    className="bg-white bg-opacity-5 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-10 hover:border-opacity-30 transition-all duration-300 group"
+                    whileHover={{ y: -4, backgroundColor: 'rgba(255, 255, 255, 0.08)' }}
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-accent bg-opacity-20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-opacity-30 transition-all duration-300">
+                        <Clock className="w-6 h-6 text-accent" />
+                      </div>
+                      <div>
+                        <p className="text-white font-semibold text-lg mb-1">Lançamento Quinzenal</p>
+                        <p className="text-gray-100 text-sm">Novos episódios a cada duas semanas</p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="text-white font-semibold">Lançamento Quinzenal</p>
-                      <p className="text-gray-100 text-sm">Novos episódios a cada duas semanas</p>
-                    </div>
-                  </div>
+                  </motion.div>
 
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-primary font-bold text-sm">✓</span>
+                  {/* Feature 3 */}
+                  <motion.div
+                    className="bg-white bg-opacity-5 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-10 hover:border-opacity-30 transition-all duration-300 group"
+                    whileHover={{ y: -4, backgroundColor: 'rgba(255, 255, 255, 0.08)' }}
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-accent bg-opacity-20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-opacity-30 transition-all duration-300">
+                        <Users className="w-6 h-6 text-accent" />
+                      </div>
+                      <div>
+                        <p className="text-white font-semibold text-lg mb-1">Todas as Plataformas</p>
+                        <p className="text-gray-100 text-sm">Spotify, Apple Podcasts, YouTube e mais</p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="text-white font-semibold">Todas as Plataformas</p>
-                      <p className="text-gray-100 text-sm">Spotify, Apple Podcasts, YouTube e mais</p>
-                    </div>
-                  </div>
-                </div>
+                  </motion.div>
+                </motion.div>
 
-                <div className="h-px bg-white bg-opacity-20"></div>
+                <div className="h-px bg-gradient-to-r from-transparent via-white via-opacity-20 to-transparent"></div>
 
-                <button className="w-full bg-accent text-primary hover:bg-opacity-90 px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105">
-                  <Bell className="w-5 h-5" />
-                  Notifique-me Quando Lançar
-                </button>
+                {/* CTA Button */}
+                <motion.button
+                  onClick={handleNotifyClick}
+                  className={`w-full px-8 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all duration-300 transform ${
+                    isNotified
+                      ? 'bg-green-500 text-white'
+                      : 'bg-accent text-primary hover:bg-opacity-90 hover:scale-105 active:scale-95'
+                  }`}
+                  whileHover={!isNotified ? { scale: 1.02 } : {}}
+                  whileTap={!isNotified ? { scale: 0.98 } : {}}
+                >
+                  {isNotified ? (
+                    <>
+                      <CheckCircle2 className="w-5 h-5" />
+                      Notificação Ativada!
+                    </>
+                  ) : (
+                    <>
+                      <Bell className="w-5 h-5" />
+                      Notifique-me Quando Lançar
+                    </>
+                  )}
+                </motion.button>
               </div>
             </motion.div>
 
