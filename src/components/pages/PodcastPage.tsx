@@ -128,8 +128,8 @@ export default function PodcastPage() {
                         <Zap className="w-6 h-6 text-accent" />
                       </div>
                       <div>
-                        <p className="text-white font-semibold text-lg mb-1">15+ Episódios</p>
-                        <p className="text-gray-100 text-sm">Conversas aprofundadas de 30-45 minutos</p>
+                        <p className="font-semibold text-lg mb-1 text-primary">15+ Episódios</p>
+                        <p className="text-sm text-secondary">Conversas aprofundadas de 30-45 minutos</p>
                       </div>
                     </div>
                   </motion.div>
@@ -144,8 +144,8 @@ export default function PodcastPage() {
                         <Clock className="w-6 h-6 text-accent" />
                       </div>
                       <div>
-                        <p className="text-white font-semibold text-lg mb-1">Lançamento Quinzenal</p>
-                        <p className="text-gray-100 text-sm">Novos episódios a cada duas semanas</p>
+                        <p className="font-semibold text-lg mb-1 text-primary">Lançamento Quinzenal</p>
+                        <p className="text-sm text-secondary">Novos episódios a cada duas semanas</p>
                       </div>
                     </div>
                   </motion.div>
@@ -161,7 +161,7 @@ export default function PodcastPage() {
                       </div>
                       <div>
                         <p className="font-semibold text-lg mb-1 text-primary">Todas as Plataformas</p>
-                        <p className="text-gray-100 text-sm">Spotify, Apple Podcasts, YouTube</p>
+                        <p className="text-sm text-secondary">Spotify, Apple Podcasts, YouTube</p>
                       </div>
                     </div>
                   </motion.div>
