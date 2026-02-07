@@ -303,7 +303,7 @@ export default function ConselhosPraticaPage() {
             Valor da cadeira – 1º lote
           </h2>
           <div className="mb-8">
-            <p className="font-heading text-6xl md:text-7xl font-bold text-white mb-6">R$ 500,00</p>
+            <p className="font-heading text-6xl md:text-7xl font-bold text-white mb-6">R$ 550,00</p>
             <p className="font-paragraph text-base text-gray-400">
               Evento presencial | Vagas extremamente limitadas | Curadoria de público
             </p>
