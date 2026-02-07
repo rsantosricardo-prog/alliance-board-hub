@@ -69,23 +69,23 @@ export default function HomePage() {
             >
               <div className="space-y-4">
                 <span className="font-paragraph text-xs font-bold tracking-[0.2em] uppercase text-foreground/60">
-                  Smart Money
+                  SM Board
                 </span>
                 <h1 className="font-heading text-5xl lg:text-7xl leading-[1.1] text-foreground">
-                  Inteligência Estratégica para Decisões de Alto Impacto
+                  Decisões que Transformam
                 </h1>
               </div>
               
               <p className="font-paragraph text-lg lg:text-xl text-foreground/70 leading-relaxed max-w-lg">
-                Conectando conselheiros e C-Levels em um ecossistema exclusivo de capital intelectual, onde decisões estratégicas encontram visão de longo prazo e acesso qualificado.
+                Conectando conselheiros e C-Levels em um ambiente seletivo de troca estratégica, onde visão de futuro, maturidade decisória e responsabilidade institucional convergem para impacto real.
               </p>
 
               <div className="pt-8 border-t border-foreground/10 flex flex-col sm:flex-row gap-4">
                 <Link 
-                  to="/institutional" 
+                  to="/strategy" 
                   className="group flex items-center justify-center w-full sm:w-auto bg-primary text-primary-foreground px-8 py-4 rounded-lg hover:bg-secondary transition-all duration-300 font-paragraph font-medium"
                 >
-                  Explorar Posicionamento
+                  Explorar Estratégia
                   <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link 

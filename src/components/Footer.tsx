@@ -30,8 +30,8 @@ export default function Footer() {
               <Link to="/about" className="font-paragraph text-base text-primary-foreground/80 hover:text-accent hover:translate-x-1 transition-all duration-300">
                 Quem Somos
               </Link>
-              <Link to="/institutional" className="font-paragraph text-base text-primary-foreground/80 hover:text-accent hover:translate-x-1 transition-all duration-300">
-                Posicionamento
+              <Link to="/strategy" className="font-paragraph text-base text-primary-foreground/80 hover:text-accent hover:translate-x-1 transition-all duration-300">
+                Estratégia
               </Link>
               <Link to="/events" className="font-paragraph text-base text-primary-foreground/80 hover:text-accent hover:translate-x-1 transition-all duration-300">
                 Eventos
@@ -77,8 +77,8 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-accent flex-shrink-0" />
-                <a href="mailto:conselho@allianceboardhub.com" className="font-paragraph text-base text-primary-foreground/90 hover:text-accent transition-colors">
-                  conselho@allianceboardhub.com
+                <a href="mailto:contato@smboard.com.br" className="font-paragraph text-base text-primary-foreground/90 hover:text-accent transition-colors">
+                  contato@smboard.com.br
                 </a>
               </div>
             </div>
@@ -107,7 +107,7 @@ export default function Footer() {
               </Link>
               <span className="text-primary-foreground/30">|</span>
               <a 
-                href="https://www.allianceboardhub.com/" 
+                href="https://www.linkedin.com/company/smboard/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-primary-foreground/70 hover:text-accent transition-colors"

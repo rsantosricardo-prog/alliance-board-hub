@@ -69,12 +69,12 @@ export default function Header() {
               Quem Somos
             </Link>
             <Link
-              to="/institutional"
+              to="/strategy"
               className={`font-paragraph text-base transition-colors ${
-                isActive('/institutional') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
+                isActive('/strategy') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
               }`}
             >
-              Posicionamento
+              Estratégia
             </Link>
             <Link
               to="/events"
@@ -142,13 +142,13 @@ export default function Header() {
               Quem Somos
             </Link>
             <Link
-              to="/institutional"
+              to="/strategy"
               onClick={() => setIsMenuOpen(false)}
               className={`font-paragraph text-base transition-colors ${
-                isActive('/institutional') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
+                isActive('/strategy') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
               }`}
             >
-              Posicionamento
+              Estratégia
             </Link>
             <Link
               to="/events"
