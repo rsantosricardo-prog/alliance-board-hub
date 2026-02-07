@@ -126,6 +126,14 @@ export interface Eventos {
   _updatedDate?: Date;
   /** @wixFieldType text */
   eventTitle?: string;
+  /** @wixFieldType text */
+  finalMessage?: string;
+  /** @wixFieldType text */
+  targetAudience?: string;
+  /** @wixFieldType text */
+  detailedAgenda?: string;
+  /** @wixFieldType text */
+  introduction?: string;
   /** @wixFieldType number */
   price?: number;
   /** @wixFieldType datetime */

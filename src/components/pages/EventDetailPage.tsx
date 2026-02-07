@@ -117,8 +117,53 @@ export default function EventDetailPage() {
                       {event.eventTitle}
                     </h1>
 
-                    {/* Agenda Description */}
-                    {event.agendaDescription && (
+                    {/* Introduction */}
+                    {event.introduction && (
+                      <div className="mb-12">
+                        <p className="font-paragraph text-lg text-secondary/80 leading-relaxed whitespace-pre-line">
+                          {event.introduction}
+                        </p>
+                      </div>
+                    )}
+
+                    {/* Detailed Agenda */}
+                    {event.detailedAgenda && (
+                      <div className="mb-12">
+                        <h2 className="font-heading text-2xl lg:text-3xl text-secondary mb-6">
+                          AGENDA
+                        </h2>
+                        <p className="font-paragraph text-lg text-secondary/80 leading-relaxed whitespace-pre-line">
+                          {event.detailedAgenda}
+                        </p>
+                      </div>
+                    )}
+
+                    {/* Target Audience */}
+                    {event.targetAudience && (
+                      <div className="mb-12">
+                        <h2 className="font-heading text-2xl lg:text-3xl text-secondary mb-6">
+                          PARA QUEM É ESTE ENCONTRO
+                        </h2>
+                        <p className="font-paragraph text-lg text-secondary/80 leading-relaxed whitespace-pre-line">
+                          {event.targetAudience}
+                        </p>
+                      </div>
+                    )}
+
+                    {/* Final Message */}
+                    {event.finalMessage && (
+                      <div className="mb-12">
+                        <h2 className="font-heading text-2xl lg:text-3xl text-secondary mb-6">
+                          MENSAGEM FINAL
+                        </h2>
+                        <p className="font-paragraph text-lg text-secondary/80 leading-relaxed whitespace-pre-line">
+                          {event.finalMessage}
+                        </p>
+                      </div>
+                    )}
+
+                    {/* Legacy Agenda Description - kept for backward compatibility */}
+                    {event.agendaDescription && !event.detailedAgenda && (
                       <div className="mb-12">
                         <h2 className="font-heading text-2xl lg:text-3xl text-secondary mb-6">
                           Agenda do Evento
