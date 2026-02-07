@@ -6,7 +6,7 @@ import { BrandEssence, CoreValues } from '@/entities';
 import { Image } from '@/components/ui/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ArrowRight, ChevronDown, MessageCircle, Linkedin, Mail, Globe } from 'lucide-react';
 
 export default function HomePage() {
   const [brandEssence, setBrandEssence] = useState<BrandEssence | null>(null);
@@ -296,25 +296,45 @@ export default function HomePage() {
               <p className="font-paragraph text-foreground/70 leading-relaxed mb-8">
                 Comunidade exclusiva de conselheiros independentes para discussões estratégicas, compartilhamento de experiências e networking qualificado.
               </p>
-              <div className="space-y-3">
-                <a 
-                  href="https://stripe.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center w-full bg-primary text-primary-foreground px-8 py-4 rounded-lg hover:bg-secondary transition-all duration-300 font-paragraph font-medium"
-                >
-                  Acessar Pagamento
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
-                <a 
-                  href="https://chat.whatsapp.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center w-full border-2 border-primary text-primary px-8 py-4 rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-paragraph font-medium"
-                >
-                  Entrar no Grupo
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
+              <div className="space-y-4">
+                <div className="flex gap-3">
+                  <a 
+                    href="https://chat.whatsapp.com/conselheiros"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-secondary transition-all duration-300 font-paragraph font-medium"
+                  >
+                    <MessageCircle className="w-5 h-5" />
+                    WhatsApp
+                  </a>
+                  <a 
+                    href="https://linkedin.com/groups/conselheiros"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 border-2 border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-paragraph font-medium"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                    LinkedIn
+                  </a>
+                </div>
+                <div className="flex gap-3">
+                  <a 
+                    href="mailto:conselheiros@smartmoney.com"
+                    className="flex-1 flex items-center justify-center gap-2 border-2 border-foreground/30 text-foreground px-6 py-3 rounded-lg hover:bg-foreground/5 transition-all duration-300 font-paragraph font-medium"
+                  >
+                    <Mail className="w-5 h-5" />
+                    Email
+                  </a>
+                  <a 
+                    href="https://smartmoney.com/conselheiros"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 border-2 border-foreground/30 text-foreground px-6 py-3 rounded-lg hover:bg-foreground/5 transition-all duration-300 font-paragraph font-medium"
+                  >
+                    <Globe className="w-5 h-5" />
+                    Portal
+                  </a>
+                </div>
               </div>
             </motion.div>
 
@@ -330,17 +350,45 @@ export default function HomePage() {
               <p className="font-paragraph text-foreground/70 leading-relaxed mb-8">
                 Comunidade seletiva de C-Levels e executivos para discussões estratégicas. Entrada mediante curadoria e aprovação para garantir qualidade e alinhamento.
               </p>
-              <div className="space-y-3">
-                <Link 
-                  to="/contact"
-                  className="flex items-center justify-center w-full bg-primary text-primary-foreground px-8 py-4 rounded-lg hover:bg-secondary transition-all duration-300 font-paragraph font-medium"
-                >
-                  Solicitar Candidatura
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-                <p className="font-paragraph text-sm text-foreground/60 text-center pt-2">
-                  Entrada mediante curadoria e aprovação
-                </p>
+              <div className="space-y-4">
+                <div className="flex gap-3">
+                  <a 
+                    href="https://chat.whatsapp.com/clevels"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-secondary transition-all duration-300 font-paragraph font-medium"
+                  >
+                    <MessageCircle className="w-5 h-5" />
+                    WhatsApp
+                  </a>
+                  <a 
+                    href="https://linkedin.com/groups/clevels"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 border-2 border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-paragraph font-medium"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                    LinkedIn
+                  </a>
+                </div>
+                <div className="flex gap-3">
+                  <a 
+                    href="mailto:clevels@smartmoney.com"
+                    className="flex-1 flex items-center justify-center gap-2 border-2 border-foreground/30 text-foreground px-6 py-3 rounded-lg hover:bg-foreground/5 transition-all duration-300 font-paragraph font-medium"
+                  >
+                    <Mail className="w-5 h-5" />
+                    Email
+                  </a>
+                  <a 
+                    href="https://smartmoney.com/clevels"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 border-2 border-foreground/30 text-foreground px-6 py-3 rounded-lg hover:bg-foreground/5 transition-all duration-300 font-paragraph font-medium"
+                  >
+                    <Globe className="w-5 h-5" />
+                    Portal
+                  </a>
+                </div>
               </div>
             </motion.div>
           </div>
