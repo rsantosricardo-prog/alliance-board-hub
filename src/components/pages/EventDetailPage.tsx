@@ -55,7 +55,6 @@ export default function EventDetailPage() {
   return (
     <div className="min-h-screen bg-background pt-28">
       <Header />
-
       <div className="w-full py-12 lg:py-20">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
           {/* Back Button */}
@@ -166,11 +165,11 @@ export default function EventDetailPage() {
                     {event.agendaDescription && !event.detailedAgenda && (
                       <div className="mb-12">
                         <h2 className="font-heading text-2xl lg:text-3xl text-secondary mb-6">
-                          Agenda do Evento
-                        </h2>
+                            Agenda do Evento
+                          </h2>
                         <p className="font-paragraph text-lg text-secondary/80 leading-relaxed whitespace-pre-line">
-                          {event.agendaDescription}
-                        </p>
+                        {event.agendaDescription}
+                      </p>
                       </div>
                     )}
                   </div>
@@ -229,7 +228,6 @@ export default function EventDetailPage() {
           </div>
         </div>
       </div>
-
       <Footer />
     </div>
   );
