@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Image } from '@/components/ui/image';
@@ -6,8 +5,6 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export default function ConselhosPraticaPage() {
-  const [isScrolled, setIsScrolled] = useState(false);
-
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
@@ -81,75 +78,93 @@ export default function ConselhosPraticaPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative w-full min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-20 right-10 w-96 h-96 bg-gray-800 rounded-full mix-blend-multiply filter blur-3xl"></div>
-          <div className="absolute bottom-20 left-10 w-96 h-96 bg-gray-900 rounded-full mix-blend-multiply filter blur-3xl"></div>
-        </div>
-
+      <section className="relative w-full min-h-screen flex items-center justify-center px-4 pt-32 pb-20 overflow-hidden bg-gradient-to-b from-black via-black to-gray-950">
         <motion.div
-          className="relative z-10 max-w-4xl mx-auto text-center"
-          initial={{ opacity: 0, y: 30 }}
+          className="relative z-10 max-w-5xl mx-auto text-center"
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.9 }}
         >
-          <motion.h1
-            className="font-heading text-7xl md:text-8xl font-bold mb-6 tracking-tight"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          {/* Subtitle accent */}
+          <motion.div
+            className="mb-8 inline-block"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            CONSELHOS NA PRÁTICA
+            <p className="font-paragraph text-sm tracking-widest text-gray-400 uppercase">Evento Executivo</p>
+          </motion.div>
+
+          {/* Main title */}
+          <motion.h1
+            className="font-heading text-6xl md:text-7xl lg:text-8xl font-bold mb-8 tracking-tight leading-tight"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.2 }}
+          >
+            CONSELHOS<br />NA PRÁTICA
           </motion.h1>
 
-          <motion.p
-            className="font-paragraph text-2xl md:text-3xl text-gray-300 mb-8 leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Decisão, Governança e Inovação em Ambientes de Alta Complexidade
-          </motion.p>
-
-          <motion.p
-            className="font-paragraph text-lg text-gray-400 mb-12 max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            Um encontro presencial, exclusivo e cuidadosamente curado para C-Levels, empresários e conselheiros.
-          </motion.p>
-
+          {/* Divider */}
           <motion.div
-            className="flex flex-col md:flex-row justify-center items-center gap-8 mb-12 text-gray-300"
+            className="w-16 h-px bg-gradient-to-r from-transparent via-gray-500 to-transparent mx-auto mb-8"
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          />
+
+          {/* Subtitle */}
+          <motion.p
+            className="font-paragraph text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <div className="flex items-center gap-3">
-              <span className="text-2xl">📍</span>
-              <span className="font-paragraph">Restaurante Pavino – Brooklin, São Paulo</span>
-            </div>
-            <div className="hidden md:block w-px h-8 bg-gray-700"></div>
-            <div className="flex items-center gap-3">
-              <span className="text-2xl">📅</span>
-              <span className="font-paragraph">19 de março</span>
-            </div>
-            <div className="hidden md:block w-px h-8 bg-gray-700"></div>
-            <div className="flex items-center gap-3">
-              <span className="text-2xl">⏰</span>
-              <span className="font-paragraph">16h às 22h</span>
-            </div>
-          </motion.div>
+            Decisão, Governança e Inovação em Ambientes de Alta Complexidade
+          </motion.p>
 
-          <motion.div
+          {/* Support text */}
+          <motion.p
+            className="font-paragraph text-base text-gray-400 mb-16 max-w-2xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
+            Um encontro presencial, exclusivo e cuidadosamente curado para C-Levels, empresários e conselheiros.
+          </motion.p>
+
+          {/* Event details */}
+          <motion.div
+            className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 mb-16 text-gray-300"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            <div className="flex items-center gap-3">
+              <span className="text-gray-500 font-paragraph text-sm">LOCALIZAÇÃO</span>
+              <span className="font-paragraph text-sm">Restaurante Pavino – Brooklin, SP</span>
+            </div>
+            <div className="hidden md:block w-px h-6 bg-gray-700"></div>
+            <div className="flex items-center gap-3">
+              <span className="text-gray-500 font-paragraph text-sm">DATA</span>
+              <span className="font-paragraph text-sm">19 de março</span>
+            </div>
+            <div className="hidden md:block w-px h-6 bg-gray-700"></div>
+            <div className="flex items-center gap-3">
+              <span className="text-gray-500 font-paragraph text-sm">HORÁRIO</span>
+              <span className="font-paragraph text-sm">16h às 22h</span>
+            </div>
+          </motion.div>
+
+          {/* CTA Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+          >
             <Button
               size="lg"
-              className="bg-white text-black hover:bg-gray-200 font-heading text-lg px-12 py-6 rounded-lg"
+              className="bg-white text-black hover:bg-gray-100 font-heading text-base px-10 py-3 rounded-sm transition-all duration-300"
             >
               Garanta sua cadeira – Vagas limitadas
             </Button>
@@ -158,31 +173,30 @@ export default function ConselhosPraticaPage() {
       </section>
 
       {/* Posicionamento */}
-      <section className="w-full max-w-6xl mx-auto px-4 py-24">
+      <section className="w-full bg-gray-950 px-4 py-32">
         <motion.div
-          className="text-center"
+          className="max-w-4xl mx-auto text-center"
           {...fadeInUp}
         >
-          <h2 className="font-heading text-5xl md:text-6xl font-bold mb-8">
+          <h2 className="font-heading text-5xl md:text-6xl font-bold mb-8 leading-tight">
             Este não é um evento aberto.
           </h2>
-          <p className="font-paragraph text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Este encontro foi desenhado para líderes que ocupam — ou se preparam para ocupar — posições reais de decisão.
-            Aqui, conteúdo estratégico e networking acontecem entre pares, em um ambiente reservado, elegante e intencionalmente curado.
+          <p className="font-paragraph text-lg text-gray-300 leading-relaxed">
+            Este encontro foi desenhado para líderes que ocupam — ou se preparam para ocupar — posições reais de decisão. Aqui, conteúdo estratégico e networking acontecem entre pares, em um ambiente reservado, elegante e intencionalmente curado.
           </p>
         </motion.div>
       </section>
 
       {/* Por que participar */}
-      <section className="w-full max-w-6xl mx-auto px-4 py-24">
+      <section className="w-full px-4 py-32">
         <motion.h2
-          className="font-heading text-5xl md:text-6xl font-bold mb-16 text-center"
+          className="font-heading text-5xl md:text-6xl font-bold mb-20 text-center"
           {...fadeInUp}
         >
           Por que participar
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 lg:gap-16">
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}
@@ -192,8 +206,8 @@ export default function ConselhosPraticaPage() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true, margin: '0px 0px -100px 0px' }}
             >
-              <div className="w-2 h-2 bg-gray-400 rounded-full mt-3 flex-shrink-0"></div>
-              <p className="font-paragraph text-lg text-gray-300 leading-relaxed">
+              <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-3 flex-shrink-0"></div>
+              <p className="font-paragraph text-base text-gray-300 leading-relaxed">
                 {benefit}
               </p>
             </motion.div>
@@ -202,31 +216,33 @@ export default function ConselhosPraticaPage() {
       </section>
 
       {/* Agenda */}
-      <section className="w-full max-w-6xl mx-auto px-4 py-24">
+      <section className="w-full bg-gray-950 px-4 py-32">
         <motion.h2
-          className="font-heading text-5xl md:text-6xl font-bold mb-16 text-center"
+          className="font-heading text-5xl md:text-6xl font-bold mb-20 text-center"
           {...fadeInUp}
         >
           Agenda do Evento
         </motion.h2>
 
-        <div className="space-y-8">
+        <div className="max-w-4xl mx-auto space-y-0">
           {agenda.map((item, index) => (
             <motion.div
               key={index}
-              className="border-l-2 border-gray-700 pl-8 py-4"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="border-b border-gray-800 py-8 last:border-b-0"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.08 }}
               viewport={{ once: true, margin: '0px 0px -100px 0px' }}
             >
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+                <div className="md:w-32 flex-shrink-0">
+                  <p className="font-heading text-sm text-gray-400 tracking-wide">{item.time}</p>
+                </div>
                 <div className="flex-1">
-                  <p className="font-heading text-lg text-gray-400 mb-2">{item.time}</p>
-                  <p className="font-paragraph text-xl text-white mb-2">{item.title}</p>
+                  <p className="font-heading text-lg text-white mb-2">{item.title}</p>
                   {item.speaker && (
-                    <p className="font-paragraph text-gray-400">
-                      <span className="text-gray-500">Palestrante:</span> {item.speaker}
+                    <p className="font-paragraph text-sm text-gray-400">
+                      {item.speaker}
                     </p>
                   )}
                 </div>
@@ -237,15 +253,15 @@ export default function ConselhosPraticaPage() {
       </section>
 
       {/* Palestrantes */}
-      <section className="w-full max-w-6xl mx-auto px-4 py-24">
+      <section className="w-full px-4 py-32">
         <motion.h2
-          className="font-heading text-5xl md:text-6xl font-bold mb-16 text-center"
+          className="font-heading text-5xl md:text-6xl font-bold mb-20 text-center"
           {...fadeInUp}
         >
           Palestrantes
         </motion.h2>
 
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
           {speakers.map((speaker, index) => (
             <motion.div
               key={index}
@@ -255,7 +271,7 @@ export default function ConselhosPraticaPage() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true, margin: '0px 0px -100px 0px' }}
             >
-              <div className="mb-6 overflow-hidden rounded-lg">
+              <div className="mb-8 overflow-hidden">
                 <Image
                   src={speaker.image}
                   alt={speaker.name}
@@ -264,25 +280,25 @@ export default function ConselhosPraticaPage() {
                   className="w-full aspect-square object-cover"
                 />
               </div>
-              <h3 className="font-heading text-2xl font-bold mb-3">{speaker.name}</h3>
-              <p className="font-paragraph text-gray-300 leading-relaxed">{speaker.bio}</p>
+              <h3 className="font-heading text-xl font-bold mb-3">{speaker.name}</h3>
+              <p className="font-paragraph text-sm text-gray-400 leading-relaxed">{speaker.bio}</p>
             </motion.div>
           ))}
         </div>
       </section>
 
       {/* Investimento */}
-      <section className="w-full max-w-6xl mx-auto px-4 py-24">
+      <section className="w-full bg-gray-950 px-4 py-32">
         <motion.div
-          className="text-center"
+          className="max-w-3xl mx-auto text-center"
           {...fadeInUp}
         >
-          <h2 className="font-heading text-5xl md:text-6xl font-bold mb-8">
+          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-12">
             Valor da cadeira – 1º lote
           </h2>
           <div className="mb-8">
-            <p className="font-heading text-7xl font-bold text-white mb-4">R$ 500,00</p>
-            <p className="font-paragraph text-lg text-gray-400">
+            <p className="font-heading text-6xl md:text-7xl font-bold text-white mb-6">R$ 500,00</p>
+            <p className="font-paragraph text-base text-gray-400">
               Evento presencial | Vagas extremamente limitadas | Curadoria de público
             </p>
           </div>
@@ -290,15 +306,15 @@ export default function ConselhosPraticaPage() {
       </section>
 
       {/* O que está incluso */}
-      <section className="w-full max-w-6xl mx-auto px-4 py-24">
+      <section className="w-full px-4 py-32">
         <motion.h2
-          className="font-heading text-5xl md:text-6xl font-bold mb-16 text-center"
+          className="font-heading text-5xl md:text-6xl font-bold mb-20 text-center"
           {...fadeInUp}
         >
           O que está incluso
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+        <div className="max-w-2xl mx-auto grid md:grid-cols-2 gap-8">
           {includes.map((item, index) => (
             <motion.div
               key={index}
@@ -308,20 +324,20 @@ export default function ConselhosPraticaPage() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true, margin: '0px 0px -100px 0px' }}
             >
-              <div className="w-2 h-2 bg-gray-400 rounded-full mt-3 flex-shrink-0"></div>
-              <p className="font-paragraph text-lg text-gray-300">{item}</p>
+              <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2.5 flex-shrink-0"></div>
+              <p className="font-paragraph text-base text-gray-300">{item}</p>
             </motion.div>
           ))}
         </div>
       </section>
 
       {/* CTA Final */}
-      <section className="w-full max-w-6xl mx-auto px-4 py-24">
+      <section className="w-full bg-gradient-to-b from-gray-950 to-black px-4 py-32">
         <motion.div
-          className="text-center"
+          className="max-w-4xl mx-auto text-center"
           {...fadeInUp}
         >
-          <h2 className="font-heading text-5xl md:text-6xl font-bold mb-8 leading-tight">
+          <h2 className="font-heading text-5xl md:text-6xl font-bold mb-12 leading-tight">
             Este não é um evento para assistir.
             <br />
             É um encontro para participar, trocar e se posicionar.
@@ -335,7 +351,7 @@ export default function ConselhosPraticaPage() {
           >
             <Button
               size="lg"
-              className="bg-white text-black hover:bg-gray-200 font-heading text-lg px-12 py-6 rounded-lg"
+              className="bg-white text-black hover:bg-gray-100 font-heading text-base px-10 py-3 rounded-sm transition-all duration-300"
             >
               Garanta sua cadeira agora
             </Button>
@@ -344,7 +360,7 @@ export default function ConselhosPraticaPage() {
       </section>
 
       {/* Spacing before footer */}
-      <div className="h-24"></div>
+      <div className="h-12"></div>
 
       <Footer />
     </div>
