@@ -5,6 +5,11 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export default function ConselhosPraticaPage() {
+  const handleRegister = () => {
+    // Replace with your actual registration link
+    window.open('https://your-registration-link.com', '_blank');
+  };
+
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
@@ -164,6 +169,7 @@ export default function ConselhosPraticaPage() {
           >
             <Button
               size="lg"
+              onClick={handleRegister}
               className="bg-white text-black hover:bg-gray-100 font-heading text-base px-10 py-3 rounded-sm transition-all duration-300"
             >
               Garanta sua cadeira – Vagas limitadas
@@ -351,6 +357,7 @@ export default function ConselhosPraticaPage() {
           >
             <Button
               size="lg"
+              onClick={handleRegister}
               className="bg-white text-black hover:bg-gray-100 font-heading text-base px-10 py-3 rounded-sm transition-all duration-300"
             >
               Garanta sua cadeira agora
