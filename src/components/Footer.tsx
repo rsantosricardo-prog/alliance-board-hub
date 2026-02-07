@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail, MapPin, Phone, Linkedin } from 'lucide-react';
+import { Image } from '@/components/ui/image';
 
 export default function Footer() {
   return (
@@ -12,8 +13,13 @@ export default function Footer() {
       <div className="max-w-[120rem] mx-auto px-6 lg:px-12 py-16 lg:py-20 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
           {/* Brand Column */}
-          <div className="lg:col-span-1">
-            <h3 className="font-heading text-2xl lg:text-3xl mb-6 text-primary-foreground text-center">SM Board</h3>
+          <div className="lg:col-span-1 flex flex-col items-center">
+            <Image 
+              src="https://static.wixstatic.com/media/904ff8_6f8d6e04187746d3b7fb821ec3cd8582~mv2.png" 
+              alt="SM Board Nonogram Logo" 
+              width={120}
+              className="mb-6"
+            />
             <p className="font-paragraph text-base text-primary-foreground/90 leading-relaxed mb-6 text-justify">
               Conectando conselheiros e C-Levels para decisões estratégicas de alto impacto através de inteligência coletiva e capital intelectual.
             </p>
