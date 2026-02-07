@@ -3,7 +3,7 @@ import { Mail, MapPin, Phone, Linkedin } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-gradient-to-br from-primary via-primary to-secondary text-primary-foreground relative overflow-hidden">
+    <footer className="w-full bg-primary text-primary-foreground relative overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 right-0 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
@@ -13,9 +13,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <h3 className="font-heading text-2xl lg:text-3xl mb-6 text-accent text-center">Alliance Board Hub</h3>
+            <h3 className="font-heading text-2xl lg:text-3xl mb-6 text-primary-foreground text-center">SM Board</h3>
             <p className="font-paragraph text-base text-primary-foreground/90 leading-relaxed mb-6 text-justify">
-              Conectando conselheiros e organizações para fortalecer a governança corporativa com clareza, independência e excelência.
+              Conectando conselheiros e C-Levels para decisões estratégicas de alto impacto através de inteligência coletiva e capital intelectual.
             </p>
             <div className="h-1 w-20 bg-accent rounded-full"></div>
           </div>
@@ -31,13 +31,7 @@ export default function Footer() {
                 Quem Somos
               </Link>
               <Link to="/institutional" className="font-paragraph text-base text-primary-foreground/80 hover:text-accent hover:translate-x-1 transition-all duration-300">
-                Institucional
-              </Link>
-              <Link to="/solutions" className="font-paragraph text-base text-primary-foreground/80 hover:text-accent hover:translate-x-1 transition-all duration-300">
-                Soluções
-              </Link>
-              <Link to="/governance" className="font-paragraph text-base text-primary-foreground/80 hover:text-accent hover:translate-x-1 transition-all duration-300">
-                Governança na Prática
+                Posicionamento
               </Link>
               <Link to="/events" className="font-paragraph text-base text-primary-foreground/80 hover:text-accent hover:translate-x-1 transition-all duration-300">
                 Eventos
@@ -101,7 +95,7 @@ export default function Footer() {
         <div className="mt-16 pt-8 border-t border-primary-foreground/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="font-paragraph text-sm text-primary-foreground/70 text-center md:text-left">
-              © {new Date().getFullYear()} Alliance Board Hub. Todos os direitos reservados.
+              © {new Date().getFullYear()} SM Board. Todos os direitos reservados.
             </p>
             <div className="flex items-center gap-6">
               <Link to="/about" className="font-paragraph text-sm text-primary-foreground/70 hover:text-accent transition-colors">

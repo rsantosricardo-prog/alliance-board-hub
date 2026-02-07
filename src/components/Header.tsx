@@ -74,23 +74,7 @@ export default function Header() {
                 isActive('/institutional') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
               }`}
             >
-              Definição Institucional
-            </Link>
-            <Link
-              to="/solutions"
-              className={`font-paragraph text-base transition-colors ${
-                isActive('/solutions') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
-              }`}
-            >
-              Soluções
-            </Link>
-            <Link
-              to="/governance"
-              className={`font-paragraph text-base transition-colors ${
-                isActive('/governance') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
-              }`}
-            >
-              Governança na Prática
+              Posicionamento
             </Link>
             <Link
               to="/events"
@@ -164,25 +148,7 @@ export default function Header() {
                 isActive('/institutional') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
               }`}
             >
-              Definição Institucional
-            </Link>
-            <Link
-              to="/solutions"
-              onClick={() => setIsMenuOpen(false)}
-              className={`font-paragraph text-base transition-colors ${
-                isActive('/solutions') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
-              }`}
-            >
-              Soluções
-            </Link>
-            <Link
-              to="/governance"
-              onClick={() => setIsMenuOpen(false)}
-              className={`font-paragraph text-base transition-colors ${
-                isActive('/governance') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
-              }`}
-            >
-              Governança na Prática
+              Posicionamento
             </Link>
             <Link
               to="/events"

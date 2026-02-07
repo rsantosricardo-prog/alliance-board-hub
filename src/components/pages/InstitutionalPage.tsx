@@ -39,10 +39,10 @@ export default function InstitutionalPage() {
           >
             <div className="w-16 h-1 bg-accent mb-8" />
             <h1 className="font-heading text-5xl lg:text-7xl mb-6">
-              Definição Institucional
+              Posicionamento Estratégico
             </h1>
             <p className="font-paragraph text-xl lg:text-2xl text-primary-foreground/80 leading-relaxed">
-              Conectando excelência em governança corporativa através de uma rede qualificada de conselheiros independentes e empresas parceiras comprometidas com as melhores práticas.
+              SM Board: Inteligência estratégica para conselheiros e C-Levels que buscam decisões de alto impacto através de capital intelectual qualificado e acesso a pares de excelência.
             </p>
           </motion.div>
         </div>

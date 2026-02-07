@@ -1,38 +1,19 @@
-// HPI 1.7-V
 import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, useScroll, useTransform, useSpring, useInView } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { BaseCrudService } from '@/integrations';
 import { BrandEssence, CoreValues } from '@/entities';
 import { Image } from '@/components/ui/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { ArrowRight, Calendar, ChevronDown, Globe, ShieldCheck, Users } from 'lucide-react';
-
-// --- Utility Components ---
-
-const SectionDivider = () => (
-  <div className="w-full flex justify-center py-12 opacity-20">
-    <div className="h-24 w-px bg-secondary" />
-  </div>
-);
-
-const Monogram = () => (
-  <div className="relative w-32 h-48 border-[3px] border-primary-foreground rounded-[100%] flex flex-col items-center justify-center overflow-hidden group cursor-default transition-transform duration-700 hover:scale-105">
-
-  </div>
-);
-
-// --- Main Component ---
+import { ArrowRight, ChevronDown } from 'lucide-react';
 
 export default function HomePage() {
-  // --- Data Fidelity Protocol: Canonical Data Sources ---
   const [brandEssence, setBrandEssence] = useState<BrandEssence | null>(null);
   const [coreValues, setCoreValues] = useState<CoreValues[]>([]);
   const [isLoadingBrand, setIsLoadingBrand] = useState(true);
   const [isLoadingValues, setIsLoadingValues] = useState(true);
 
-  // --- Scroll Hooks for Parallax & Motion ---
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -40,7 +21,6 @@ export default function HomePage() {
   });
 
   const heroParallax = useTransform(scrollYProgress, [0, 0.2], [0, 100]);
-  const scaleSpring = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
 
   useEffect(() => {
     const loadBrandEssence = async () => {
@@ -72,205 +52,310 @@ export default function HomePage() {
     loadCoreValues();
   }, []);
 
-  // --- Render ---
-
   return (
     <div ref={containerRef} className="min-h-screen bg-background selection:bg-primary selection:text-white overflow-x-clip pt-28">
       <Header />
-      {/* --- HERO SECTION: The "Ritornello" Layout --- */}
-      {/* Replicating the 3-column structure: Orange Block | Image Slice | Light Content */}
-      <section className="relative w-full min-h-[100vh] flex flex-col lg:grid lg:grid-cols-10 pt-20 lg:pt-0">
-        
-        {/* Column 1: The Anchor (Orange) - 40% */}
-        <div className="lg:col-span-4 text-primary-foreground flex flex-col justify-between p-8 lg:p-16 relative overflow-hidden order-1 bg-primary">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-12 lg:mt-24 relative z-10"
-          >
-            {/* Decorative Monogram */}
 
-            {/* Main Title */}
-            <h1 className="font-heading text-4xl lg:text-6xl leading-[1.2] mb-8 text-primary-foreground">
-              Governança estratégica por meio da aliança de conselheiros experientes
-            </h1>
-            <div className="w-32 h-1.5 bg-accent shadow-lg" />
-            <p className="font-paragraph text-base lg:text-lg mt-6 tracking-wide text-primary-foreground leading-relaxed max-w-md text-justify">
-              Conectamos organizações e conselheiros independentes para apoiar decisões estratégicas éticas, sustentáveis e alinhadas às melhores práticas de governança corporativa.
-            </p>
-            <p className="font-paragraph text-sm lg:text-base mt-6 tracking-wide text-primary-foreground/80 leading-relaxed max-w-md text-justify">{"Atuamos como um hub institucional que promove diálogo qualificado, visão externa e maturidade decisória em ambientes corporativos complexos."}</p>
-          </motion.div>
-
-          {/* Contact Information Section */}
-          {/* Decorative background texture for depth */}
-          <div className="absolute inset-0 opacity-10 pointer-events-none" 
-               style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, black 1px, transparent 0)', backgroundSize: '40px 40px' }}>
-          </div>
-          
-          {/* Subtle gradient overlay */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="relative z-10 mb-8 space-y-4"
-          >
-            <div className="flex items-start gap-3">
-            <Users className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
-            <div>
-              <p className="font-paragraph text-sm text-primary-foreground/80 leading-relaxed">
-                Conectando Líderes e Organizações
+      {/* HERO SECTION */}
+      <section className="relative w-full min-h-[90vh] flex items-center justify-center pt-20 lg:pt-0">
+        <div className="max-w-[100rem] mx-auto px-6 lg:px-12 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            {/* Left: Hero Text */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="flex flex-col gap-8"
+            >
+              <div className="space-y-4">
+                <span className="font-paragraph text-xs font-bold tracking-[0.2em] uppercase text-foreground/60">
+                  Smart Money
+                </span>
+                <h1 className="font-heading text-5xl lg:text-7xl leading-[1.1] text-foreground">
+                  Inteligência Estratégica para Decisões de Alto Impacto
+                </h1>
+              </div>
+              
+              <p className="font-paragraph text-lg lg:text-xl text-foreground/70 leading-relaxed max-w-lg">
+                Conectando conselheiros e C-Levels em um ecossistema exclusivo de capital intelectual, onde decisões estratégicas encontram visão de longo prazo e acesso qualificado.
               </p>
-            </div>
+
+              <div className="pt-8 border-t border-foreground/10 flex flex-col sm:flex-row gap-4">
+                <Link 
+                  to="/institutional" 
+                  className="group flex items-center justify-center w-full sm:w-auto bg-primary text-primary-foreground px-8 py-4 rounded-lg hover:bg-secondary transition-all duration-300 font-paragraph font-medium"
+                >
+                  Explorar Posicionamento
+                  <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link 
+                  to="/contact" 
+                  className="group flex items-center justify-center w-full sm:w-auto border-2 border-foreground text-foreground px-8 py-4 rounded-lg hover:bg-foreground hover:text-background transition-all duration-300 font-paragraph font-medium"
+                >
+                  Solicitar Acesso
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Right: Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative h-[400px] lg:h-[500px] rounded-lg overflow-hidden group"
+            >
+              <div className="absolute inset-0 bg-black/10 z-10 group-hover:bg-black/0 transition-colors duration-700" />
+              {isLoadingBrand ? (
+                <div className="w-full h-full bg-neutral-200 animate-pulse" />
+              ) : (
+                <Image
+                  src={brandEssence?.brandImage || "https://static.wixstatic.com/media/904ff8_f6b14faca1744f968654e0c5057e4581~mv2.png?originWidth=1152&originHeight=768"}
+                  alt="Smart Money Strategy"
+                  className="w-full h-full object-cover grayscale transition-transform duration-1000 ease-out group-hover:scale-105"
+                  width={1200}
+                />
+              )}
+            </motion.div>
           </div>
-          <div className="flex items-start gap-3">
-                <Globe className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
-                <div>
-                  <p className="font-paragraph text-sm text-primary-foreground/80 leading-relaxed">
-                    São Paulo, Brasil
-                  </p>
+        </div>
+      </section>
+
+      {/* INSTITUTIONAL POSITIONING SECTION */}
+      <section className="relative w-full bg-background py-24 lg:py-32 border-t border-foreground/10">
+        <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            {/* Left: Content */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="flex flex-col gap-8"
+            >
+              <div className="space-y-4">
+                <span className="font-paragraph text-xs font-bold tracking-[0.2em] uppercase text-foreground/60">
+                  Posicionamento
+                </span>
+                <h2 className="font-heading text-5xl lg:text-6xl text-foreground leading-tight">
+                  O que é SM Board
+                </h2>
+              </div>
+
+              <p className="font-paragraph text-lg text-foreground/70 leading-relaxed">
+                {brandEssence?.summary || "SM Board é uma plataforma seletiva de Smart Money que conecta conselheiros e C-Levels em um ecossistema de alto valor estratégico."}
+              </p>
+
+              <div className="space-y-6 pt-8 border-t border-foreground/10">
+                <div className="flex gap-4">
+                  <div className="w-1 bg-primary flex-shrink-0" />
+                  <div>
+                    <h3 className="font-heading text-xl text-foreground mb-2">Público-Alvo</h3>
+                    <p className="font-paragraph text-foreground/70">Conselheiros independentes e C-Levels que buscam decisões estratégicas de alto impacto através de inteligência coletiva.</p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <div className="w-1 bg-primary flex-shrink-0" />
+                  <div>
+                    <h3 className="font-heading text-xl text-foreground mb-2">Diferencial</h3>
+                    <p className="font-paragraph text-foreground/70">Capital intelectual qualificado, acesso a pares de excelência e visão de longo prazo para decisões que transformam.</p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <div className="w-1 bg-primary flex-shrink-0" />
+                  <div>
+                    <h3 className="font-heading text-xl text-foreground mb-2">Propósito</h3>
+                    <p className="font-paragraph text-foreground/70">Conectar líderes estratégicos em um ecossistema exclusivo onde conhecimento, experiência e visão convergem para decisões de impacto.</p>
+                  </div>
                 </div>
               </div>
             </motion.div>
 
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/10 pointer-events-none" />
-        </div>
-
-        {/* Column 2: The Window (Image) - 30% */}
-        <div className="lg:col-span-3 relative h-[50vh] lg:h-auto bg-foreground overflow-hidden order-2 lg:order-2 group">
-          <div className="absolute inset-0 bg-black/20 z-10 group-hover:bg-black/0 transition-colors duration-700" />
-          
-          {/* Parallax Image Container */}
-          <motion.div 
-            className="w-full h-[120%] relative -top-[10%]"
-            style={{ y: heroParallax }}
-          >
-            {isLoadingBrand ? (
-              <div className="w-full h-full bg-neutral-800 animate-pulse" />
-            ) : (
+            {/* Right: Visual */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="relative h-[400px] lg:h-[500px] rounded-lg overflow-hidden group"
+            >
+              <div className="absolute inset-0 bg-black/5 z-10 group-hover:bg-black/0 transition-colors duration-700" />
               <Image
-                src={brandEssence?.brandImage || "https://static.wixstatic.com/media/904ff8_f6b14faca1744f968654e0c5057e4581~mv2.png?originWidth=1152&originHeight=768"}
-                alt="Strategic Board Meeting"
-                className="w-full h-full object-cover grayscale contrast-125 transition-transform duration-1000 ease-out group-hover:scale-105"
+                src="https://static.wixstatic.com/media/904ff8_f6b14faca1744f968654e0c5057e4581~mv2.png?originWidth=1152&originHeight=768"
+                alt="Strategic Positioning"
+                className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
                 width={1200}
               />
-            )}
-          </motion.div>
-          
-          {/* Vertical Divider Line */}
-          <div className="absolute right-0 top-0 bottom-0 w-px bg-white/20 z-20 hidden lg:block" />
-        </div>
-
-        {/* Column 3: The Context (Light) - 30% */}
-        <div className="lg:col-span-3 bg-background flex flex-col justify-end p-8 lg:p-16 relative order-3">
-          <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-muted/5 to-transparent pointer-events-none lg:hidden" />
-          
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col gap-8 mb-12"
-          >
-            <div className="space-y-4">
-              <span className="font-paragraph text-xs font-bold tracking-[0.2em] uppercase text-foreground/60">
-                Próximo Capítulo
-              </span>
-              <h2 className="font-heading text-4xl lg:text-5xl text-foreground leading-tight">
-                {brandEssence?.title || "Governança Estratégica"}
-              </h2>
-              <p className="font-paragraph text-foreground/70 max-w-md text-lg leading-relaxed">
-                Governança como alavanca de performance empresarial.
-              </p>
-            </div>
-
-            <div className="pt-8 border-t border-foreground/10 flex flex-col gap-4">
-              <Link 
-                to="/institutional" 
-                className="group flex items-center justify-between w-full bg-primary text-primary-foreground px-8 py-5 rounded-full hover:bg-secondary transition-all duration-300"
-              >
-                <span className="font-paragraph font-medium tracking-wide">Conheça Nossa Rede</span>
-                <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link 
-                to="/events" 
-                className="group flex items-center justify-between w-full bg-accent text-accent-foreground px-8 py-5 rounded-full hover:bg-accent/80 transition-all duration-300"
-              >
-                <span className="font-paragraph font-medium tracking-wide">Explorar Eventos</span>
-                <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-      {/* --- SECTION 2: THE ESSENCE (Cinematic Scroll) --- */}
-      <section className="relative w-full bg-primary text-primary-foreground py-32 lg:py-48 overflow-hidden">
-        {/* Background Noise Texture */}
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay"
-             style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}>
-        </div>
-
-        <div className="max-w-[100rem] mx-auto px-6 lg:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
-            
-            {/* Sticky Title */}
-            <div className="lg:col-span-4">
-              <div className="sticky top-32">
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  className="flex flex-col gap-6"
-                >
-                  <div className="w-12 h-1 bg-accent" />
-                  <h2 className="font-heading text-5xl lg:text-7xl text-primary-foreground">
-                    Nossa<br />Essência
-                  </h2>
-                  <p className="font-paragraph text-primary-foreground/70 text-lg max-w-xs">
-                    Definindo os padrões da governança corporativa moderna através da independência e excelência.
-                  </p>
-                </motion.div>
-              </div>
-            </div>
-
-            {/* Scrolling Content */}
-            <div className="lg:col-span-8">
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-              >
-                <p className="font-heading text-3xl lg:text-5xl leading-[1.4] text-primary-foreground/90 indent-12 lg:indent-24 text-left">
-                  {brandEssence?.content || "Somos a ponte entre liderança visionária e execução sustentável. Em um mundo de complexidade, fornecemos a clareza necessária para que os conselhos naveguem o futuro com confiança."}
-                </p>
-                
-                <div className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-12">
-                  <div className="border-t border-primary-foreground/20 pt-8">
-                    <ShieldCheck className="w-10 h-10 text-accent mb-6" />
-                    <h3 className="font-heading text-2xl mb-4 text-primary-foreground">Liderança Ética</h3>
-                    <p className="font-paragraph text-primary-foreground/70">Mantendo os mais altos padrões de integridade em cada decisão e conexão que facilitamos.</p>
-                  </div>
-                  <div className="border-t border-primary-foreground/20 pt-8">
-                    <Globe className="w-10 h-10 text-accent mb-6" />
-                    <h3 className="font-heading text-2xl mb-4 text-primary-foreground">Perspectiva Global</h3>
-                    <p className="font-paragraph text-primary-foreground/70">Trazendo pontos de vista diversos e melhores práticas internacionais para salas de conselho locais.</p>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
-      {/* --- SECTION 3: CORE VALUES (Staggered Grid) --- */}
-      <section className="w-full py-24 lg:py-32 bg-background relative">
+
+      {/* SOLUTIONS SECTION */}
+      <section className="relative w-full bg-primary text-primary-foreground py-24 lg:py-32">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
-          
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 lg:mb-20 border-b border-foreground/10 pb-8 lg:pb-10 gap-6 lg:gap-0">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16 lg:mb-20"
+          >
+            <span className="font-paragraph text-xs font-bold tracking-[0.2em] uppercase text-primary-foreground/60">
+              Soluções
+            </span>
+            <h2 className="font-heading text-5xl lg:text-6xl text-primary-foreground leading-tight mt-4">
+              Networking Estratégico e Curadoria de Conhecimento
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 p-8 lg:p-10 rounded-lg"
+            >
+              <h3 className="font-heading text-2xl lg:text-3xl text-primary-foreground mb-4">Acesso a Pares</h3>
+              <p className="font-paragraph text-primary-foreground/80 leading-relaxed">
+                Conecte-se com conselheiros e executivos de alto nível que compartilham visão estratégica e experiência comprovada em decisões de impacto corporativo.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 p-8 lg:p-10 rounded-lg"
+            >
+              <h3 className="font-heading text-2xl lg:text-3xl text-primary-foreground mb-4">Curadoria de Conhecimento</h3>
+              <p className="font-paragraph text-primary-foreground/80 leading-relaxed">
+                Acesso a conteúdo estratégico, insights de mercado e melhores práticas selecionadas especificamente para líderes que tomam decisões de alto impacto.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 p-8 lg:p-10 rounded-lg"
+            >
+              <h3 className="font-heading text-2xl lg:text-3xl text-primary-foreground mb-4">Inteligência Coletiva</h3>
+              <p className="font-paragraph text-primary-foreground/80 leading-relaxed">
+                Beneficie-se da sabedoria coletiva de uma rede qualificada, onde experiências e perspectivas convergem para decisões mais informadas e estratégicas.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 p-8 lg:p-10 rounded-lg"
+            >
+              <h3 className="font-heading text-2xl lg:text-3xl text-primary-foreground mb-4">Visão de Longo Prazo</h3>
+              <p className="font-paragraph text-primary-foreground/80 leading-relaxed">
+                Discussões estratégicas focadas em sustentabilidade, governança e criação de valor duradouro para organizações e stakeholders.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* STRATEGIC COMMUNITIES SECTION */}
+      <section className="relative w-full bg-background py-24 lg:py-32 border-t border-foreground/10">
+        <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16 lg:mb-20"
+          >
+            <span className="font-paragraph text-xs font-bold tracking-[0.2em] uppercase text-foreground/60">
+              Comunidades
+            </span>
+            <h2 className="font-heading text-5xl lg:text-6xl text-foreground leading-tight mt-4">
+              Comunidades Estratégicas
+            </h2>
+            <p className="font-paragraph text-lg text-foreground/70 leading-relaxed max-w-2xl mt-6">
+              Acesso exclusivo a grupos de WhatsApp especializados para conselheiros e C-Levels, onde decisões estratégicas são discutidas entre pares qualificados.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            {/* Conselheiros Group */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="border-2 border-foreground/20 p-10 lg:p-12 rounded-lg hover:border-primary transition-colors duration-300"
+            >
+              <h3 className="font-heading text-3xl text-foreground mb-4">Grupo WhatsApp - Conselheiros</h3>
+              <p className="font-paragraph text-foreground/70 leading-relaxed mb-8">
+                Comunidade exclusiva de conselheiros independentes para discussões estratégicas, compartilhamento de experiências e networking qualificado.
+              </p>
+              <div className="space-y-3">
+                <a 
+                  href="https://stripe.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center w-full bg-primary text-primary-foreground px-8 py-4 rounded-lg hover:bg-secondary transition-all duration-300 font-paragraph font-medium"
+                >
+                  Acessar Pagamento
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </a>
+                <a 
+                  href="https://chat.whatsapp.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center w-full border-2 border-primary text-primary px-8 py-4 rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-paragraph font-medium"
+                >
+                  Entrar no Grupo
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </a>
+              </div>
+            </motion.div>
+
+            {/* C-Levels Group */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="border-2 border-foreground/20 p-10 lg:p-12 rounded-lg hover:border-primary transition-colors duration-300"
+            >
+              <h3 className="font-heading text-3xl text-foreground mb-4">Grupo WhatsApp - C-Levels</h3>
+              <p className="font-paragraph text-foreground/70 leading-relaxed mb-8">
+                Comunidade seletiva de C-Levels e executivos para discussões estratégicas. Entrada mediante curadoria e aprovação para garantir qualidade e alinhamento.
+              </p>
+              <div className="space-y-3">
+                <Link 
+                  to="/contact"
+                  className="flex items-center justify-center w-full bg-primary text-primary-foreground px-8 py-4 rounded-lg hover:bg-secondary transition-all duration-300 font-paragraph font-medium"
+                >
+                  Solicitar Candidatura
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+                <p className="font-paragraph text-sm text-foreground/60 text-center pt-2">
+                  Entrada mediante curadoria e aprovação
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* CORE VALUES SECTION */}
+      <section className="w-full py-24 lg:py-32 bg-background relative border-t border-foreground/10">
+        <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 lg:mb-20 gap-6 lg:gap-0">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-heading text-5xl lg:text-7xl text-foreground"
+              className="font-heading text-5xl lg:text-6xl text-foreground"
             >
               Valores Fundamentais
             </motion.h2>
@@ -287,10 +372,9 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
             {isLoadingValues ? (
-              // Skeleton Loading
-              ([1, 2, 3].map((i) => (
-                <div key={i} className="h-96 bg-foreground/5 animate-pulse rounded-sm" />
-              )))
+              [1, 2, 3].map((i) => (
+                <div key={i} className="h-96 bg-foreground/5 animate-pulse rounded-lg" />
+              ))
             ) : (
               coreValues.map((value, index) => (
                 <ValueCard key={value._id} value={value} index={index} />
@@ -299,44 +383,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* --- SECTION 4: VISUAL BREATHER (Full Bleed Image) --- */}
-      <section className="w-full h-[80vh] relative overflow-hidden clip-path-slant">
-        <div className="absolute inset-0 bg-black/40 z-10" />
-        <motion.div 
-          className="w-full h-full"
-          initial={{ scale: 1.1 }}
-          whileInView={{ scale: 1 }}
-          transition={{ duration: 1.5 }}
-          viewport={{ once: true }}
-        >
-          <Image
-            src="https://static.wixstatic.com/media/904ff8_8b2ed19fab2d4bf0aac40294594cea06~mv2.png?originWidth=1920&originHeight=768"
-            alt="Boardroom Atmosphere"
-            className="w-full h-full object-cover"
-            width={1920}
-          />
-        </motion.div>
-        <div className="absolute inset-0 z-20 flex items-center justify-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-            className="text-center px-6"
-          >
-            <p className="font-heading text-4xl lg:text-6xl text-white max-w-4xl leading-tight">
-              "Governança não é apenas sobre conformidade.<br/>É sobre desempenho."
-            </p>
-          </motion.div>
-        </div>
-      </section>
-      {/* --- SECTION 5: CALL TO ACTION (The Finale) --- */}
-      <section className="w-full py-32 lg:py-40 bg-primary text-primary-foreground relative overflow-hidden">
-        {/* Decorative large typography background */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center pointer-events-none opacity-10 select-none">
-          <span className="font-heading text-[20vw] leading-none">ALLIANCE</span>
-        </div>
 
+      {/* CTA SECTION */}
+      <section className="w-full py-32 lg:py-40 bg-primary text-primary-foreground relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -345,45 +394,37 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="font-heading text-5xl lg:text-7xl mb-8">
-              Junte-se à Aliança
+              Junte-se a SM Board
             </h2>
             <p className="font-paragraph text-xl lg:text-2xl mb-12 opacity-90 max-w-2xl mx-auto">
-              Conecte-se com uma rede de conselheiros e organizações distintas moldando o futuro.
+              Conecte-se com uma rede de líderes estratégicos moldando decisões de alto impacto.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link 
                 to="/institutional"
-                className="min-w-[200px] bg-accent text-accent-foreground px-10 py-5 rounded-full font-paragraph font-medium hover:bg-accent/80 transition-colors duration-300 shadow-lg hover:shadow-xl"
+                className="min-w-[200px] bg-primary-foreground text-primary px-10 py-5 rounded-lg font-paragraph font-medium hover:bg-primary-foreground/90 transition-colors duration-300"
               >
-                Faça Parte da Rede
+                Explorar Posicionamento
               </Link>
               <Link 
                 to="/contact"
-                className="min-w-[200px] border-2 border-primary-foreground text-primary-foreground px-10 py-5 rounded-full font-paragraph font-medium hover:bg-primary-foreground hover:text-primary transition-colors duration-300"
+                className="min-w-[200px] border-2 border-primary-foreground text-primary-foreground px-10 py-5 rounded-lg font-paragraph font-medium hover:bg-primary-foreground hover:text-primary transition-colors duration-300"
               >
-                Entre em Contato
+                Solicitar Acesso
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
+
       <Footer />
-      {/* Custom Styles for specific effects */}
-      <style>{`
-        .clip-path-slant {
-          clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-        }
-      `}</style>
     </div>
   );
 }
 
-// --- Sub-Components ---
-
 function ValueCard({ value, index }: { value: CoreValues; index: number }) {
-  // Staggered vertical offset based on index
-  const yOffset = index % 2 === 0 ? 0 : 60;
+  const yOffset = index % 2 === 0 ? 0 : 40;
   
   return (
     <motion.div
@@ -391,42 +432,39 @@ function ValueCard({ value, index }: { value: CoreValues; index: number }) {
       whileInView={{ opacity: 1, y: yOffset }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.7, delay: index * 0.1 }}
-      className={`group relative bg-white border border-muted/20 p-10 lg:p-12 h-full min-h-[400px] flex flex-col justify-between hover:border-accent transition-colors duration-500 ${index % 2 !== 0 ? 'lg:mt-16' : ''}`}
+      className={`group relative bg-white border border-foreground/10 p-10 lg:p-12 h-full min-h-[350px] flex flex-col justify-between hover:border-primary transition-all duration-500 rounded-lg ${index % 2 !== 0 ? 'lg:mt-12' : ''}`}
     >
-      {/* Hover Reveal Background */}
-      <div className="absolute inset-0 bg-secondary transform scale-y-0 origin-bottom transition-transform duration-500 group-hover:scale-y-100 z-0 mt-8 mb-12" />
-      
       <div className="relative z-10">
         <div className="flex justify-between items-start mb-8">
-          <span className="font-heading text-6xl text-foreground/10 group-hover:text-secondary-foreground/20 transition-colors">
+          <span className="font-heading text-6xl text-foreground/10 group-hover:text-primary/20 transition-colors">
             0{index + 1}
           </span>
           {value.icon && (
-            <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center group-hover:bg-accent transition-colors">
+            <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors">
               <Image 
                 src={value.icon} 
                 alt="" 
                 width={24} 
-                className="w-6 h-6 object-contain brightness-0 group-hover:brightness-200 transition-all" 
+                className="w-6 h-6 object-contain brightness-0 group-hover:brightness-100 transition-all" 
               />
             </div>
           )}
         </div>
         
-        <h3 className="font-heading text-3xl text-foreground mb-4 group-hover:text-secondary-foreground transition-colors">
+        <h3 className="font-heading text-2xl lg:text-3xl text-foreground mb-4 group-hover:text-primary transition-colors">
           {value.valueName}
         </h3>
         
-        <div className="w-12 h-px bg-accent mb-6 group-hover:bg-secondary-foreground/50 transition-colors" />
+        <div className="w-12 h-px bg-primary mb-6 group-hover:bg-primary/80 transition-colors" />
         
-        <p className="font-paragraph text-foreground/70 leading-relaxed group-hover:text-secondary-foreground/80 transition-colors">
+        <p className="font-paragraph text-foreground/70 leading-relaxed group-hover:text-foreground transition-colors">
           {value.description}
         </p>
       </div>
 
       {value.exampleOfApplication && (
-        <div className="relative z-10 mt-8 pt-6 border-t border-foreground/5 group-hover:border-secondary-foreground/10">
-          <p className="font-paragraph text-sm text-foreground/50 italic group-hover:text-secondary-foreground/60">
+        <div className="relative z-10 mt-8 pt-6 border-t border-foreground/5 group-hover:border-primary/10">
+          <p className="font-paragraph text-sm text-foreground/50 italic group-hover:text-foreground/70">
             "{value.exampleOfApplication}"
           </p>
         </div>

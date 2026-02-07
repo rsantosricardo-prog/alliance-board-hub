@@ -65,6 +65,7 @@ const router = createBrowserRouter([
         routeMetadata: {
           pageIdentifier: 'governance',
         },
+        index: false,
       },
       {
         path: "events",
