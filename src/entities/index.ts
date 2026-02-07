@@ -117,6 +117,7 @@ export interface Ebooks {
 
 /**
  * Collection ID: events
+ * @catalog This collection is an eCommerce catalog
  * Interface for Eventos
  */
 export interface Eventos {
@@ -125,6 +126,8 @@ export interface Eventos {
   _updatedDate?: Date;
   /** @wixFieldType text */
   eventTitle?: string;
+  /** @wixFieldType number */
+  price?: number;
   /** @wixFieldType datetime */
   eventDateTime?: Date | string;
   /** @wixFieldType text */

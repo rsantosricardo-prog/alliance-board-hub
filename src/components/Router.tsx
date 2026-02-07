@@ -15,6 +15,7 @@ import EbookDetailPage from '@/components/pages/EbookDetailPage';
 import ContactPage from '@/components/pages/ContactPage';
 import DueDiligenceIAPage from '@/components/pages/DueDiligenceIAPage';
 import PodcastPage from '@/components/pages/PodcastPage';
+import ConselhosPraticaPage from '@/components/pages/ConselhosPraticaPage';
 
 // Layout component that includes ScrollToTop
 function Layout() {
@@ -122,6 +123,13 @@ const router = createBrowserRouter([
         element: <PodcastPage />,
         routeMetadata: {
           pageIdentifier: 'podcast',
+        },
+      },
+      {
+        path: "conselhos-pratica",
+        element: <ConselhosPraticaPage />,
+        routeMetadata: {
+          pageIdentifier: 'conselhos-pratica',
         },
       },
       {

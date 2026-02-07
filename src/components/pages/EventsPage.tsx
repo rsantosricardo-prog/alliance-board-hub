@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { BaseCrudService } from '@/integrations';
-import { Events } from '@/entities';
+import { Eventos } from '@/entities';
 import { Image } from '@/components/ui/image';
 import { Calendar, MapPin, ExternalLink } from 'lucide-react';
 import Header from '@/components/Header';
@@ -10,7 +10,7 @@ import Footer from '@/components/Footer';
 import { format } from 'date-fns';
 
 export default function EventsPage() {
-  const [events, setEvents] = useState<Events[]>([]);
+  const [events, setEvents] = useState<Eventos[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [hasNext, setHasNext] = useState(false);
   const [skip, setSkip] = useState(0);
@@ -18,7 +18,7 @@ export default function EventsPage() {
 
   const loadEvents = async (currentSkip: number = 0) => {
     try {
-      const result = await BaseCrudService.getAll<Events>('events', {}, { limit, skip: currentSkip });
+      const result = await BaseCrudService.getAll<Eventos>('events', {}, { limit, skip: currentSkip });
       const sortedItems = result.items.sort((a, b) => {
         const dateA = a.eventDateTime ? new Date(a.eventDateTime).getTime() : 0;
         const dateB = b.eventDateTime ? new Date(b.eventDateTime).getTime() : 0;

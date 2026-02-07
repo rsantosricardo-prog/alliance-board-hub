@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { BaseCrudService } from '@/integrations';
-import { Events } from '@/entities';
+import { Eventos } from '@/entities';
 import { Image } from '@/components/ui/image';
 import { LoadingSpinner } from '@/components/ui/loading-spinner';
 import { Calendar, MapPin, ExternalLink, ArrowLeft } from 'lucide-react';
@@ -12,7 +12,7 @@ import { format } from 'date-fns';
 
 export default function EventDetailPage() {
   const { id } = useParams<{ id: string }>();
-  const [event, setEvent] = useState<Events | null>(null);
+  const [event, setEvent] = useState<Eventos | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ export default function EventDetailPage() {
       if (!id) return;
       
       try {
-        const data = await BaseCrudService.getById<Events>('events', id);
+        const data = await BaseCrudService.getById<Eventos>('events', id);
         setEvent(data);
       } catch (error) {
         console.error('Error loading event:', error);
