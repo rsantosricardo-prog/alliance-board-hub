@@ -42,14 +42,12 @@ export default function Header() {
         <div className="flex items-center justify-between gap-6">
           {/* Logo */}
           <Link to="/" className="flex items-center justify-center lg:mx-0">
-            <Image 
-              src="https://static.wixstatic.com/media/904ff8_e139363c186d4f4f8a5fd7c11421908a~mv2.png" 
+            <Image
+              src="https://static.wixstatic.com/media/904ff8_b7c292056fcd415ba4c7e2be30a33ad6~mv2.jpg"
               width={200}
-              className="h-14 w-auto hover:opacity-80 transition-opacity duration-300" 
-              originWidth={1002} 
-              originHeight={366}
-              alt="Logo"
-            />
+              className="h-14 w-auto hover:opacity-80 transition-opacity duration-300"
+              originWidth={601}
+              originHeight={601} />
           </Link>
 
           {/* Desktop Navigation */}
