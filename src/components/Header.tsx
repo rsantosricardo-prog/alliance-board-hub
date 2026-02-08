@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import SMBoardLogo from '@/components/SMBoardLogo';
+import { Image } from '@/components/ui/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,18 +42,24 @@ export default function Header() {
         <div className="flex items-center justify-between gap-6">
           {/* Logo */}
           <Link to="/" className="flex items-center justify-center lg:mx-0 hover:opacity-80 transition-opacity duration-300">
-            <SMBoardLogo variant="light" className="h-14" />
+            <Image 
+              src="https://static.wixstatic.com/media/904ff8_844bbded66e8440cb9d047aa7c3a3b6e~mv2.png"
+              alt="SM Board Logo"
+              width={120}
+              height={56}
+              className="h-14 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             <Link
-              to="/"
+              to="/strategy"
               className={`font-paragraph text-base transition-colors ${
-                isActive('/') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
+                isActive('/') || isActive('/strategy') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
               }`}
             >
-              Início
+              Estratégia
             </Link>
             <Link
               to="/about"
@@ -62,14 +68,6 @@ export default function Header() {
               }`}
             >
               Quem Somos
-            </Link>
-            <Link
-              to="/strategy"
-              className={`font-paragraph text-base transition-colors ${
-                isActive('/strategy') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
-              }`}
-            >
-              Estratégia
             </Link>
             <Link
               to="/events"
@@ -119,13 +117,13 @@ export default function Header() {
         {isMenuOpen && (
           <nav className="lg:hidden mt-6 flex flex-col gap-4 pb-4">
             <Link
-              to="/"
+              to="/strategy"
               onClick={() => setIsMenuOpen(false)}
               className={`font-paragraph text-base transition-colors ${
-                isActive('/') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
+                isActive('/') || isActive('/strategy') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
               }`}
             >
-              Início
+              Estratégia
             </Link>
             <Link
               to="/about"
@@ -135,15 +133,6 @@ export default function Header() {
               }`}
             >
               Quem Somos
-            </Link>
-            <Link
-              to="/strategy"
-              onClick={() => setIsMenuOpen(false)}
-              className={`font-paragraph text-base transition-colors ${
-                isActive('/strategy') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
-              }`}
-            >
-              Estratégia
             </Link>
             <Link
               to="/events"

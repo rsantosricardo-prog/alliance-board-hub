@@ -36,9 +36,9 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <HomePage />,
+        element: <StrategyPage />,
         routeMetadata: {
-          pageIdentifier: 'home',
+          pageIdentifier: 'strategy',
         },
       },
       {
