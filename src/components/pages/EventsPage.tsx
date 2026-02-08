@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { BaseCrudService } from '@/integrations';
 import { Eventos } from '@/entities';
 import { Image } from '@/components/ui/image';
-import { Calendar, MapPin, ExternalLink } from 'lucide-react';
+import { Calendar, MapPin, ExternalLink, Plus } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { format } from 'date-fns';
@@ -82,6 +82,18 @@ export default function EventsPage() {
               Junte-se a nós para discussões perspicazes, workshops e oportunidades de networking focadas em governança corporativa ética e sustentável.
             </p>
           </motion.div>
+        </div>
+      </section>
+      {/* Add Event Button */}
+      <section className="w-full bg-secondary/5 py-6 border-b border-border">
+        <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
+          <Link
+            to="/events/admin/new"
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full hover:bg-primary/90 transition-colors font-paragraph text-base"
+          >
+            <Plus className="w-5 h-5" />
+            Adicionar Novo Evento
+          </Link>
         </div>
       </section>
       {/* Events List Section */}

@@ -10,6 +10,7 @@ import SolutionsPage from '@/components/pages/SolutionsPage';
 import GovernancePage from '@/components/pages/GovernancePage';
 import EventsPage from '@/components/pages/EventsPage';
 import EventDetailPage from '@/components/pages/EventDetailPage';
+import AdminEventsPage from '@/components/pages/AdminEventsPage';
 import EbooksPage from '@/components/pages/EbooksPage';
 import EbookDetailPage from '@/components/pages/EbookDetailPage';
 import ContactPage from '@/components/pages/ContactPage';
@@ -88,6 +89,13 @@ const router = createBrowserRouter([
         element: <EventDetailPage />,
         routeMetadata: {
           pageIdentifier: 'event-detail',
+        },
+      },
+      {
+        path: "events/admin/new",
+        element: <AdminEventsPage />,
+        routeMetadata: {
+          pageIdentifier: 'admin-events',
         },
       },
       {
