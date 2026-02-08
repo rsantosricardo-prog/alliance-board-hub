@@ -42,13 +42,13 @@ export default function Header() {
         <div className="flex items-center justify-between gap-6">
           {/* Logo */}
           <Link to="/" className="flex items-center justify-center lg:mx-0 hover:opacity-80 transition-opacity duration-300">
-            <Image 
-              src="https://static.wixstatic.com/media/904ff8_844bbded66e8440cb9d047aa7c3a3b6e~mv2.png"
-              alt="SM Board Logo"
+            <Image
+              src="https://static.wixstatic.com/media/904ff8_7772e2c934fb4fdb848796bf5f843b8e~mv2.jpg"
               width={120}
               height={56}
               className="h-14 w-auto"
-            />
+              originWidth={616}
+              originHeight={415} />
           </Link>
 
           {/* Desktop Navigation */}

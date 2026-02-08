@@ -15,11 +15,11 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1 flex flex-col items-center">
             <SMBoardLogo variant="dark" className="h-20 mb-6" />
-            <p className="font-paragraph text-base text-primary-foreground/90 leading-relaxed mb-6 text-justify">
+            <div className="h-1 w-20 bg-accent rounded-full"></div>
+          <p className="font-paragraph text-base text-primary-foreground/90 leading-relaxed mb-6 text-justify">
               Conectando conselheiros e C-Levels para decisões estratégicas de alto impacto através de inteligência coletiva e capital intelectual.
             </p>
-            <div className="h-1 w-20 bg-accent rounded-full"></div>
-          </div>
+            </div>
 
           {/* Navigation Column */}
           <div>
