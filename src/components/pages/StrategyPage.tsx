@@ -205,7 +205,7 @@ export default function StrategyPage() {
                 </div>
               </div>
               <a
-                href="https://buy.stripe.com/conselheiros"
+                href="https://chat.whatsapp.com/EG5yLFfjDi24OApOSCOw3O"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-10 inline-flex items-center justify-center gap-2 w-full bg-primary-foreground text-primary px-6 py-3 rounded-lg hover:bg-primary-foreground/90 transition-all duration-300 font-paragraph font-medium"
