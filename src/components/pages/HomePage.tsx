@@ -55,7 +55,6 @@ export default function HomePage() {
   return (
     <div ref={containerRef} className="min-h-screen bg-background selection:bg-primary selection:text-white overflow-x-clip pt-28">
       <Header />
-
       {/* HERO SECTION */}
       <section className="relative w-full min-h-[90vh] flex items-center justify-center pt-20 lg:pt-0">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12 w-full">
@@ -119,7 +118,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* INSTITUTIONAL POSITIONING SECTION */}
       <section className="relative w-full bg-background py-24 lg:py-32 border-t border-foreground/10">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
@@ -189,7 +187,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* SOLUTIONS SECTION */}
       <section className="relative w-full bg-primary text-primary-foreground py-24 lg:py-32">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
@@ -262,7 +259,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* STRATEGIC COMMUNITIES SECTION */}
       <section className="relative w-full bg-background py-24 lg:py-32 border-t border-foreground/10">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
@@ -293,9 +289,7 @@ export default function HomePage() {
               className="border-2 border-foreground/20 p-10 lg:p-12 rounded-lg hover:border-primary transition-colors duration-300"
             >
               <h3 className="font-heading text-3xl text-foreground mb-4">Grupo WhatsApp - Conselheiros</h3>
-              <p className="font-paragraph text-foreground/70 leading-relaxed mb-8">
-                Comunidade exclusiva de conselheiros independentes para discussões estratégicas, compartilhamento de experiências e networking qualificado.
-              </p>
+              <p className="font-paragraph text-foreground/70 leading-relaxed mb-8">Comunidade exclusiva de conselheiros independentes para discussões estratégicas, compartilhamento de experiências, networking qualificado.</p>
               <div className="space-y-4">
                 <div className="flex gap-3">
                   <a 
@@ -325,15 +319,7 @@ export default function HomePage() {
                     <Mail className="w-5 h-5" />
                     Email
                   </a>
-                  <a 
-                    href="https://smartmoney.com/conselheiros"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 border-2 border-foreground/30 text-foreground px-6 py-3 rounded-lg hover:bg-foreground/5 transition-all duration-300 font-paragraph font-medium"
-                  >
-                    <Globe className="w-5 h-5" />
-                    Portal
-                  </a>
+
                 </div>
               </div>
             </motion.div>
@@ -347,9 +333,7 @@ export default function HomePage() {
               className="border-2 border-foreground/20 p-10 lg:p-12 rounded-lg hover:border-primary transition-colors duration-300"
             >
               <h3 className="font-heading text-3xl text-foreground mb-4">Grupo WhatsApp - C-Levels</h3>
-              <p className="font-paragraph text-foreground/70 leading-relaxed mb-8">
-                Comunidade seletiva de C-Levels e executivos para discussões estratégicas. Entrada mediante curadoria e aprovação para garantir qualidade e alinhamento.
-              </p>
+              <p className="font-paragraph text-foreground/70 leading-relaxed mb-8">Comunidade seletiva de C-Levels e executivos para discussões estratégicas debatidas com profundidade para criar novas oportunidades, novos ecossistemas e entregando cada vez mais valor para os acionistas e clientes.Entrada mediante curadoria e aprovação para garantir qualidade e alinhamento.</p>
               <div className="space-y-4">
                 <div className="flex gap-3">
                   <a 
@@ -379,22 +363,13 @@ export default function HomePage() {
                     <Mail className="w-5 h-5" />
                     Email
                   </a>
-                  <a 
-                    href="https://smartmoney.com/clevels"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 border-2 border-foreground/30 text-foreground px-6 py-3 rounded-lg hover:bg-foreground/5 transition-all duration-300 font-paragraph font-medium"
-                  >
-                    <Globe className="w-5 h-5" />
-                    Portal
-                  </a>
+
                 </div>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
-
       {/* CORE VALUES SECTION */}
       <section className="w-full py-24 lg:py-32 bg-background relative border-t border-foreground/10">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
@@ -431,7 +406,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* CTA SECTION */}
       <section className="w-full py-32 lg:py-40 bg-primary text-primary-foreground relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
@@ -465,7 +439,6 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
