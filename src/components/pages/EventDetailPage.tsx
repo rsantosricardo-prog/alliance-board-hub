@@ -9,6 +9,7 @@ import { Calendar, MapPin, ExternalLink, ArrowLeft } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { format } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
 
 export default function EventDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -36,7 +37,7 @@ export default function EventDetailPage() {
     if (!dateString) return '';
     try {
       const date = typeof dateString === 'string' ? new Date(dateString) : dateString;
-      return format(date, 'EEEE, MMMM d, yyyy');
+      return format(date, "EEEE, d 'de' MMMM 'de' yyyy", { locale: ptBR });
     } catch {
       return '';
     }
@@ -46,7 +47,7 @@ export default function EventDetailPage() {
     if (!dateString) return '';
     try {
       const date = typeof dateString === 'string' ? new Date(dateString) : dateString;
-      return format(date, 'h:mm a');
+      return format(date, 'HH:mm', { locale: ptBR });
     } catch {
       return '';
     }

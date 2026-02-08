@@ -1,2 +1,2 @@
 // Re-export from main entities file for backward compatibility
-export type { CoreValues } from './index';
+export type { Valores } from './index';

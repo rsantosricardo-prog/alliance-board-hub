@@ -5,9 +5,9 @@
 
 /**
  * Collection ID: brandessence
- * Interface for BrandEssence
+ * Interface for EssnciadaMarca
  */
-export interface BrandEssence {
+export interface EssnciadaMarca {
   _id: string;
   _createdDate?: Date;
   _updatedDate?: Date;
@@ -57,9 +57,9 @@ export interface Conselheiros {
 
 /**
  * Collection ID: corevalues
- * Interface for CoreValues
+ * Interface for Valores
  */
-export interface CoreValues {
+export interface Valores {
   _id: string;
   _createdDate?: Date;
   _updatedDate?: Date;

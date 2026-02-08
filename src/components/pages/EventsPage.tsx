@@ -8,6 +8,7 @@ import { Calendar, MapPin, ExternalLink, Plus } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { format } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
 
 export default function EventsPage() {
   const [events, setEvents] = useState<Eventos[]>([]);
@@ -57,7 +58,7 @@ export default function EventsPage() {
     if (!dateString) return '';
     try {
       const date = typeof dateString === 'string' ? new Date(dateString) : dateString;
-      return format(date, 'MMMM d, yyyy • h:mm a');
+      return format(date, "d 'de' MMMM 'de' yyyy '•' HH:mm", { locale: ptBR });
     } catch {
       return '';
     }
