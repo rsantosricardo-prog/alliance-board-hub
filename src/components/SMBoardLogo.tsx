@@ -58,15 +58,9 @@ export default function SMBoardLogo({ variant = 'light', className = '' }: SMBoa
           SM
         </text>
       </svg>
-
       {/* BOARD Text */}
       <div className="flex flex-col items-center gap-1">
-        <span
-          className="text-xs font-bold tracking-[0.3em] uppercase"
-          style={{ color: textColor, fontFamily: "'Trajan Pro', 'Times New Roman', serif" }}
-        >
-          BOARD
-        </span>
+
         {/* Minimal Underline */}
         <div
           className="h-px w-12"
