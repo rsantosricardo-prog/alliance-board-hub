@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Image } from '@/components/ui/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import SMBoardLogo from '@/components/SMBoardLogo';
 import { 
   BookOpen, 
   FileText, 
@@ -125,7 +126,7 @@ export default function GovernancePage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="w-16 h-1 bg-primary mb-8" />
+              <SMBoardLogo variant="light" className="h-20 mb-8" />
               <h1 className="font-heading text-6xl lg:text-8xl text-secondary mb-8 leading-tight">
                 Governança na Prática
               </h1>

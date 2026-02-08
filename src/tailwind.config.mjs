@@ -19,19 +19,19 @@ export default {
                 '9xl': ['8rem', { lineHeight: '1', letterSpacing: '0.06em', fontWeight: '400' }],
             },
             fontFamily: {
-                heading: "forum",
-                paragraph: "proxima-n-w01-reg"
+                heading: "'Trajan Pro', 'Times New Roman', serif",
+                paragraph: "'Open Sans', 'Lato', sans-serif"
             },
             colors: {
                 foreground: '#000000',
                 destructive: '#DC2626',
                 destructiveforeground: '#FFFFFF',
                 background: '#FFFFFF',
-                secondary: '#404040',
+                secondary: '#1C1C1C',
                 'secondary-foreground': '#FFFFFF',
                 'primary-foreground': '#FFFFFF',
                 primary: '#000000',
-                accent: '#666666',
+                accent: '#1C1C1C',
                 'accent-foreground': '#FFFFFF',
                 muted: '#9CA3AF',
                 'muted-foreground': '#FFFFFF',

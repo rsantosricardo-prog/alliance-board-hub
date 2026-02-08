@@ -146,4 +146,6 @@ export interface Eventos {
   agendaDescription?: string;
   /** @wixFieldType image - Contains image URL, render with <Image> component, NOT as text */
   eventImage?: string;
+  /** @wixFieldType url */
+  cadeira?: string;
 }

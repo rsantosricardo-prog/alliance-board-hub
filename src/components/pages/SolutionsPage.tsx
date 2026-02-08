@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import SMBoardLogo from '@/components/SMBoardLogo';
 import { 
   Building2, 
   Users, 
@@ -118,7 +119,7 @@ export default function SolutionsPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="w-16 h-1 bg-primary-foreground mb-8" />
+              <SMBoardLogo variant="dark" className="h-20 mb-8" />
               <h1 className="font-heading text-6xl lg:text-8xl mb-8 leading-tight">
                 Soluções & Atuação
               </h1>
@@ -126,7 +127,6 @@ export default function SolutionsPage() {
                 Transformamos governança em vantagem competitiva através de soluções integradas e personalizadas para cada desafio estratégico.
               </p>
             </motion.div>
-
 
           </div>
         </div>
@@ -160,8 +160,8 @@ export default function SolutionsPage() {
                 className="bg-white border border-secondary/10 p-10 lg:p-12 hover:border-primary/50 transition-all duration-300 group"
               >
                 <div className="flex items-start gap-6 mb-8">
-                  <div className={`w-16 h-16 rounded-full bg-${solution.color}/10 flex items-center justify-center flex-shrink-0 group-hover:bg-${solution.color} transition-colors`}>
-                    <solution.icon className={`w-8 h-8 text-${solution.color} group-hover:text-white transition-colors`} />
+                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors">
+                    <solution.icon className="w-8 h-8 text-primary group-hover:text-white transition-colors" />
                   </div>
                   <div>
                     <h3 className="font-heading text-3xl text-secondary mb-3">
@@ -186,191 +186,6 @@ export default function SolutionsPage() {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-      {/* Conselho as a Service Section */}
-      <section className="w-full py-32 bg-gradient-to-br from-[#EAEAEA] to-white">
-        <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <div className="inline-flex items-center gap-2 bg-primary/10 px-6 py-2 rounded-full mb-8">
-              <Sparkles className="w-5 h-5 text-primary" />
-              <span className="font-paragraph text-sm text-primary font-medium">Modelo Contínuo de Assessoria</span>
-            </div>
-            <h2 className="font-heading text-5xl lg:text-7xl text-secondary mb-8">
-              Conselho as a Service
-            </h2>
-            <p className="font-heading text-2xl lg:text-3xl text-primary mb-12 italic">
-              Governança não é um evento. É um processo contínuo.
-            </p>
-            <div className="max-w-4xl mx-auto">
-              <p className="font-paragraph text-lg text-secondary/80 leading-relaxed mb-6">
-                Um modelo contínuo de assessoria em governança corporativa que conecta organizações a conselheiros experientes, oferecendo apoio estratégico recorrente para decisões críticas, alinhamento institucional e sustentabilidade de longo prazo.
-              </p>
-              <p className="font-paragraph text-lg text-secondary/80 leading-relaxed">
-                Diferente de consultorias pontuais, o Conselho as a Service promove acompanhamento estruturado, visão externa independente e amadurecimento progressivo da governança.
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Packages Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-20">
-            
-            {/* Pacote Essencial */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="bg-white border-2 border-secondary/20 p-10 hover:border-primary hover:shadow-2xl transition-all duration-300 group"
-            >
-              <div className="mb-8">
-                <div className="w-12 h-1 bg-primary mb-6" />
-                <h3 className="font-heading text-3xl text-secondary mb-2">
-                  Pacote Essencial
-                </h3>
-                <p className="font-paragraph text-sm text-secondary/60 uppercase tracking-wider">
-                  Estruturação Inicial
-                </p>
-              </div>
-
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <span className="font-paragraph text-secondary/80">Apoio estratégico periódico</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <span className="font-paragraph text-secondary/80">Participação em reuniões-chave</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <span className="font-paragraph text-secondary/80">Orientação em decisões estruturantes</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <span className="font-paragraph text-secondary/80">Foco em organização inicial da governança</span>
-                </li>
-              </ul>
-
-              <div className="mt-10 pt-8 border-t border-secondary/10">
-                <p className="font-paragraph text-sm text-secondary/60 italic">
-                  Ideal para organizações que estão estruturando suas práticas de governança
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Pacote Estratégico */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="bg-primary text-primary-foreground border-2 border-primary p-10 hover:shadow-2xl transition-all duration-300 transform lg:scale-105 relative"
-            >
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground px-6 py-2 rounded-full">
-                <span className="font-paragraph text-xs font-bold uppercase tracking-wider">Recomendado</span>
-              </div>
-
-              <div className="mb-8">
-                <div className="w-12 h-1 bg-primary-foreground mb-6" />
-                <h3 className="font-heading text-3xl text-primary-foreground mb-2">
-                  Pacote Estratégico
-                </h3>
-                <p className="font-paragraph text-sm text-primary-foreground/70 uppercase tracking-wider">
-                  Acompanhamento Contínuo
-                </p>
-              </div>
-
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary-foreground flex-shrink-0 mt-1" />
-                  <span className="font-paragraph text-primary-foreground/90">Acompanhamento contínuo da alta gestão</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary-foreground flex-shrink-0 mt-1" />
-                  <span className="font-paragraph text-primary-foreground/90">Participação recorrente em fóruns decisórios</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary-foreground flex-shrink-0 mt-1" />
-                  <span className="font-paragraph text-primary-foreground/90">Apoio em planejamento estratégico e governança</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary-foreground flex-shrink-0 mt-1" />
-                  <span className="font-paragraph text-primary-foreground/90">Mediação e visão externa independente</span>
-                </li>
-              </ul>
-
-              <div className="mt-10 pt-8 border-t border-primary-foreground/20">
-                <p className="font-paragraph text-sm text-primary-foreground/70 italic">
-                  Para organizações que buscam amadurecimento contínuo da governança
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Pacote Avançado */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="bg-white border-2 border-secondary/20 p-10 hover:border-primary hover:shadow-2xl transition-all duration-300 group"
-            >
-              <div className="mb-8">
-                <div className="w-12 h-1 bg-primary mb-6" />
-                <h3 className="font-heading text-3xl text-secondary mb-2">
-                  Pacote Avançado
-                </h3>
-                <p className="font-paragraph text-sm text-secondary/60 uppercase tracking-wider">
-                  Parceria Estratégica
-                </p>
-              </div>
-
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <span className="font-paragraph text-secondary/80">Atuação próxima ao conselho e à liderança</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <span className="font-paragraph text-secondary/80">Apoio em decisões complexas e sensíveis</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <span className="font-paragraph text-secondary/80">Estruturação e amadurecimento da governança</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <span className="font-paragraph text-secondary/80">Acompanhamento estratégico de longo prazo</span>
-                </li>
-              </ul>
-
-              <div className="mt-10 pt-8 border-t border-secondary/10">
-                <p className="font-paragraph text-sm text-secondary/60 italic">
-                  Para organizações que demandam parceria estratégica de alto nível
-                </p>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Customization Note */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mt-16 text-center"
-          >
-            <div className="max-w-3xl mx-auto bg-white border border-primary/20 p-8">
-              <p className="font-paragraph text-secondary/70 leading-relaxed">
-                <span className="font-bold text-primary">Nota:</span> Todos os pacotes são customizáveis conforme a realidade e necessidades específicas de cada organização. O escopo é ajustado para garantir máximo valor e alinhamento estratégico.
-              </p>
-            </div>
-          </motion.div>
         </div>
       </section>
       {/* Sectors Section */}

@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import { Image } from '@/components/ui/image';
+import SMBoardLogo from '@/components/SMBoardLogo';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,13 +41,8 @@ export default function Header() {
       <div className="max-w-[120rem] mx-auto px-6 lg:px-12 py-4">
         <div className="flex items-center justify-between gap-6">
           {/* Logo */}
-          <Link to="/" className="flex items-center justify-center lg:mx-0">
-            <Image
-              src="https://static.wixstatic.com/media/904ff8_b7c292056fcd415ba4c7e2be30a33ad6~mv2.jpg"
-              width={200}
-              className="h-14 w-auto hover:opacity-80 transition-opacity duration-300"
-              originWidth={601}
-              originHeight={601} />
+          <Link to="/" className="flex items-center justify-center lg:mx-0 hover:opacity-80 transition-opacity duration-300">
+            <SMBoardLogo variant="light" className="h-14" />
           </Link>
 
           {/* Desktop Navigation */}

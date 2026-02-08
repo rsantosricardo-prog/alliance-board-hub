@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import SMBoardLogo from '@/components/SMBoardLogo';
 import { ArrowRight, CheckCircle2, Users, Target, Zap, Globe } from 'lucide-react';
 
 export default function StrategyPage() {
@@ -19,6 +20,7 @@ export default function StrategyPage() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl"
           >
+            <SMBoardLogo variant="light" className="h-20 mb-8" />
             <h1 className="font-heading text-6xl lg:text-7xl mb-8 text-foreground leading-tight">
               Decisões que Transformam
             </h1>

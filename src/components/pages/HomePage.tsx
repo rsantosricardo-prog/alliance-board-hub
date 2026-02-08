@@ -6,6 +6,7 @@ import { BrandEssence, CoreValues } from '@/entities';
 import { Image } from '@/components/ui/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import SMBoardLogo from '@/components/SMBoardLogo';
 import { ArrowRight, ChevronDown, MessageCircle, Linkedin, Mail, Globe } from 'lucide-react';
 
 export default function HomePage() {
@@ -66,10 +67,8 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
               className="flex flex-col gap-8"
             >
-              <div className="space-y-4">
-                <span className="font-paragraph text-xs font-bold tracking-[0.2em] uppercase text-foreground/60">
-                  SM Board
-                </span>
+              <div className="space-y-6">
+                <SMBoardLogo variant="light" className="h-20" />
                 <h1 className="font-heading text-5xl lg:text-7xl leading-[1.1] text-foreground">
                   Decisões que Transformam
                 </h1>

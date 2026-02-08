@@ -5,6 +5,7 @@ import { BrandEssence } from '@/entities';
 import { Image } from '@/components/ui/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import SMBoardLogo from '@/components/SMBoardLogo';
 import { Target, Users, Globe, TrendingUp, Award, Lightbulb, Linkedin } from 'lucide-react';
 
 interface Conselheiros {
@@ -63,7 +64,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             className="max-w-5xl"
           >
-            <div className="w-16 h-1 bg-accent mb-8" />
+            <SMBoardLogo variant="dark" className="h-20 mb-8" />
             <h1 className="font-heading text-6xl lg:text-8xl mb-8 leading-tight">
               Quem Somos
             </h1>

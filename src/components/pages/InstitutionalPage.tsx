@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Image } from '@/components/ui/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import SMBoardLogo from '@/components/SMBoardLogo';
 import { 
   UserCheck, 
   Building2, 
@@ -37,7 +38,7 @@ export default function InstitutionalPage() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl"
           >
-            <div className="w-16 h-1 bg-accent mb-8" />
+            <SMBoardLogo variant="dark" className="h-20 mb-8" />
             <h1 className="font-heading text-5xl lg:text-7xl mb-6">
               Posicionamento Estratégico
             </h1>
