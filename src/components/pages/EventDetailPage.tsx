@@ -209,6 +209,32 @@ export default function EventDetailPage() {
                         </div>
                       )}
 
+                      {/* Secure Your Seat CTA */}
+                      <div className="mt-8 pt-6 border-t border-secondary-foreground/20">
+                        <p className="font-paragraph text-sm text-secondary-foreground/70 mb-4">
+                          Garanta sua participação
+                        </p>
+                        <div className="flex flex-col items-center gap-4">
+                          <a
+                            href="https://smartmoneyboard.com/_paylink/AZw9-E74"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full text-center font-paragraph text-base bg-secondary-foreground text-secondary px-6 py-3 rounded-full hover:bg-secondary-foreground/90 transition-colors"
+                          >
+                            Garantir minha cadeira
+                          </a>
+                          <div className="mt-2">
+                            <Image
+                              src="https://static.wixstatic.com/media/904ff8_f0a5e3f07f484c3996e48ae81ede4cf9~mv2.png"
+                              alt="QR Code para garantir cadeira"
+                              width={120}
+                              height={120}
+                              className="w-28 h-28"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
                       {/* Contact CTA */}
                       <div className="mt-8 pt-6 border-t border-secondary-foreground/20">
                         <p className="font-paragraph text-sm text-secondary-foreground/70 mb-4">
