@@ -12,6 +12,10 @@ export interface BrandEssence {
   _createdDate?: Date;
   _updatedDate?: Date;
   /** @wixFieldType text */
+  mission?: string;
+  /** @wixFieldType text */
+  vision?: string;
+  /** @wixFieldType text */
   title?: string;
   /** @wixFieldType text */
   content?: string;
