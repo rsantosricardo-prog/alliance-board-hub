@@ -10,7 +10,6 @@ export default function Footer() {
         <div className="absolute top-0 right-0 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
       </div>
-
       {/* Main Content */}
       <div className="max-w-[120rem] mx-auto px-6 lg:px-12 py-20 lg:py-24 relative z-10">
         {/* Top Section - Brand & CTA */}
@@ -18,13 +17,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="flex flex-col justify-between">
             <div>
-              <Image 
-                src="https://static.wixstatic.com/media/904ff8_35c505e9c82646a2b7d6d0d4886211e3~mv2.png" 
-                alt="SM Board Monogram" 
-                width={60}
-                height={60}
-                className="mb-6"
-              />
+
               <h3 className="font-heading text-2xl mb-4 text-foreground">SM Board</h3>
               <p className="font-paragraph text-base text-foreground/80 leading-relaxed max-w-md">
                 Conectando conselheiros e C-Levels para decisões estratégicas de alto impacto através de inteligência coletiva e capital intelectual.
@@ -77,12 +70,7 @@ export default function Footer() {
               <Link to="/strategy" className="font-paragraph text-base text-foreground/70 hover:text-accent transition-colors duration-300">
                 Estratégia
               </Link>
-              <Link to="/institutional" className="font-paragraph text-base text-foreground/70 hover:text-accent transition-colors duration-300">
-                Institucional
-              </Link>
-              <Link to="/solutions" className="font-paragraph text-base text-foreground/70 hover:text-accent transition-colors duration-300">
-                Soluções
-              </Link>
+
             </nav>
           </div>
 
@@ -93,12 +81,7 @@ export default function Footer() {
               <Link to="/events" className="font-paragraph text-base text-foreground/70 hover:text-accent transition-colors duration-300">
                 Eventos
               </Link>
-              <Link to="/ebooks" className="font-paragraph text-base text-foreground/70 hover:text-accent transition-colors duration-300">
-                E-books
-              </Link>
-              <Link to="/governance" className="font-paragraph text-base text-foreground/70 hover:text-accent transition-colors duration-300">
-                Governança
-              </Link>
+
               <Link to="/podcast" className="font-paragraph text-base text-foreground/70 hover:text-accent transition-colors duration-300">
                 Podcast
               </Link>
