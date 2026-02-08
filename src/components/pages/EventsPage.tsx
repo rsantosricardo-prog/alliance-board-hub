@@ -85,17 +85,7 @@ export default function EventsPage() {
         </div>
       </section>
       {/* Add Event Button */}
-      <section className="w-full bg-secondary/5 py-6 border-b border-border">
-        <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
-          <Link
-            to="/events/admin/new"
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full hover:bg-primary/90 transition-colors font-paragraph text-base"
-          >
-            <Plus className="w-5 h-5" />
-            Adicionar Novo Evento
-          </Link>
-        </div>
-      </section>
+
       {/* Events List Section */}
       <section className="w-full py-20 lg:py-32">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
