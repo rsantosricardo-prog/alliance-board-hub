@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Mail, MapPin, Phone, Linkedin } from 'lucide-react';
 import SMBoardLogo from '@/components/SMBoardLogo';
+import { Image } from '@/components/ui/image';
 
 export default function Footer() {
   return (
@@ -14,7 +15,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
           {/* Brand Column */}
           <div className="lg:col-span-1 flex flex-col items-center">
-            <SMBoardLogo variant="dark" className="h-20 mb-6" />
+            <Image 
+              src="https://static.wixstatic.com/media/904ff8_35c505e9c82646a2b7d6d0d4886211e3~mv2.png" 
+              alt="SM Board Monogram" 
+              width={80}
+              height={80}
+              className="mb-6"
+            />
             <div className="h-1 w-20 bg-accent rounded-full"></div>
           <p className="font-paragraph text-base text-primary-foreground/90 leading-relaxed mb-6 text-justify">
               Conectando conselheiros e C-Levels para decisões estratégicas de alto impacto através de inteligência coletiva e capital intelectual.
