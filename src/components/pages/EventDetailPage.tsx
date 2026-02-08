@@ -220,9 +220,7 @@ export default function EventDetailPage() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-full text-center font-paragraph text-base bg-secondary-foreground text-secondary px-6 py-3 rounded-full hover:bg-secondary-foreground/90 transition-colors"
-                          >
-                            Garantir minha cadeira
-                          </a>
+                          >Minha Cadeira</a>
                           <div className="mt-2">
                             <Image
                               src="https://static.wixstatic.com/media/904ff8_f0a5e3f07f484c3996e48ae81ede4cf9~mv2.png"
