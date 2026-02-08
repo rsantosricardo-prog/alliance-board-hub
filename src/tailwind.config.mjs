@@ -19,7 +19,7 @@ export default {
                 '9xl': ['8rem', { lineHeight: '1', letterSpacing: '0.06em', fontWeight: '400' }],
             },
             fontFamily: {
-                heading: "'Trajan Pro', 'Times New Roman', serif",
+                heading: "'Trajan Pro', 'Cormorant Garamond', 'Playfair Display', 'Times New Roman', serif",
                 paragraph: "'Open Sans', 'Lato', sans-serif"
             },
             colors: {
