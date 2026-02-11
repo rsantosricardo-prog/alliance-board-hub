@@ -118,7 +118,95 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      {/* Our Story Section */}
+
+      {/* Story of the Name Section */}
+      <section className="w-full py-32 bg-secondary text-secondary-foreground">
+        <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="font-heading text-5xl lg:text-6xl text-primary-foreground mb-6">
+              A História do Nome SM Board
+            </h2>
+            <div className="w-24 h-1 bg-accent mx-auto" />
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left Column - SM Meaning */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="space-y-8"
+            >
+              <div>
+                <h3 className="font-heading text-3xl lg:text-4xl text-primary-foreground mb-4">
+                  SM: Strategy & Management
+                </h3>
+                <p className="font-paragraph text-lg leading-relaxed text-secondary-foreground/90">
+                  A escolha do nome SM Board traduz a evolução e a sofisticação do grupo em um conceito mais estratégico e autoral. "SM" representa, em primeiro lugar, <span className="font-semibold">Strategy & Management</span>, pilares essenciais da atuação de conselheiros que influenciam decisões de alto impacto.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-accent pl-6">
+                <h4 className="font-heading text-2xl text-primary-foreground mb-3">
+                  Smart Money
+                </h4>
+                <p className="font-paragraph text-lg leading-relaxed text-secondary-foreground/90">
+                  Ao mesmo tempo, carrega o conceito de <span className="font-semibold">Smart Money</span> — não apenas capital financeiro, mas capital intelectual, reputacional e relacional.
+                </p>
+                <p className="font-paragraph text-lg leading-relaxed text-secondary-foreground/90 mt-4">
+                  Smart Money simboliza conhecimento aplicado com discernimento, experiência transformada em direção estratégica e conexões que ampliam valor. É a inteligência coletiva que fortalece decisões, eleva padrões e impulsiona Equity — tanto individual quanto do ecossistema como um todo.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Right Column - Board Meaning */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="bg-white text-primary-foreground p-10 lg:p-12 border border-muted/20"
+            >
+              <h3 className="font-heading text-3xl lg:text-4xl mb-6">
+                Board: Governança & Liderança
+              </h3>
+              <p className="font-paragraph text-lg leading-relaxed mb-6">
+                "Board" reafirma nosso foco em conselhos e governança, consolidando um posicionamento claro: um grupo exclusivo, formado por lideranças que entendem que conhecimento qualificado é ativo estratégico.
+              </p>
+              <div className="space-y-4">
+                <div className="flex gap-4">
+                  <div className="w-1 bg-accent flex-shrink-0" />
+                  <div>
+                    <p className="font-paragraph text-lg leading-relaxed">
+                      Quando bem direcionado, potencializa valor sustentável e reputação no longo prazo.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Bottom Insight */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="mt-16 text-center"
+          >
+            <p className="font-paragraph text-xl leading-relaxed text-secondary-foreground/90 max-w-3xl mx-auto italic">
+              SM Board representa a convergência entre estratégia sofisticada, inteligência coletiva e governança responsável — um compromisso com a excelência que transcende o capital financeiro.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Differentials Section */}
       <section className="w-full py-32 bg-background">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
