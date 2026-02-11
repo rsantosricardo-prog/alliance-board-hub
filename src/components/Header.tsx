@@ -2,11 +2,14 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Image } from '@/components/ui/image';
+import { BaseCrudService } from '@/integrations';
+import { Eventos } from '@/entities';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [firstEventId, setFirstEventId] = useState<string | null>(null);
   const location = useLocation();
 
   const isActive = (path: string) => {
@@ -15,6 +18,21 @@ export default function Header() {
     }
     return location.pathname === path;
   };
+
+  useEffect(() => {
+    const loadFirstEvent = async () => {
+      try {
+        const result = await BaseCrudService.getAll<Eventos>('events', {}, { limit: 1 });
+        if (result.items.length > 0) {
+          setFirstEventId(result.items[0]._id);
+        }
+      } catch (error) {
+        console.error('Error loading first event:', error);
+      }
+    };
+
+    loadFirstEvent();
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -75,7 +93,7 @@ export default function Header() {
               Quem Somos
             </Link>
             <Link
-              to="/events"
+              to={firstEventId ? `/events/${firstEventId}` : '/events'}
               className={`font-paragraph text-base transition-colors ${
                 isActive('/events') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
               }`}
@@ -140,7 +158,7 @@ export default function Header() {
               Quem Somos
             </Link>
             <Link
-              to="/events"
+              to={firstEventId ? `/events/${firstEventId}` : '/events'}
               onClick={() => setIsMenuOpen(false)}
               className={`font-paragraph text-base transition-colors ${
                 isActive('/events') ? 'text-primary font-medium' : 'text-foreground hover:text-primary'
