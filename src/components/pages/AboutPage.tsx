@@ -88,11 +88,11 @@ export default function AboutPage() {
               className="bg-white border border-muted/20 p-12 lg:p-16"
             >
               <Target className="w-12 h-12 text-accent mb-8" />
-              <h2 className="font-heading text-4xl lg:text-5xl text-primary mb-6">
+              <h2 className="font-heading text-4xl lg:text-5xl mb-6 text-primary-foreground">
                 Nossa Missão
               </h2>
               <div className="w-16 h-1 bg-accent mb-8" />
-              <p className="font-paragraph text-lg text-foreground/80 leading-relaxed">
+              <p className="font-paragraph text-lg leading-relaxed text-primary-foreground">
                 Fortalecer a governança corporativa conectando conselheiros independentes de excelência com organizações que buscam decisões estratégicas éticas, transparentes e sustentáveis. Promovemos a cultura de integridade e performance através de práticas inovadoras e alinhadas às melhores referências globais.
               </p>
             </motion.div>
@@ -105,11 +105,11 @@ export default function AboutPage() {
               transition={{ duration: 0.7 }}
               className="bg-primary text-primary-foreground p-12 lg:p-16"
             >
-              <Lightbulb className="w-12 h-12 text-primary-foreground mb-8" />
+              <Lightbulb className="w-12 h-12 text-primary-foreground mb-8 fill-primary" />
               <h2 className="font-heading text-4xl lg:text-5xl mb-6">
                 Nossa Visão
               </h2>
-              <div className="w-16 h-1 bg-primary-foreground mb-8" />
+              <div className="w-16 h-1 mb-8 bg-secondary" />
               <p className="font-paragraph text-lg text-primary-foreground/90 leading-relaxed">
                 Ser a principal referência em governança corporativa independente, reconhecida pela excelência na formação de conselhos estratégicos que transformam organizações e impulsionam resultados sustentáveis em escala global.
               </p>
