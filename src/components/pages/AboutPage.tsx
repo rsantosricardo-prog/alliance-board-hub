@@ -105,7 +105,7 @@ export default function AboutPage() {
               transition={{ duration: 0.7 }}
               className="bg-primary text-primary-foreground p-12 lg:p-16"
             >
-              <Lightbulb className="w-12 h-12 text-primary-foreground mb-8 fill-primary" />
+              <Lightbulb className="w-12 h-12 text-primary-foreground mb-8 fill-primary opacity-[0.16]" />
               <h2 className="font-heading text-4xl lg:text-5xl mb-6">
                 Nossa Visão
               </h2>
@@ -119,55 +119,6 @@ export default function AboutPage() {
         </div>
       </section>
       {/* Our Story Section */}
-      <section className="w-full py-32 bg-background">
-        <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-            
-            <div className="lg:col-span-5">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="sticky top-32"
-              >
-                <h2 className="font-heading text-5xl lg:text-6xl text-primary mb-8">
-                  Nossa História
-                </h2>
-                <div className="w-16 h-1 bg-accent mb-8" />
-                <p className="font-paragraph text-lg text-foreground/70 leading-relaxed">
-                  Nascemos da necessidade de transformar a governança corporativa em um diferencial competitivo real, conectando expertise independente com visão estratégica.
-                </p>
-              </motion.div>
-            </div>
-
-            <div className="lg:col-span-7 space-y-12">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-              >
-                <p className="font-paragraph text-xl text-foreground/80 leading-relaxed indent-12">
-                  {brandEssence?.content || "A Alliance Board Hub foi fundada por profissionais com décadas de experiência em conselhos de administração, consultoria estratégica e governança corporativa. Identificamos uma lacuna crítica: organizações buscando conselheiros independentes qualificados e conselheiros buscando oportunidades alinhadas aos seus valores e expertise."}
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="border-l-4 border-accent pl-8"
-              >
-                <p className="font-paragraph text-xl text-foreground/80 leading-relaxed">
-                  Hoje, somos uma rede de profissionais comprometidos com a excelência, conectando talentos diversos a organizações que valorizam governança de alto impacto. Nossa abordagem combina rigor técnico, ética inabalável e visão de futuro.
-                </p>
-              </motion.div>
-            </div>
-
-          </div>
-        </div>
-      </section>
       {/* Differentials Section */}
       <section className="w-full py-32 bg-background">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
@@ -229,10 +180,10 @@ export default function AboutPage() {
                 className="bg-white border border-muted/20 p-8 hover:border-accent transition-colors duration-300"
               >
                 <item.icon className="w-10 h-10 text-accent mb-6" />
-                <h3 className="font-heading text-2xl text-primary mb-4">
+                <h3 className="font-heading text-2xl mb-4 text-primary-foreground">
                   {item.title}
                 </h3>
-                <p className="font-paragraph text-foreground/70 leading-relaxed">
+                <p className="font-paragraph leading-relaxed text-primary-foreground">
                   {item.description}
                 </p>
               </motion.div>
@@ -242,15 +193,6 @@ export default function AboutPage() {
         </div>
       </section>
       {/* Image Breather */}
-      <section className="w-full h-[60vh] relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/30 z-10" />
-        <Image
-          src={brandEssence?.brandImage || "https://static.wixstatic.com/media/904ff8_f6b14faca1744f968654e0c5057e4581~mv2.png"}
-          alt="Alliance Board Hub Team"
-          className="w-full h-full object-cover"
-          width={1920}
-        />
-      </section>
       {/* Board Members Section - Nossos Conselheiros */}
       <section className="w-full py-32 bg-background">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
@@ -296,13 +238,13 @@ export default function AboutPage() {
 
                     {/* Content */}
                     <div className="p-8">
-                      <h3 className="font-heading text-2xl text-primary mb-2">
+                      <h3 className="font-heading text-2xl mb-2 text-primary-foreground">
                         {conselheiro.fullName}
                       </h3>
                       <p className="font-paragraph text-accent font-medium mb-4">
                         {conselheiro.position}
                       </p>
-                      <p className="font-paragraph text-foreground/70 leading-relaxed mb-6">
+                      <p className="font-paragraph leading-relaxed mb-6 text-primary-foreground">
                         {conselheiro.institutionalBio}
                       </p>
                       {conselheiro.linkedInUrl && (
