@@ -55,6 +55,38 @@ export default function EventDetailPage() {
     }
   };
 
+  const highlightTimeInText = (text: string) => {
+    // Pattern to match time formats like HH:mm or HH:MM
+    const timePattern = /\d{1,2}:\d{2}/g;
+    
+    // Split text by lines
+    const lines = text.split('\n');
+    
+    return lines.map((line, lineIndex) => {
+      // Check if line contains time
+      if (timePattern.test(line)) {
+        // Reset regex lastIndex for next test
+        timePattern.lastIndex = 0;
+        
+        // Split line by time pattern and wrap times in bold
+        const parts = line.split(/([\d]{1,2}:[\d]{2})/);
+        
+        return (
+          <div key={lineIndex}>
+            {parts.map((part, partIndex) => {
+              if (/([\d]{1,2}:[\d]{2})/.test(part)) {
+                return <strong key={partIndex}>{line}</strong>;
+              }
+              return part;
+            })}
+          </div>
+        );
+      }
+      
+      return <div key={lineIndex}>{line}</div>;
+    });
+  };
+
   return (
     <div className="min-h-screen bg-background pt-28">
       <Header />
@@ -134,9 +166,9 @@ export default function EventDetailPage() {
                         <h2 className="font-heading text-2xl lg:text-3xl text-secondary mb-6">
                           AGENDA
                         </h2>
-                        <p className="font-paragraph text-lg text-secondary/80 leading-relaxed whitespace-pre-line">
-                          {event.detailedAgenda}
-                        </p>
+                        <div className="font-paragraph text-lg text-secondary/80 leading-relaxed whitespace-pre-line">
+                          {highlightTimeInText(event.detailedAgenda)}
+                        </div>
                       </div>
                     )}
 
