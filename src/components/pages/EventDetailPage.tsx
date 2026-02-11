@@ -37,7 +37,9 @@ export default function EventDetailPage() {
     if (!dateString) return '';
     try {
       const date = typeof dateString === 'string' ? new Date(dateString) : dateString;
-      return format(date, "EEEE, d 'de' MMMM 'de' yyyy", { locale: ptBR });
+      const formatted = format(date, "EEEE, d 'de' MMMM 'de' yyyy", { locale: ptBR });
+      // Capitalize first letter of day and month
+      return formatted.replace(/^(.)/, (match) => match.toUpperCase()).replace(/ de ([a-z])/g, (match, letter) => ` de ${letter.toUpperCase()}`);
     } catch {
       return '';
     }
