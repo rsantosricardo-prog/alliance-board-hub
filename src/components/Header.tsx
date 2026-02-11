@@ -9,7 +9,12 @@ export default function Header() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) => {
+    if (path === '/events') {
+      return location.pathname === '/events' || location.pathname.startsWith('/events/');
+    }
+    return location.pathname === path;
+  };
 
   useEffect(() => {
     const handleScroll = () => {
