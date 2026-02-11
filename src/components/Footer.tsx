@@ -119,6 +119,29 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* QR Code Section */}
+        <div className="mb-16 pb-16 border-b border-border">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div>
+              <h4 className="font-heading text-lg mb-3 text-foreground">Conecte-se Conosco</h4>
+              <p className="font-paragraph text-base text-foreground/70 max-w-md">
+                Escaneie o código QR para acessar mais informações e se conectar com a SM Board.
+              </p>
+            </div>
+            <div className="bg-foreground p-4 rounded-lg">
+              <Image
+                src="https://static.wixstatic.com/media/904ff8_f9cc735f70c84ea0b2dd3792c7b8221b~mv2.png"
+                width={120}
+                height={120}
+                alt="QR Code SM Board"
+                className="w-32 h-32"
+                originWidth={200}
+                originHeight={200}
+              />
+            </div>
+          </div>
+        </div>
+
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="font-paragraph text-sm text-foreground/60 text-center md:text-left">
