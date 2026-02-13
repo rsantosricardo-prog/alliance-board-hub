@@ -7,7 +7,7 @@ import { Image } from '@/components/ui/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SMBoardLogo from '@/components/SMBoardLogo';
-import { ArrowRight, ChevronDown, MessageCircle, Linkedin, Mail, Globe } from 'lucide-react';
+import { ArrowRight, ChevronDown, MessageCircle, Linkedin, Mail, Globe, Crown, Lock, Users } from 'lucide-react';
 
 export default function HomePage() {
   const [brandEssence, setBrandEssence] = useState<BrandEssence | null>(null);
