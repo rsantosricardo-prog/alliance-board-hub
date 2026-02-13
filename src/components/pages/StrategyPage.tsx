@@ -10,7 +10,6 @@ export default function StrategyPage() {
   return (
     <div className="min-h-screen bg-background pt-28">
       <Header />
-
       {/* Hero Section */}
       <section className="relative w-full bg-background py-32 lg:py-40 overflow-hidden">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12 relative z-10">
@@ -30,7 +29,6 @@ export default function StrategyPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Institutional Positioning */}
       <section className="w-full py-24 lg:py-32 bg-primary text-primary-foreground border-t border-foreground/10">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
@@ -52,7 +50,6 @@ export default function StrategyPage() {
           </motion.div>
         </div>
       </section>
-
       {/* What We Do - Strategic Experiences */}
       <section className="w-full py-24 lg:py-32 bg-background border-t border-foreground/10">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
@@ -157,7 +154,6 @@ export default function StrategyPage() {
           </div>
         </div>
       </section>
-
       {/* Strategic Communities */}
       <section className="w-full py-24 lg:py-32 bg-primary text-primary-foreground border-t border-foreground/10">
         <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
@@ -254,7 +250,6 @@ export default function StrategyPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="w-full py-32 lg:py-40 bg-background border-t border-foreground/10">
         <div className="max-w-4xl mx-auto px-6 text-center">
@@ -292,43 +287,7 @@ export default function StrategyPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Payment Widget Section */}
-      <section className="w-full py-24 lg:py-32 bg-primary border-t border-foreground/10">
-        <div className="max-w-4xl mx-auto px-6 flex justify-center">
-          <div style={{ width: '240px', overflow: 'hidden', borderRadius: '4px', boxShadow: '0 6px 6px 0 rgba(22,45,61,.06),0 0 18px 0 rgba(22,45,61,.12)' }}>
-            <div style={{ display: 'flex', borderRadius: '6px', backgroundColor: '#fff', fontFamily: 'Helvetica Neue,Helvetica,Arial' }}>
-              <div style={{ display: 'flex', width: '100%', flexDirection: 'row', flexWrap: 'wrap' }}>
-                <div style={{ display: 'flex', width: '100%', height: '153px', alignItems: 'center', justifyContent: 'center', backgroundPosition: 'center center', backgroundColor: '#EDEEF5' }}>
-                  <div style={{ maxWidth: '100%', width: '100%', whiteSpace: 'nowrap', justifyContent: 'center', display: 'flex' }}>
-                    <div style={{ fontSize: '28px', fontWeight: '400', lineHeight: '58px' }}>R$</div>
-                    <div style={{ fontSize: '58px', fontWeight: '400', lineHeight: '58px' }}> 500 </div>
-                  </div>
-                </div>
-                <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'row', flexWrap: 'wrap', flexGrow: 'initial', textAlign: 'center', width: '100%', padding: 'calc(18px) calc(24px) calc(24px)' }}>
-                  <div style={{ display: 'flex', flexDirection: 'row', width: '100%', maxWidth: '100%', maxHeight: '84px', justifyContent: 'center', wordBreak: 'break-word', overflow: 'hidden', marginBottom: '12px' }}>
-                    <div style={{ fontSize: '21px', fontWeight: '700', lineHeight: '28px' }}>Onde conhecimento se transforma em Equity</div>
-                  </div>
-                  <div style={{ display: 'flex', flexDirection: 'row', width: '100%', margin: '0 calc(36px) calc(12px)' }}>
-                    <hr style={{ backgroundColor: '#dfe5eb', minHeight: '1px', width: '100%', border: '0' }} />
-                  </div>
-                  <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', width: '100%', height: '54px', wordBreak: 'break-word', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '14px', fontWeight: '400', lineHeight: '18px', textOverflow: 'ellipsis', overflow: 'hidden', maxWidth: '100%', verticalAlign: 'bottom' }}>Dia 19/03/2026
-Restaurante Pavino Rua Roque Petrella, 235 – Brooklin, São Paulo – SP.</span>
-                  </div>
-                  <div style={{ display: 'flex', flexDirection: 'row', width: '100%' }}>
-                    <a href="https://www.smartmoneyboard.com/_paylink/AZxMV2zd" target="_blank" rel="noopener noreferrer" style={{ width: '100%' }}>
-                      <button style={{ backgroundColor: 'black', width: '100%', justifyContent: 'center', textAlign: 'center', height: '36px', borderRadius: '18px', border: '0', minWidth: '84px', padding: '0 23px', textDecoration: 'none', userSelect: 'none', whiteSpace: 'nowrap', cursor: 'pointer', color: 'white' }}>
-                        <span style={{ textOverflow: 'ellipsis', overflow: 'hidden', maxWidth: '100%', verticalAlign: 'bottom' }}>Pagar</span>
-                      </button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>
