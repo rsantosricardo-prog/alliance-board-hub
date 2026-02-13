@@ -383,9 +383,7 @@ export default function EventDetailPage() {
                         </p>
                         <div className="flex flex-col items-center gap-4">
                           <a
-                            href="https://www.smartmoneyboard.com/_paylink/AZxMV2zd"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            href="/solicitar-curadoria"
                             className="w-full text-center font-paragraph text-base bg-secondary-foreground text-secondary px-6 py-3 rounded-full hover:bg-secondary-foreground/90 transition-colors"
                           >Solicitar Curadoria</a>
                           <div className="mt-2">

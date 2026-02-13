@@ -153,3 +153,46 @@ export interface Eventos {
   /** @wixFieldType url */
   cadeira?: string;
 }
+
+
+/**
+ * Collection ID: executivecurations
+ * Interface for ExecutiveCurationSubmissions
+ */
+export interface ExecutiveCurationSubmissions {
+  _id: string;
+  _createdDate?: Date;
+  _updatedDate?: Date;
+  /** @wixFieldType text */
+  fullName?: string;
+  /** @wixFieldType text */
+  currentPosition?: string;
+  /** @wixFieldType text */
+  company?: string;
+  /** @wixFieldType url */
+  linkedInProfile?: string;
+  /** @wixFieldType text */
+  corporateEmail?: string;
+  /** @wixFieldType text */
+  whatsApp?: string;
+  /** @wixFieldType text */
+  leadershipYears?: string;
+  /** @wixFieldType boolean */
+  hasBeenCouncilor?: boolean;
+  /** @wixFieldType text */
+  strategicAreas?: string;
+  /** @wixFieldType text */
+  interestReason?: string;
+  /** @wixFieldType text */
+  valueProposition?: string;
+  /** @wixFieldType text */
+  referredBy?: string;
+  /** @wixFieldType boolean */
+  agreedToTerms?: boolean;
+  /** @wixFieldType boolean */
+  agreedToCuration?: boolean;
+  /** @wixFieldType date */
+  submissionDate?: Date | string;
+  /** @wixFieldType text */
+  status?: string;
+}

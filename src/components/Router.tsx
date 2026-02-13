@@ -17,6 +17,7 @@ import ContactPage from '@/components/pages/ContactPage';
 import DueDiligenceIAPage from '@/components/pages/DueDiligenceIAPage';
 import PodcastPage from '@/components/pages/PodcastPage';
 import ConselhosPraticaPage from '@/components/pages/ConselhosPraticaPage';
+import ExecutiveCurationPage from '@/components/pages/ExecutiveCurationPage';
 
 // Layout component that includes ScrollToTop
 function Layout() {
@@ -138,6 +139,13 @@ const router = createBrowserRouter([
         element: <ConselhosPraticaPage />,
         routeMetadata: {
           pageIdentifier: 'conselhos-pratica',
+        },
+      },
+      {
+        path: "solicitar-curadoria",
+        element: <ExecutiveCurationPage />,
+        routeMetadata: {
+          pageIdentifier: 'executive-curation',
         },
       },
       {
