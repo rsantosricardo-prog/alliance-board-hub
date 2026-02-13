@@ -179,10 +179,7 @@ export default function ExecutiveCurationPage() {
           {/* Form */}
           <div className="mb-12 text-center">
             <h1 className="font-heading text-5xl text-foreground mb-4">Solicitar Curadoria</h1>
-            <p className="font-paragraph text-lg text-muted max-w-2xl mx-auto">
-            Acesso exclusivo para conselheiros, C-Levels, investidores e líderes estratégicos.
-            Sua participação está sujeita à curadoria.
-          </p>
+            <p className="font-paragraph text-lg text-muted max-w-2xl mx-auto">Acesso exclusivo para Empresários, C-Levels, Conselheiros, Investidores e líderes estratégicos. Sua participação está sujeita à curadoria.</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-12">

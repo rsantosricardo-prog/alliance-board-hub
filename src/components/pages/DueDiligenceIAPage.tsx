@@ -106,7 +106,7 @@ export default function DueDiligenceIAPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-primary hover:bg-secondary text-white font-semibold px-8 py-6 text-base rounded-lg"
+              className="hover:bg-secondary text-white font-semibold px-8 py-6 text-base rounded-lg bg-primary-foreground"
             >
               Acesse a Plataforma
               <ArrowRight className="ml-2 w-5 h-5" />
@@ -173,7 +173,7 @@ export default function DueDiligenceIAPage() {
                 variants={itemVariants}
                 className="bg-foreground border-2 border-accent/30 rounded-xl p-8 hover:border-accent hover:shadow-lg transition-all duration-300"
               >
-                <div className="mb-6">
+                <div className="mb-6 bg-primary">
                   <IconComponent className="w-12 h-12 text-accent" />
                 </div>
                 <h3 className="font-heading text-xl font-bold text-background mb-4">
@@ -238,7 +238,7 @@ export default function DueDiligenceIAPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-heading text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="font-heading text-4xl lg:text-5xl font-bold mb-6 text-primary-foreground">
               Pronto para Transformar Sua Análise de Risco?
             </h2>
             <p className="font-paragraph text-lg text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
