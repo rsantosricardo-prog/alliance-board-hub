@@ -213,7 +213,6 @@ export default function EventDetailPage() {
                   <div className="lg:col-span-1">
                     <div className="bg-secondary text-secondary-foreground p-8 rounded-lg sticky top-8">
                       <h3 className="font-heading text-2xl mb-6">Detalhes do Evento</h3>
-
                       {/* Date and Time */}
                       {event.eventDateTime && (
                         <div className="mb-6">
@@ -230,7 +229,6 @@ export default function EventDetailPage() {
                           </div>
                         </div>
                       )}
-
                       {/* Location */}
                       {event.location && (
                         <div className="mb-6">
@@ -242,7 +240,6 @@ export default function EventDetailPage() {
                           </div>
                         </div>
                       )}
-
                       {/* Secure Your Seat CTA */}
                       <div className="mt-8 pt-6 border-t border-secondary-foreground/20">
                         <p className="font-paragraph text-sm text-secondary-foreground/70 mb-4">
@@ -254,25 +251,14 @@ export default function EventDetailPage() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-full text-center font-paragraph text-base bg-secondary-foreground text-secondary px-6 py-3 rounded-full hover:bg-secondary-foreground/90 transition-colors"
-                          >Minha Cadeira</a>
+                          >Solicitar Curadoria</a>
                           <div className="mt-2">
 
                           </div>
                         </div>
                       </div>
-
                       {/* Contact CTA */}
-                      <div className="mt-8 pt-6 border-t border-secondary-foreground/20">
-                        <p className="font-paragraph text-sm text-secondary-foreground/70 mb-4">
-                          Tem dúvidas sobre este evento?
-                        </p>
-                        <Link
-                          to="/contact"
-                          className="block text-center font-paragraph text-base bg-secondary-foreground text-secondary px-6 py-3 rounded-full hover:bg-secondary-foreground/90 transition-colors"
-                        >
-                          Fale Conosco
-                        </Link>
-                      </div>
+
                     </div>
                   </div>
                 </div>
