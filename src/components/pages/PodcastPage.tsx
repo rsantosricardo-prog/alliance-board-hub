@@ -21,10 +21,10 @@ export default function PodcastPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-black">
       <Header />
       {/* Hero Section - Coming Soon */}
-      <section className="w-full bg-gradient-to-br from-primary via-secondary to-primary py-32 md:py-48">
+      <section className="w-full bg-black py-32 md:py-48">
         <div className="max-w-[100rem] mx-auto px-4 md:px-8">
           <motion.div
             className="flex flex-col items-center justify-center text-center"
@@ -62,7 +62,6 @@ export default function PodcastPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              Se Conselho Fosse Bom
             </motion.h1>
 
             {/* Subtitle */}

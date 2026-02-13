@@ -86,7 +86,7 @@ export default function DueDiligenceIAPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-black">
       <Header />
       {/* Hero Section */}
       <section className="w-full max-w-[120rem] mx-auto px-6 py-20 lg:py-32">
