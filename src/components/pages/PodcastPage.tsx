@@ -24,8 +24,8 @@ export default function PodcastPage() {
     <div className="min-h-screen bg-black">
       <Header />
       {/* Hero Section - Coming Soon */}
-      <section className="w-full bg-black py-32 md:py-48">
-        <div className="max-w-[100rem] mx-auto px-4 md:px-8">
+      <section className="w-full bg-black pt-32 pb-20 md:pt-48 md:pb-32">
+        <div className="max-w-[100rem] mx-auto px-6 md:px-12">
           <motion.div
             className="flex flex-col items-center justify-center text-center"
             initial={{ opacity: 0 }}
@@ -57,11 +57,12 @@ export default function PodcastPage() {
 
             {/* Main Title */}
             <motion.h1
-              className="font-heading text-5xl md:text-7xl font-bold mb-6 leading-tight text-white"
+              className="font-heading text-5xl md:text-7xl font-bold mb-6 leading-tight text-foreground"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
+              Podcast SM Board
             </motion.h1>
 
             {/* Subtitle */}
@@ -74,7 +75,7 @@ export default function PodcastPage() {
 
             {/* Description */}
             <motion.p
-              className="text-lg text-gray-100 mb-12 leading-relaxed max-w-2xl"
+              className="text-lg text-foreground/80 mb-12 leading-relaxed max-w-2xl font-paragraph"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.6 }}
@@ -84,7 +85,7 @@ export default function PodcastPage() {
 
             {/* Coming Soon Message - Enhanced Container */}
             <motion.div
-              className="bg-gradient-to-br from-white from-5% via-white via-50% to-accent to-95% bg-opacity-[0.08] backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-white border-opacity-30 max-w-3xl w-full shadow-2xl hover:shadow-accent/20 transition-all duration-300"
+              className="bg-gradient-to-br from-foreground/10 to-accent/10 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-accent/30 max-w-4xl w-full transition-all duration-300"
               initial={{ opacity: 0, y: 20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ delay: 0.7, duration: 0.6 }}
@@ -99,14 +100,14 @@ export default function PodcastPage() {
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-1 h-8 bg-gradient-to-b from-accent to-accent/50 rounded-full"></div>
-                    <p className="text-3xl font-bold font-heading text-primary">Episódios em Produção</p>
+                    <p className="text-3xl font-bold font-heading text-foreground">Episódios em Produção</p>
                   </div>
-                  <p className="text-lg leading-relaxed text-primary">
+                  <p className="text-lg leading-relaxed text-foreground/80 font-paragraph">
                     Estamos preparando conversas profundas e inspiradoras com líderes, especialistas e pensadores sobre governança corporativa.
                   </p>
                 </motion.div>
 
-                <div className="h-px bg-gradient-to-r from-transparent via-white via-opacity-20 to-transparent"></div>
+                <div className="h-px bg-gradient-to-r from-transparent via-accent via-opacity-20 to-transparent"></div>
 
                 {/* Features Grid */}
                 <motion.div
@@ -117,54 +118,54 @@ export default function PodcastPage() {
                 >
                   {/* Feature 1 */}
                   <motion.div
-                    className="bg-white bg-opacity-5 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-10 hover:border-opacity-30 transition-all duration-300 group"
-                    whileHover={{ y: -4, backgroundColor: 'rgba(255, 255, 255, 0.08)' }}
+                    className="bg-foreground/5 backdrop-blur-md rounded-2xl p-6 border border-accent/20 hover:border-accent/50 transition-all duration-300 group"
+                    whileHover={{ y: -4, backgroundColor: 'rgba(229, 231, 235, 0.08)' }}
                   >
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-accent bg-opacity-20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-opacity-30 transition-all duration-300">
+                      <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-accent/30 transition-all duration-300">
                         <Zap className="w-6 h-6 text-accent" />
                       </div>
                       <div>
-                        <p className="font-semibold text-lg mb-1 text-primary">15+ Episódios</p>
-                        <p className="text-sm text-secondary">Conversas aprofundadas de 30-45 minutos</p>
+                        <p className="font-semibold text-lg mb-1 text-foreground font-heading">15+ Episódios</p>
+                        <p className="text-sm text-foreground/70 font-paragraph">Conversas aprofundadas de 30-45 minutos</p>
                       </div>
                     </div>
                   </motion.div>
 
                   {/* Feature 2 */}
                   <motion.div
-                    className="bg-white bg-opacity-5 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-10 hover:border-opacity-30 transition-all duration-300 group"
-                    whileHover={{ y: -4, backgroundColor: 'rgba(255, 255, 255, 0.08)' }}
+                    className="bg-foreground/5 backdrop-blur-md rounded-2xl p-6 border border-accent/20 hover:border-accent/50 transition-all duration-300 group"
+                    whileHover={{ y: -4, backgroundColor: 'rgba(229, 231, 235, 0.08)' }}
                   >
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-accent bg-opacity-20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-opacity-30 transition-all duration-300">
+                      <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-accent/30 transition-all duration-300">
                         <Clock className="w-6 h-6 text-accent" />
                       </div>
                       <div>
-                        <p className="font-semibold text-lg mb-1 text-primary">Lançamento Quinzenal</p>
-                        <p className="text-sm text-secondary">Novos episódios a cada duas semanas</p>
+                        <p className="font-semibold text-lg mb-1 text-foreground font-heading">Lançamento Quinzenal</p>
+                        <p className="text-sm text-foreground/70 font-paragraph">Novos episódios a cada duas semanas</p>
                       </div>
                     </div>
                   </motion.div>
 
                   {/* Feature 3 */}
                   <motion.div
-                    className="bg-white bg-opacity-5 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-10 hover:border-opacity-30 transition-all duration-300 group"
-                    whileHover={{ y: -4, backgroundColor: 'rgba(255, 255, 255, 0.08)' }}
+                    className="bg-foreground/5 backdrop-blur-md rounded-2xl p-6 border border-accent/20 hover:border-accent/50 transition-all duration-300 group"
+                    whileHover={{ y: -4, backgroundColor: 'rgba(229, 231, 235, 0.08)' }}
                   >
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-accent bg-opacity-20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-opacity-30 transition-all duration-300">
+                      <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-accent/30 transition-all duration-300">
                         <Users className="w-6 h-6 text-accent" />
                       </div>
                       <div>
-                        <p className="font-semibold text-lg mb-1 text-primary">Todas as Plataformas</p>
-                        <p className="text-sm text-secondary">Spotify, Apple Podcasts, YouTube</p>
+                        <p className="font-semibold text-lg mb-1 text-foreground font-heading">Todas as Plataformas</p>
+                        <p className="text-sm text-foreground/70 font-paragraph">Spotify, Apple Podcasts, YouTube</p>
                       </div>
                     </div>
                   </motion.div>
                 </motion.div>
 
-                <div className="h-px bg-gradient-to-r from-transparent via-white via-opacity-20 to-transparent"></div>
+                <div className="h-px bg-gradient-to-r from-transparent via-accent via-opacity-20 to-transparent"></div>
 
                 {/* CTA Button */}
                 <motion.button
@@ -172,7 +173,7 @@ export default function PodcastPage() {
                   className={`w-full px-8 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all duration-300 transform ${
                     isNotified
                       ? 'bg-green-500 text-white'
-                      : 'bg-accent text-primary hover:bg-opacity-90 hover:scale-105 active:scale-95'
+                      : 'bg-accent text-background hover:bg-accent/90 hover:scale-105 active:scale-95'
                   }`}
                   whileHover={!isNotified ? { scale: 1.02 } : {}}
                   whileTap={!isNotified ? { scale: 0.98 } : {}}
@@ -194,7 +195,7 @@ export default function PodcastPage() {
 
             {/* Additional Info */}
             <motion.p
-              className="text-gray-100 text-sm mt-12 max-w-2xl"
+              className="text-foreground/70 text-base mt-12 max-w-2xl font-paragraph leading-relaxed"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.6 }}

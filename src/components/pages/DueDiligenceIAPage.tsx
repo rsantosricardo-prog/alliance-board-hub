@@ -171,15 +171,15 @@ export default function DueDiligenceIAPage() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="bg-white border-2 border-border/20 rounded-xl p-8 hover:border-accent hover:shadow-lg transition-all duration-300"
+                className="bg-foreground border-2 border-accent/30 rounded-xl p-8 hover:border-accent hover:shadow-lg transition-all duration-300"
               >
                 <div className="mb-6">
                   <IconComponent className="w-12 h-12 text-accent" />
                 </div>
-                <h3 className="font-heading text-xl font-bold text-foreground mb-4">
+                <h3 className="font-heading text-xl font-bold text-background mb-4">
                   {benefit.title}
                 </h3>
-                <p className="font-paragraph text-muted leading-relaxed">
+                <p className="font-paragraph text-background/80 leading-relaxed">
                   {benefit.description}
                 </p>
               </motion.div>
@@ -216,12 +216,12 @@ export default function DueDiligenceIAPage() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="bg-white rounded-lg p-8 border-l-4 border-accent hover:shadow-md transition-all duration-300"
+                className="bg-foreground rounded-lg p-8 border-l-4 border-accent hover:shadow-md transition-all duration-300"
               >
-                <h3 className="font-heading text-xl font-bold text-foreground mb-3">
+                <h3 className="font-heading text-xl font-bold text-background mb-3">
                   {audience.title}
                 </h3>
-                <p className="font-paragraph text-muted leading-relaxed">
+                <p className="font-paragraph text-background/80 leading-relaxed">
                   {audience.description}
                 </p>
               </motion.div>
