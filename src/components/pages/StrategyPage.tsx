@@ -4,28 +4,87 @@ import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SMBoardLogo from '@/components/SMBoardLogo';
+import { Image } from '@/components/ui/image';
 import { ArrowRight, CheckCircle2, Users, Target, Zap, Globe } from 'lucide-react';
 
 export default function StrategyPage() {
   return (
     <div className="min-h-screen bg-background pt-28">
       <Header />
-      {/* Hero Section */}
-      <section className="relative w-full bg-background py-32 lg:py-40 overflow-hidden">
-        <div className="max-w-[100rem] mx-auto px-6 lg:px-12 relative z-10">
+      {/* Hero Section - Authority & Exclusivity */}
+      <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-background">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://static.wixstatic.com/media/904ff8_7cb08566e24b4477b1734af2da36e177~mv2.png"
+            alt="Elegant boardroom with strategic decision-making atmosphere"
+            className="w-full h-full object-cover"
+            width={1920}
+          />
+          {/* Dark Overlay for Text Readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-[100rem] mx-auto px-6 lg:px-12 w-full text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl"
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="space-y-8"
           >
-            <SMBoardLogo variant="light" className="h-20 mb-8" />
-            <h1 className="font-heading text-6xl lg:text-7xl mb-8 text-foreground leading-tight">
-              Decisões que Transformam
+            {/* Main Headline */}
+            <h1 className="font-heading text-5xl lg:text-7xl xl:text-8xl text-foreground leading-tight tracking-tight">
+              Onde Decisões de{' '}
+              <span className="text-[#C6A756]">Alto Nível</span>
+              {' '}São Construídas.
             </h1>
-            <p className="font-paragraph text-xl lg:text-2xl text-foreground/70 leading-relaxed">
-              SM Board conecta conselheiros e executivos C-Level em um ambiente seletivo de troca estratégica, onde visão de futuro, maturidade decisória e responsabilidade institucional convergem para impacto real.
-            </p>
+
+            {/* Subheadline */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.2 }}
+              className="font-paragraph text-lg lg:text-xl text-foreground/90 leading-relaxed max-w-3xl mx-auto"
+            >
+              Um encontro reservado a conselheiros, C-Levels e líderes estratégicos que atuam no nível da governança, inovação e decisões de impacto.
+              <br />
+              <span className="text-foreground/80">Participação mediante curadoria e cadeiras limitadas.</span>
+            </motion.p>
+
+            {/* Institutional Complement */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.4 }}
+              className="pt-4"
+            >
+              <p className="font-paragraph text-sm lg:text-base text-foreground/70 tracking-wide uppercase letter-spacing">
+                Ambiente confidencial. Conexões qualificadas. Inteligência aplicada ao Board.
+              </p>
+            </motion.div>
+
+            {/* CTA Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.6 }}
+              className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8"
+            >
+              <Link
+                to="/solicitar-curadoria"
+                className="px-10 py-4 bg-[#C6A756] text-background font-paragraph font-semibold rounded-lg hover:bg-[#D4B563] transition-all duration-300 inline-flex items-center justify-center gap-2 min-w-[220px]"
+              >
+                Solicitar Curadoria
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <a
+                href="#agenda"
+                className="px-10 py-4 border-2 border-foreground text-foreground font-paragraph font-semibold rounded-lg hover:bg-foreground hover:text-background transition-all duration-300 inline-flex items-center justify-center gap-2 min-w-[220px]"
+              >
+                Ver Agenda
+              </a>
+            </motion.div>
           </motion.div>
         </div>
       </section>
