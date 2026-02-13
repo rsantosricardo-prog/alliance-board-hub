@@ -176,15 +176,15 @@ export default function ExecutiveCurationPage() {
       <main className="min-h-screen bg-background py-16 px-4">
         <div className="max-w-3xl mx-auto">
           {/* Header */}
+          {/* Form */}
           <div className="mb-12 text-center">
             <h1 className="font-heading text-5xl text-foreground mb-4">Solicitar Curadoria</h1>
             <p className="font-paragraph text-lg text-muted max-w-2xl mx-auto">
-              Acesso exclusivo para conselheiros, C-Levels, investidores e líderes estratégicos.
-              Sua participação está sujeita à curadoria.
-            </p>
+            Acesso exclusivo para conselheiros, C-Levels, investidores e líderes estratégicos.
+            Sua participação está sujeita à curadoria.
+          </p>
           </div>
 
-          {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-12">
             {/* Section 1: Identificação */}
             <section>
