@@ -173,7 +173,7 @@ export default function ExecutiveCurationPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-background py-16 px-4">
+      <main className="min-h-screen bg-background py-16 px-4 pt-[calc(1cm+4rem)]">
         <div className="max-w-3xl mx-auto">
           {/* Header */}
           {/* Form */}
