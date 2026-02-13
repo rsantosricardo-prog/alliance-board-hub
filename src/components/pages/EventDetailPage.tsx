@@ -218,7 +218,7 @@ export default function EventDetailPage() {
                       {event.eventDateTime && (
                         <div className="mb-6">
                           <div className="flex items-start gap-3 mb-2">
-                            <Calendar className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                            <Calendar className="w-5 h-5 text-primary flex-shrink-0 mt-1 fill-primary-foreground" />
                             <div>
                               <p className="font-paragraph text-base text-secondary-foreground mb-1">
                                 {formatEventDate(event.eventDateTime)}
@@ -234,8 +234,8 @@ export default function EventDetailPage() {
                       {/* Location */}
                       {event.location && (
                         <div className="mb-6">
-                          <div className="flex items-start gap-3">
-                            <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                          <div className="flex items-start gap-3 shadow-[12px_12px_4px_0px_#d9d9d9]">
+                            <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1 fill-secondary-foreground shadow-[12px_12px_4px_0px_#d9d9d9]" />
                             <p className="font-paragraph text-base text-secondary-foreground">
                               {event.location}
                             </p>
