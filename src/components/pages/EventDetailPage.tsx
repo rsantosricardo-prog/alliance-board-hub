@@ -160,14 +160,150 @@ export default function EventDetailPage() {
                       </div>
                     )}
 
-                    {/* Detailed Agenda */}
+                    {/* Detailed Agenda - Elegant Section */}
                     {event.detailedAgenda && (
-                      <div className="mb-12">
-                        <h2 className="font-heading text-2xl lg:text-3xl text-secondary mb-6">
-                          AGENDA
+                      <div className="mb-16">
+                        <h2 className="font-heading text-3xl lg:text-4xl text-secondary mb-12">
+                          AGENDA DO EVENTO
                         </h2>
-                        <div className="font-paragraph text-lg text-secondary/80 leading-relaxed whitespace-pre-line">
-                          {highlightTimeInText(event.detailedAgenda)}
+                        
+                        <div className="space-y-8">
+                          {/* Welcome Coffee & Credenciamento */}
+                          <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            viewport={{ once: true }}
+                            className="pb-8 border-b border-secondary/20"
+                          >
+                            <div className="flex items-start gap-6">
+                              <div className="flex-shrink-0">
+                                <p className="font-heading text-xl text-amber-500 font-bold">16:00 – 16:15</p>
+                              </div>
+                              <div className="flex-grow">
+                                <h3 className="font-heading text-2xl text-amber-500 font-bold mb-2">
+                                  Welcome Coffee & Credenciamento
+                                </h3>
+                              </div>
+                            </div>
+                          </motion.div>
+
+                          {/* Liderar Hoje as Decisões de Amanhã */}
+                          <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.1 }}
+                            viewport={{ once: true }}
+                            className="pb-8 border-b border-secondary/20"
+                          >
+                            <div className="flex items-start gap-6">
+                              <div className="flex-shrink-0">
+                                <p className="font-heading text-xl text-amber-500 font-bold">16:15 – 16:40</p>
+                              </div>
+                              <div className="flex-grow">
+                                <h3 className="font-heading text-2xl text-amber-500 font-bold mb-3">
+                                  Liderar Hoje as Decisões de Amanhã
+                                </h3>
+                                <p className="font-paragraph text-base text-secondary/70 mb-3 italic">
+                                  Tecnologia, inovação e gestão
+                                </p>
+                                <p className="font-heading text-lg text-amber-500 font-bold mb-4">
+                                  Marcela Silveira
+                                </p>
+                                <p className="font-paragraph text-base text-secondary/80 leading-relaxed">
+                                  Uma visão estratégica sobre como líderes e Conselhos precisam antecipar tendências, integrar tecnologia e inovar na gestão para sustentar decisões relevantes no presente e no futuro.
+                                </p>
+                              </div>
+                            </div>
+                          </motion.div>
+
+                          {/* Entre Risco e Crescimento */}
+                          <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                            viewport={{ once: true }}
+                            className="pb-8 border-b border-secondary/20"
+                          >
+                            <div className="flex items-start gap-6">
+                              <div className="flex-shrink-0">
+                                <p className="font-heading text-xl text-amber-500 font-bold">16:40 – 17:30</p>
+                              </div>
+                              <div className="flex-grow">
+                                <h3 className="font-heading text-2xl text-amber-500 font-bold mb-3">
+                                  Entre Risco e Crescimento – Cenários
+                                </h3>
+                                <p className="font-paragraph text-base text-secondary/70 mb-3 italic">
+                                  Governança, pressão e decisões em ambientes complexos
+                                </p>
+                                <p className="font-heading text-lg text-amber-500 font-bold mb-4">
+                                  Júlio Damião
+                                </p>
+                                <p className="font-paragraph text-base text-secondary/80 leading-relaxed">
+                                  Leitura aprofundada dos cenários que impactam diretamente os Conselhos, explorando os dilemas entre risco, crescimento, responsabilidade e sustentabilidade das decisões estratégicas.
+                                </p>
+                              </div>
+                            </div>
+                          </motion.div>
+
+                          {/* Decidir com Consistência */}
+                          <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.3 }}
+                            viewport={{ once: true }}
+                            className="pb-8 border-b border-secondary/20"
+                          >
+                            <div className="flex items-start gap-6">
+                              <div className="flex-shrink-0">
+                                <p className="font-heading text-xl text-amber-500 font-bold">17:30 – 18:00</p>
+                              </div>
+                              <div className="flex-grow">
+                                <h3 className="font-heading text-2xl text-amber-500 font-bold mb-3">
+                                  Decidir com Consistência
+                                </h3>
+                                <p className="font-paragraph text-base text-secondary/70 mb-3 italic">
+                                  Informação, critério e responsabilidade no nível do Board
+                                </p>
+                                <p className="font-heading text-lg text-amber-500 font-bold mb-4">
+                                  Ricardo Santos
+                                </p>
+                                <p className="font-paragraph text-base text-secondary/80 leading-relaxed">
+                                  Como a qualidade da informação, o rigor dos critérios e os processos de Due Diligence sustentam decisões sólidas no ambiente de Conselho. Apresentação da plataforma eDue aplicada à governança.
+                                </p>
+                              </div>
+                            </div>
+                          </motion.div>
+
+                          {/* Happy Hour Executivo */}
+                          <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.4 }}
+                            viewport={{ once: true }}
+                          >
+                            <div className="flex items-start gap-6">
+                              <div className="flex-shrink-0">
+                                <p className="font-heading text-xl text-amber-500 font-bold">18:00 – 22:00</p>
+                              </div>
+                              <div className="flex-grow">
+                                <h3 className="font-heading text-2xl text-amber-500 font-bold mb-4">
+                                  Happy Hour Executivo
+                                </h3>
+                                <ul className="space-y-2">
+                                  <li className="font-paragraph text-base text-secondary/80">
+                                    Jantar completo
+                                  </li>
+                                  <li className="font-paragraph text-base text-secondary/80">
+                                    Bebidas à vontade
+                                  </li>
+                                  <li className="font-paragraph text-base text-secondary/80">
+                                    Conexões estratégicas entre C-Levels, empresários e conselheiros
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </motion.div>
                         </div>
                       </div>
                     )}
