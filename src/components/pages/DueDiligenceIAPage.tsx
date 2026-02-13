@@ -241,13 +241,13 @@ export default function DueDiligenceIAPage() {
             <h2 className="font-heading text-4xl lg:text-5xl font-bold mb-6 text-primary-foreground">
               Pronto para Transformar Sua Análise de Risco?
             </h2>
-            <p className="font-paragraph text-lg text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
+            <p className="font-paragraph text-lg mb-12 max-w-2xl mx-auto leading-relaxed text-primary-foreground">
               Fale com um especialista e descubra como eDue pode impulsionar sua governança corporativa e conformidade.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-white text-foreground hover:bg-accent hover:text-foreground font-semibold px-8 py-6 text-base rounded-lg"
+                className="text-foreground hover:bg-accent hover:text-foreground font-semibold px-8 py-6 text-base rounded-lg border-0 border-solid border-[#000000ff] bg-secondary-foreground"
               >
                 Fale com um Especialista
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -255,7 +255,7 @@ export default function DueDiligenceIAPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-foreground font-semibold px-8 py-6 text-base rounded-lg"
+                className="border-2 border-white text-white hover:bg-white hover:text-foreground font-semibold px-8 py-6 text-base rounded-lg bg-secondary"
               >Acesse a Plataforma</Button>
             </div>
           </motion.div>
