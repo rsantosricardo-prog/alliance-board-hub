@@ -7,7 +7,7 @@ import { Image } from '@/components/ui/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SMBoardLogo from '@/components/SMBoardLogo';
-import { ArrowRight, ChevronDown, MessageCircle, Linkedin, Mail, Globe, Crown, Lock, Users } from 'lucide-react';
+import { ArrowRight, ChevronDown, MessageCircle, Linkedin, Mail, Globe, Crown, Lock, Users, CheckCircle2 } from 'lucide-react';
 
 export default function HomePage() {
   const [brandEssence, setBrandEssence] = useState<BrandEssence | null>(null);
@@ -113,6 +113,103 @@ export default function HomePage() {
                   width={1200}
                 />
               )}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      {/* E-DUE PLATFORM SECTION */}
+      <section className="relative w-full bg-white py-24 lg:py-32 border-t border-foreground/10">
+        <div className="max-w-[100rem] mx-auto px-6 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            {/* Left: Content */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="flex flex-col gap-8 order-2 lg:order-1"
+            >
+              <div className="space-y-6">
+                <h2 className="font-heading text-5xl lg:text-6xl text-background leading-tight">
+                  Decisão Estruturada.
+                  <br />
+                  <span className="relative">
+                    Governança com Critério.
+                    <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-[#C6A756] to-transparent"></span>
+                  </span>
+                </h2>
+              </div>
+
+              <div className="space-y-4">
+                <p className="font-paragraph text-lg text-background/80 leading-relaxed">
+                  <span className="font-semibold text-[#C6A756]">e-Due</span> — Inteligência aplicada à diligência e ao processo decisório no nível do Board.
+                </p>
+                <p className="font-paragraph text-base text-background/70 leading-relaxed">
+                  A e-Due é uma plataforma orientada à governança que organiza informações, fortalece critérios de análise e sustenta decisões estratégicas com rigor e consistência.
+                </p>
+                <p className="font-paragraph text-base text-background/70 leading-relaxed">
+                  Projetada para Conselhos, investidores e lideranças executivas, integra tecnologia, metodologia e estrutura analítica para elevar o padrão das deliberações.
+                </p>
+                <p className="font-paragraph text-sm text-[#C6A756] font-semibold italic pt-4">
+                  Informação qualificada. Processo estruturado. Responsabilidade fiduciária fortalecida.
+                </p>
+              </div>
+
+              {/* Highlights */}
+              <div className="space-y-4 pt-8 border-t border-background/10">
+                <div className="flex gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-[#C6A756] flex-shrink-0 mt-0.5" />
+                  <p className="font-paragraph text-background/80">Organização e centralização de informações estratégicas</p>
+                </div>
+                <div className="flex gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-[#C6A756] flex-shrink-0 mt-0.5" />
+                  <p className="font-paragraph text-background/80">Estruturação de processos de Due Diligence</p>
+                </div>
+                <div className="flex gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-[#C6A756] flex-shrink-0 mt-0.5" />
+                  <p className="font-paragraph text-background/80">Apoio técnico às decisões do Conselho</p>
+                </div>
+                <div className="flex gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-[#C6A756] flex-shrink-0 mt-0.5" />
+                  <p className="font-paragraph text-background/80">Registro e rastreabilidade decisória</p>
+                </div>
+                <div className="flex gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-[#C6A756] flex-shrink-0 mt-0.5" />
+                  <p className="font-paragraph text-background/80">Elevação do padrão de governança</p>
+                </div>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="pt-8 flex flex-col sm:flex-row gap-4">
+                <Link
+                  to="/duediligence-ia"
+                  className="group flex items-center justify-center w-full sm:w-auto bg-background text-white px-8 py-4 rounded-lg hover:bg-background/90 transition-all duration-300 font-paragraph font-medium"
+                >
+                  Conhecer a Plataforma
+                  <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  to="/governance"
+                  className="group flex items-center justify-center w-full sm:w-auto border-2 border-background text-background px-8 py-4 rounded-lg hover:bg-background hover:text-white transition-all duration-300 font-paragraph font-medium"
+                >
+                  Aplicação na Governança
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Right: Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="relative h-[400px] lg:h-[500px] rounded-lg overflow-hidden group order-1 lg:order-2"
+            >
+              <div className="absolute inset-0 bg-black/5 z-10 group-hover:bg-black/0 transition-colors duration-700" />
+              <Image
+                src="https://static.wixstatic.com/media/f7f178_3686f2ab3190423aa51944eba8c40165~mv2.png"
+                alt="e-Due Platform - Executive Dashboard"
+                className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+                width={1200}
+              />
             </motion.div>
           </div>
         </div>
