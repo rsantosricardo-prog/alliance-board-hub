@@ -10,6 +10,7 @@ export default function LinkTreePage() {
       items: [
         { label: 'LinkedIn', url: 'https://www.linkedin.com/in/marcelasilveira', icon: Linkedin },
         { label: 'Instagram', url: 'https://www.instagram.com/marcela_silveira_sm', icon: Instagram },
+        { label: 'WhatsApp', url: 'https://api.whatsapp.com/send/?phone=5531920038573&text=Quero+agendar+uma+demonstração+do+eDUE&type=phone_number&app_absent=0', icon: MessageCircle },
       ]
     },
     {
@@ -19,7 +20,7 @@ export default function LinkTreePage() {
         { label: 'Website', url: 'https://smboard.com.br', icon: Globe },
         { label: 'LinkedIn', url: 'https://www.linkedin.com/company/smboard/', icon: Linkedin },
         { label: 'Instagram', url: 'https://www.instagram.com/smartmoneyboard', icon: Instagram },
-        { label: 'WhatsApp', url: 'https://api.whatsapp.com/send/?phone=5511917198570&text&type=phone_number&app_absent=0&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGn_7TqW8TndODWe1rmz5vJ2M5TZt2g6rgcG3g-v-wCTyMTdz1VETjLC4eJFsE_aem_fbNvAHFRR3DKK7hE4xS0fA', icon: MessageCircle },
+        { label: 'WhatsApp', url: 'https://api.whatsapp.com/send/?phone=5511917198570&text=Quero+agendar+uma+demonstração+do+eDUE&type=phone_number&app_absent=0', icon: MessageCircle },
       ]
     },
     {
