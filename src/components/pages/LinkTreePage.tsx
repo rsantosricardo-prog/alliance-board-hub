@@ -35,7 +35,7 @@ export default function LinkTreePage() {
     },
     {
       title: 'Target Skin Brasil',
-      subtitle: 'Cuidados com a Pele',
+      subtitle: "Prevenção ao Câncer de Pele",
       items: [
         { label: 'Website', url: 'https://targetskinbrasil.com.br', icon: Globe },
         { label: 'LinkedIn', url: 'https://www.linkedin.com/company/target-skin-brasil/', icon: Linkedin },
@@ -43,7 +43,7 @@ export default function LinkTreePage() {
     },
     {
       title: 'Anima Bruta',
-      subtitle: 'Moda e Estilo de Vida',
+      subtitle: "Arte e Decoração",
       items: [
         { label: 'Website', url: 'https://www.animabruta.com', icon: Globe },
         { label: 'Instagram', url: 'https://www.instagram.com/anima_bruta/', icon: Instagram },
@@ -51,7 +51,7 @@ export default function LinkTreePage() {
     },
     {
       title: 'M.Leon',
-      subtitle: 'Moda e Lifestyle',
+      subtitle: "Luxo",
       items: [
         { label: 'Website', url: 'https://mleon.com.br', icon: Globe },
         { label: 'Instagram', url: 'https://www.instagram.com/mleon_official', icon: Instagram },
@@ -86,7 +86,6 @@ export default function LinkTreePage() {
         <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-slate-800/20 to-transparent rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-slate-800/20 to-transparent rounded-full blur-3xl" />
       </div>
-
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -95,9 +94,8 @@ export default function LinkTreePage() {
         className="text-center mb-12 relative z-10"
       >
         <h1 className="font-heading text-5xl md:text-6xl text-white mb-2">Cartão Virtual</h1>
-        <p className="font-paragraph text-lg text-gray-300">Conecte-se com nossos projetos</p>
+        <p className="font-paragraph text-lg text-gray-300">Prazer nos conectar</p>
       </motion.div>
-
       {/* Links Container */}
       <motion.div
         variants={containerVariants}
@@ -142,7 +140,6 @@ export default function LinkTreePage() {
           </motion.div>
         ))}
       </motion.div>
-
       {/* Footer */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -150,9 +147,7 @@ export default function LinkTreePage() {
         transition={{ delay: 0.8, duration: 0.6 }}
         className="mt-16 text-center relative z-10"
       >
-        <p className="font-paragraph text-sm text-gray-500">
-          © 2026 SM Board. Todos os direitos reservados.
-        </p>
+        <p className="font-paragraph text-sm text-gray-500">© 2026.  Todos os direitos reservados.</p>
       </motion.div>
     </div>
   );
