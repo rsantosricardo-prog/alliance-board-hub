@@ -47,6 +47,14 @@ export default function LinkTreePage() {
         { label: 'Website', url: 'https://targetskinbrasil.com.br', icon: Globe },
         { label: 'LinkedIn', url: 'https://www.linkedin.com/company/target-skin-brasil/', icon: Linkedin },
       ]
+    },
+    {
+      title: 'Anima Bruta',
+      subtitle: 'Moda e Estilo de Vida',
+      items: [
+        { label: 'Website', url: 'https://www.animabruta.com', icon: Globe },
+        { label: 'Instagram', url: 'https://www.instagram.com/anima_bruta/', icon: Instagram },
+      ]
     }
   ];
 
