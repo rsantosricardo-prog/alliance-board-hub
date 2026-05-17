@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Image } from '@/components/ui/image';
-import { Globe, Linkedin, Instagram, MessageCircle, Rocket } from 'lucide-react';
+import { Globe, Linkedin, Instagram, MessageCircle, Rocket, Youtube } from 'lucide-react';
 
 export default function LinkTreePage() {
   const links = [
@@ -11,6 +11,7 @@ export default function LinkTreePage() {
         { label: 'Website', url: 'https://smboard.com.br', icon: Globe },
         { label: 'LinkedIn', url: 'https://www.linkedin.com/company/smboard/', icon: Linkedin },
         { label: 'Instagram', url: 'https://www.instagram.com/smartmoneyboard', icon: Instagram },
+        { label: 'YouTube', url: 'https://www.youtube.com/channel/UC_5nAYfzH7COzARC4GT0TpQ', icon: Youtube },
         { label: 'WhatsApp', url: 'https://api.whatsapp.com/send/?phone=5511917198570&text&type=phone_number&app_absent=0&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGn_7TqW8TndODWe1rmz5vJ2M5TZt2g6rgcG3g-v-wCTyMTdz1VETjLC4eJFsE_aem_fbNvAHFRR3DKK7hE4xS0fA', icon: MessageCircle },
       ]
     },
