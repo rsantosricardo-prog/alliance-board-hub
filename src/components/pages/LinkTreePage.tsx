@@ -34,14 +34,6 @@ export default function LinkTreePage() {
       ]
     },
     {
-      title: 'M.Leon',
-      subtitle: 'Moda e Lifestyle',
-      items: [
-        { label: 'Website', url: 'https://mleon.com.br', icon: Globe },
-        { label: 'Instagram', url: 'https://www.instagram.com/mleon_official', icon: Instagram },
-      ]
-    },
-    {
       title: 'Target Skin Brasil',
       subtitle: 'Cuidados com a Pele',
       items: [
@@ -55,6 +47,14 @@ export default function LinkTreePage() {
       items: [
         { label: 'Website', url: 'https://www.animabruta.com', icon: Globe },
         { label: 'Instagram', url: 'https://www.instagram.com/anima_bruta/', icon: Instagram },
+      ]
+    },
+    {
+      title: 'M.Leon',
+      subtitle: 'Moda e Lifestyle',
+      items: [
+        { label: 'Website', url: 'https://mleon.com.br', icon: Globe },
+        { label: 'Instagram', url: 'https://www.instagram.com/mleon_official', icon: Instagram },
       ]
     }
   ];
