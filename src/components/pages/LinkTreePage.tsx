@@ -5,13 +5,20 @@ import { Globe, Linkedin, Instagram, MessageCircle, Rocket, Youtube } from 'luci
 export default function LinkTreePage() {
   const links = [
     {
+      title: 'Marcela C. Silveira',
+      subtitle: 'Fundadora',
+      items: [
+        { label: 'LinkedIn', url: 'https://www.linkedin.com/in/marcelasilveira', icon: Linkedin },
+        { label: 'Instagram', url: 'https://www.instagram.com/marcela_silveira_sm', icon: Instagram },
+      ]
+    },
+    {
       title: 'SM Board',
       subtitle: 'Ecossistema',
       items: [
         { label: 'Website', url: 'https://smboard.com.br', icon: Globe },
         { label: 'LinkedIn', url: 'https://www.linkedin.com/company/smboard/', icon: Linkedin },
         { label: 'Instagram', url: 'https://www.instagram.com/smartmoneyboard', icon: Instagram },
-        { label: 'YouTube', url: 'https://www.youtube.com/channel/UC_5nAYfzH7COzARC4GT0TpQ', icon: Youtube },
         { label: 'WhatsApp', url: 'https://api.whatsapp.com/send/?phone=5511917198570&text&type=phone_number&app_absent=0&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGn_7TqW8TndODWe1rmz5vJ2M5TZt2g6rgcG3g-v-wCTyMTdz1VETjLC4eJFsE_aem_fbNvAHFRR3DKK7hE4xS0fA', icon: MessageCircle },
       ]
     },
@@ -22,14 +29,23 @@ export default function LinkTreePage() {
         { label: 'Plataforma', url: 'https://duediligence.ia.br/', icon: Rocket },
         { label: 'LinkedIn', url: 'https://www.linkedin.com/company/edue-ia/', icon: Linkedin },
         { label: 'Instagram', url: 'https://www.instagram.com/eduediligence', icon: Instagram },
+        { label: 'YouTube', url: 'https://www.youtube.com/channel/UC_5nAYfzH7COzARC4GT0TpQ', icon: Youtube },
       ]
     },
     {
-      title: 'Marcela Silveira',
-      subtitle: 'Fundadora',
+      title: 'M.Leon',
+      subtitle: 'Moda e Lifestyle',
       items: [
-        { label: 'LinkedIn', url: 'https://www.linkedin.com/in/marcelasilveira', icon: Linkedin },
-        { label: 'Instagram', url: 'https://www.instagram.com/marcela_silveira_sm', icon: Instagram },
+        { label: 'Website', url: 'https://mleon.com.br', icon: Globe },
+        { label: 'Instagram', url: 'https://www.instagram.com/mleon_official', icon: Instagram },
+      ]
+    },
+    {
+      title: 'Target Skin Brasil',
+      subtitle: 'Cuidados com a Pele',
+      items: [
+        { label: 'Website', url: 'https://targetskinbrasil.com.br', icon: Globe },
+        { label: 'LinkedIn', url: 'https://www.linkedin.com/company/target-skin-brasil/', icon: Linkedin },
       ]
     }
   ];
@@ -69,8 +85,8 @@ export default function LinkTreePage() {
         transition={{ duration: 0.6 }}
         className="text-center mb-12 relative z-10"
       >
-        <h1 className="font-heading text-5xl md:text-6xl text-white mb-2">SM Board</h1>
-        <p className="font-paragraph text-lg text-gray-300">Ecossistema de Inovação</p>
+        <h1 className="font-heading text-5xl md:text-6xl text-white mb-2">Cartão Virtual</h1>
+        <p className="font-paragraph text-lg text-gray-300">Conecte-se com nossos projetos</p>
       </motion.div>
 
       {/* Links Container */}
