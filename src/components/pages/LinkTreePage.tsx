@@ -42,7 +42,7 @@ export default function LinkTreePage() {
       ]
     },
     {
-      title: 'Anima Bruta',
+      title: "Ânima Bruta",
       subtitle: "Arte e Decoração",
       items: [
         { label: 'Website', url: 'https://www.animabruta.com', icon: Globe },
@@ -51,7 +51,7 @@ export default function LinkTreePage() {
     },
     {
       title: 'M.Leon',
-      subtitle: "Luxo",
+      subtitle: "Diamonds",
       items: [
         { label: 'Website', url: 'https://mleon.com.br', icon: Globe },
         { label: 'Instagram', url: 'https://www.instagram.com/mleon_official', icon: Instagram },
@@ -107,7 +107,7 @@ export default function LinkTreePage() {
           <motion.div key={sectionIdx} variants={itemVariants} className="space-y-3">
             {/* Section Header */}
             <div className="text-center mb-4">
-              <h2 className="font-heading text-2xl text-white mb-1">{section.title}</h2>
+              <h2 className="font-heading text-2xl mb-1 text-primary">{section.title}</h2>
               <p className="font-paragraph text-sm text-gray-400">{section.subtitle}</p>
             </div>
 
