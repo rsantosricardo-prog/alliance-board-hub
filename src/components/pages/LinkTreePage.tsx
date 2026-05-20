@@ -108,7 +108,7 @@ export default function LinkTreePage() {
             {/* Section Header */}
             <div className="text-center mb-4">
               <h2 className="font-heading text-2xl mb-1 text-primary">{section.title}</h2>
-              <p className="font-paragraph text-sm text-gray-400">{section.subtitle}</p>
+
             </div>
 
             {/* Links Grid */}
